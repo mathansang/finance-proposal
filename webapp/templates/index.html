@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>금융권 입찰공고 모니터</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Noto+Serif+KR:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <p class="eyebrow">Proposal Intelligence</p>
+        <h1>금융권 신규 입찰공고</h1>
+        <p class="subtitle">
+          시장리스크 · ALM · K-ICS · IFRS · 파생평가 중심.
+          조회기간 내 공개 입찰목록을 전수 집계합니다.
+        </p>
+      </div>
+      <div class="refresh-wrap">
+        <button type="button" id="btnRefresh" class="btn-refresh" title="최근 1개월 재조회">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M20 12a8 8 0 1 1-2.2-5.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M20 4v5h-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>갱신</span>
+        </button>
+        <div class="refresh-meta" id="refreshMeta">
+          {% if data.last_refresh %}마지막 갱신 {{ data.last_refresh }}{% else %}저장된 조사 결과{% endif %}
+        </div>
+      </div>
+    </header>
+
+    <section class="stats" aria-label="요약">
+      <article class="stat">
+        <p class="stat-label">목표분야 해당</p>
+        <p class="stat-value accent" id="statHits">{{ stats.hits }}</p>
+      </article>
+      <article class="stat">
+        <p class="stat-label">조사 기관</p>
+        <p class="stat-value" id="statCompanies">{{ stats.companies }}</p>
+      </article>
+      <article class="stat">
+        <p class="stat-label">공개목록 Y</p>
+        <p class="stat-value" id="statY">{{ stats.public_y }}</p>
+      </article>
+      <article class="stat">
+        <p class="stat-label">공개목록 N</p>
+        <p class="stat-value warn" id="statN">{{ stats.public_n }}</p>
+      </article>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2>기관별 공고 현황</h2>
+        <span class="period-chip" id="periodChip">
+          {{ data.period_start }} ~ {{ data.period_end }}
+        </span>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>번호</th>
+              <th>회사명</th>
+              <th>공개목록</th>
+              <th>사업명</th>
+              <th>공고일</th>
+              <th>마감일</th>
+              <th>예산</th>
+              <th>내용</th>
+              <th>링크</th>
+            </tr>
+          </thead>
+          <tbody id="resultsBody">
+            {% for r in data.rows %}
+            <tr class="{% if r.hit %}hit{% endif %} {% if r.public_list == 'N' %}no-public{% endif %}">
+              <td class="num">{{ r.no }}</td>
+              <td class="company">{{ r.company }}</td>
+              <td>
+                <span class="badge {{ r.public_list|lower }}">{{ r.public_list }}</span>
+              </td>
+              <td class="{% if r.hit %}title-hit{% elif not r.title %}title-empty{% endif %}">
+                {{ r.title }}
+              </td>
+              <td>{{ r.announce_date }}</td>
+              <td>{{ r.deadline }}</td>
+              <td>{{ r.budget }}</td>
+              <td class="note">{{ r.note }}</td>
+              <td>
+                {% if r.link %}
+                <a class="link" href="{{ r.link }}" target="_blank" rel="noopener">열기</a>
+                {% endif %}
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <p class="legend">
+      공개목록 N이면 사업명·내용을 공란으로 둡니다.
+      갱신 시 나라장터(모두입찰) 연계 기관은 최근 1개월을 자동 재집계하고,
+      홈페이지 전용 게시판은 기간만 갱신·기존 집계를 유지합니다.
+    </p>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
