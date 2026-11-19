@@ -32,20 +32,124 @@ AGGREGATOR_HOSTS = (
     "jodaln.com",
 )
 
-# 공식 게시판 (우선). url은 홈이 아니라 공고·입찰 목록으로 지정.
-# prefer_g2b=True 이면 중계 상세를 나라장터 원문 링크로 승격.
+# 공식 입찰·공고 목록 URL (홈페이지 금지). prefer_g2b면 중계 hit→나라장터 승격.
 OFFICIAL_BOARDS: dict[str, dict[str, Any]] = {
+    # 은행·지주
+    "KB금융그룹·KB국민은행": {
+        "url": "https://omoney.kbstar.com/quics?page=C018592",
+    },
     "신한금융그룹·신한은행": {
         "url": "https://www.shinhangroup.com/kr/pr/notice",
         "fetcher": "shinhan",
     },
+    "하나금융그룹·하나은행": {
+        "url": "https://banking.kebhana.com/cont/news/news01/index.jsp",
+    },
+    "우리금융그룹·우리은행": {
+        "url": "https://www.woorifis.com/kor/company/announceList",
+    },
+    "NH농협금융·NH농협은행": {
+        "url": "https://www.nonghyup.com/ecenter/bid/bidList.do",
+    },
+    "IBK기업은행": {
+        "url": "https://www.ibk.co.kr/cyber/noticeListCyber.ibk?pageId=IR03010400",
+        "org_key": "중소기업은행",
+        "prefer_g2b": True,
+    },
+    "한국산업은행": {
+        "url": "https://www.alio.go.kr/item/itemOrganList.do?apbaId=C0210&reportFormRootNo=B1030",
+        "org_key": "한국산업은행",
+        "prefer_g2b": True,
+    },
+    "한국수출입은행": {
+        "url": "https://www.alio.go.kr/item/itemOrganList.do?apbaId=C0223&reportFormRootNo=B1030",
+        "org_key": "한국수출입은행",
+        "prefer_g2b": True,
+    },
+    # 증권
+    "미래에셋증권": {
+        "url": "https://securities.miraeasset.com/bbs/board/message/list.do?categoryId=1959",
+    },
+    "한국투자증권": {
+        "url": "https://securities.koreainvestment.com/main/customer/notice/Notice.jsp",
+    },
+    "NH투자증권": {
+        "url": "https://www.nonghyup.com/ecenter/bid/bidList.do",
+    },
+    "삼성증권": {
+        "url": "https://www.samsungsecurities.co.kr/kor/invest/notice.do",
+    },
+    "KB증권": {
+        "url": "https://bbs.kbsec.com/BBS/45",
+    },
+    "신한투자증권": {
+        "url": "https://bbs2.shinhansec.com/board/message/list.do?boardName=itbusiness&gubun=new_ir",
+    },
+    "하나증권": {
+        "url": "https://www.hanaw.com/corebbs5/bidAnnuce/list/list.cmd",
+    },
+    "키움증권": {
+        "url": "https://www3.kiwoom.com/h/ir/info/VAnnounceInfoView",
+    },
+    "메리츠증권": {
+        "url": "https://home.imeritz.com/bbs/BbsList.go?bbsGrpId=bascGrp&bbsId=bidding",
+    },
+    "IBK투자증권": {
+        "url": "https://www.ibksystem.co.kr/board?brdId=BRD002",
+    },
+    # 생명
+    "삼성생명": {
+        "url": "https://nepass.samsunglife.com/login",
+    },
+    "한화생명": {
+        "url": "https://gaps.hanwhalife.com/cmm/form/login",
+    },
+    "교보생명": {
+        "url": "https://keps.kyobo.co.kr:447/epro/spLogin.do",
+    },
+    "신한라이프": {
+        "url": "https://www.shinhanlife.co.kr/hp/cdhi0510.do",
+    },
+    "KB라이프": {
+        "url": "https://www.kblife.co.kr/customer-common/managementPublicNoticeOffice.do",
+    },
+    "iM라이프": {
+        "url": "https://www.imlifeins.co.kr",
+    },
+    "IBK연금보험": {
+        "url": "https://www.ibki.co.kr/process/HP_PBANO_MGMT_PEL_LIST?pbano_sctn_cod=0006",
+        "prefer_g2b": True,
+    },
+    # 손해
+    "삼성화재": {
+        "url": "https://www.samsungfire.com/vh/page/VH.HPIF0100.do",
+    },
+    "DB손해보험": {
+        "url": "https://idbins.com/pc/bizxpress/contentTemplet/cmy/pr/an/list.jsp",
+    },
+    "현대해상": {
+        "url": "https://www.hi.co.kr/serviceAction.do?menuId=200000",
+    },
+    "KB손해보험": {
+        "url": "https://sp.kbinsure.co.kr/splogin.jsp",
+    },
+    "메리츠화재": {
+        "url": "https://www.meritzfire.com/footer/notice.do",
+    },
+    "한화손해보험": {
+        "url": "https://www.hwgeneralins.com/intro/ir/general-list.do",
+    },
+    "롯데손해보험": {
+        "url": "https://www.lotteins.co.kr/web/C/D/cdl0220.jsp",
+    },
+    # 공공·유관
     "금융감독원": {
         "url": "https://www.fss.or.kr/fss/bbs/B0000191/list.do?menuNo=200222",
         "fetcher": "fss",
         "org_key": "금융감독원",
     },
     "금융위원회": {
-        "url": "https://www.fsc.go.kr/no010101",
+        "url": "https://www.fsc.go.kr/no010104",
         "org_key": "금융위원회",
         "prefer_g2b": True,
     },
@@ -101,23 +205,8 @@ OFFICIAL_BOARDS: dict[str, dict[str, Any]] = {
         "prefer_g2b": True,
     },
     "한국교직원공제회": {
-        "url": "https://www.tp.or.kr",
+        "url": "https://www.ktcu.or.kr/IN/IPW-INE-100201",
         "org_key": "한국교직원공제회",
-        "prefer_g2b": True,
-    },
-    "IBK기업은행": {
-        "url": "https://www.ibk.co.kr/cyber/noticeListCyber.ibk?pageId=IR03010400",
-        "org_key": "중소기업은행",
-        "prefer_g2b": True,
-    },
-    "한국산업은행": {
-        "url": "https://www.alio.go.kr/item/itemOrganList.do?apbaId=C0210&reportFormRootNo=B1030",
-        "org_key": "한국산업은행",
-        "prefer_g2b": True,
-    },
-    "한국수출입은행": {
-        "url": "https://www.koreaexim.go.kr",
-        "org_key": "한국수출입은행",
         "prefer_g2b": True,
     },
 }
@@ -743,6 +832,12 @@ def refresh_survey() -> dict[str, Any]:
         base = companies[company]
         _set_state(progress=idx, message=f"조회 중: {company} ({idx}/{len(order)})")
 
+        official_cfg = OFFICIAL_BOARDS.get(company) or {}
+        official_url = str(official_cfg.get("url") or "").strip()
+        base_link = str(base.get("link") or "").strip()
+        if not official_url and base_link and not is_aggregator_url(base_link):
+            official_url = base_link
+
         if base.get("public_list") == "N":
             row = deepcopy(base)
             row["title"] = ""
@@ -751,14 +846,12 @@ def refresh_survey() -> dict[str, Any]:
             row["deadline"] = "-"
             row["budget"] = "-"
             row["hit"] = False
+            if official_url:
+                row["link"] = official_url
+                row["list_link"] = official_url
+                row["official_link"] = official_url
             new_rows.append(row)
             continue
-
-        official_cfg = OFFICIAL_BOARDS.get(company) or {}
-        official_url = str(official_cfg.get("url") or "").strip()
-        base_link = str(base.get("link") or "").strip()
-        if not official_url and base_link and not is_aggregator_url(base_link):
-            official_url = base_link
 
         org_keys = base.get("org_keys") or [base.get("org_key")]
         org_keys = [k for k in org_keys if k]

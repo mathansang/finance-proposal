@@ -1,0 +1,48 @@
+# 매일 새벽 1시(KST) 공고 수집 → docs/ 갱신 → Pages push
+name: daily-survey
+
+on:
+  schedule:
+    # GitHub cron 기본은 UTC. timezone으로 한국 시각 고정.
+    - cron: "0 1 * * *"
+      timezone: Asia/Seoul
+  workflow_dispatch: # Actions 탭에서 수동 실행
+
+permissions:
+  contents: write # commit/push + Pages 소스(/docs) 갱신
+
+concurrency:
+  group: daily-survey
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          # push 시 최신 기본 브랜치에 커밋
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: batch/requirements.txt
+
+      - name: Install deps
+        run: pip install -r batch/requirements.txt
+
+      - name: Git identity
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Survey and publish
+        # 수집 + docs 생성 + commit/push (변경 없으면 스킵)
+        run: python -m batch --push
+        env:
+          TZ: Asia/Seoul

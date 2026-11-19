@@ -67,10 +67,10 @@ git push -u origin main
 3. 이후 `python -m batch --push` 하면 Pages가 갱신됩니다.  
    URL 예: `https://<owner>.github.io/<name>/`
 
-## Windows 작업 스케줄러 (매일)
+## Windows 작업 스케줄러 (매일, PC가 켜져 있을 때)
 
 1. 작업 스케줄러 → 기본 작업 만들기
-2. 트리거: 매일 오전 9:00 (원하는 시각)
+2. 트리거: 매일 오전 1:00
 3. 동작: 프로그램 시작
 
 | 항목 | 값 |
@@ -79,7 +79,25 @@ git push -u origin main
 | 인수 | `-NoProfile -ExecutionPolicy Bypass -File "C:\...\proposal\batch\run.ps1" -Push` |
 | 시작 위치 | `C:\...\proposal` |
 
-`-Push`는 remote가 있을 때만 실제로 push합니다. remote가 없으면 커밋만 되고 안내 메시지를 남깁니다.
+`-Push`는 remote가 있을 때만 실제로 push합니다. PC가 꺼져 있으면 실행되지 않습니다.
+
+## GitHub Actions cron (권장, 매일 새벽 1시 KST)
+
+PC 전원과 무관하게 GitHub가 돌립니다. 워크플로: `.github/workflows/daily-survey.yml`
+
+1. 위 파일을 `main`(기본 브랜치)에 push
+2. repo **Settings → Actions → General**
+   - Actions 사용 허용
+   - Workflow permissions: **Read and write** (또는 워크플로의 `contents: write`로 충분)
+3. **Settings → Pages**: Deploy from a branch → `main` / `/docs`
+4. **Actions** 탭 → `daily-survey` → **Run workflow** 로 1회 수동 확인
+5. 이후 매일 **01:00 Asia/Seoul** 자동 실행 (`schedule` + `timezone`)
+
+참고:
+
+- cron만으로는 지연될 수 있음(GitHub 부하).  Exact 1:00이 아니면 수분~수십분 밀릴 수 있음
+- Actions가 커밋한 뒤 Pages가 다시 빌드됨
+- private repo는 Actions 분 한도에 주의
 
 ## 조사 범위 / 한계
 
