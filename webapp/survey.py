@@ -1,4 +1,9 @@
-"""최근 1개월 입찰공고 재조회 (공개목록 Y · 나라장터/모두입찰 우선)."""
+"""최근 1개월 입찰공고 재조회.
+
+수집 우선순위:
+1) 기관·계열·정부 공식 게시판
+2) 모두입찰 등 중계 사이트 (보조)
+"""
 
 from __future__ import annotations
 
@@ -16,6 +21,95 @@ from bs4 import BeautifulSoup
 
 DATA_PATH = Path(__file__).parent / "data" / "results.json"
 RESULTS_MD = Path(__file__).parent.parent / "results.md"
+
+# 중계·보조 수집 채널
+AGGREGATOR_HOSTS = (
+    "modoobid.co.kr",
+    "00data.kr",
+    "narais.com",
+    "bidpro.co.kr",
+    "sankun.com",
+    "jodaln.com",
+)
+
+# 공식 게시판 (우선). fetcher가 있으면 해당 수집기를 먼저 사용.
+OFFICIAL_BOARDS: dict[str, dict[str, Any]] = {
+    "신한금융그룹·신한은행": {
+        "url": "https://www.shinhangroup.com/kr/pr/notice",
+        "fetcher": "shinhan",
+    },
+    "금융감독원": {
+        "url": "https://www.fss.or.kr/fss/bbs/B0000191/list.do?menuNo=200222",
+        "fetcher": "fss",
+        "org_key": "금융감독원",  # 공식 실패/공백 시 보조
+    },
+    "금융위원회": {
+        "url": "https://www.fsc.go.kr",
+        "org_key": "금융위원회",
+    },
+    "한국은행": {
+        "url": "https://www.bok.or.kr",
+        "org_key": "한국은행",
+    },
+    "한국거래소": {
+        "url": "https://www.krx.co.kr",
+        "org_key": "(주)한국거래소",
+    },
+    "금융결제원": {
+        "url": "https://www.kftc.or.kr",
+        "org_key": "금융결제원",
+    },
+    "한국예탁결제원": {
+        "url": "https://www.ksd.or.kr",
+        "org_key": "한국예탁결제원",
+    },
+    "예금보험공사": {
+        "url": "https://www.kdic.or.kr",
+        "org_key": "예금보험공사",
+    },
+    "한국자산관리공사": {
+        "url": "https://www.kamco.or.kr",
+        "org_key": "한국자산관리공사",
+    },
+    "한국주택금융공사": {
+        "url": "https://www.hf.go.kr",
+        "org_key": "한국주택금융공사",
+    },
+    "신용보증기금": {
+        "url": "https://www.kodit.co.kr",
+        "org_key": "신용보증기금",
+    },
+    "기술보증기금": {
+        "url": "https://www.kibo.or.kr",
+        "org_key": "기술보증기금",
+    },
+    "한국해양진흥공사": {
+        "url": "https://www.kobc.or.kr",
+        "org_key": "한국해양진흥공사",
+    },
+    "한국교직원공제회": {
+        "url": "https://www.tp.or.kr",
+        "org_key": "한국교직원공제회",
+    },
+    "IBK기업은행": {
+        "url": "https://www.ibk.co.kr",
+        "org_key": "중소기업은행",
+    },
+    "한국산업은행": {
+        "url": "https://www.kdb.co.kr",
+        "org_key": "한국산업은행",
+    },
+    "한국수출입은행": {
+        "url": "https://www.koreaexim.go.kr",
+        "org_key": "한국수출입은행",
+    },
+}
+
+
+def is_aggregator_url(url: str | None) -> bool:
+    u = (url or "").lower()
+    return any(h in u for h in AGGREGATOR_HOSTS)
+
 
 # 페이지 '목표분야 판별'에 노출하는 기준 키워드와 동일하게 유지
 TARGET_KEYWORDS = [
@@ -153,6 +247,46 @@ def fetch_modoobid(org_name: str) -> list[dict[str, Any]]:
     return items
 
 
+def fetch_fss_notices() -> list[dict[str, Any]]:
+    """금융감독원 공식 공개입찰 게시판."""
+    list_url = "https://www.fss.or.kr/fss/bbs/B0000191/list.do?menuNo=200222"
+    try:
+        resp = requests.get(list_url, headers=HEADERS, timeout=25)
+        resp.raise_for_status()
+    except requests.RequestException as e:
+        return [{"error": str(e), "title": "", "posted": None}]
+
+    soup = BeautifulSoup(resp.text, "lxml")
+    items: list[dict[str, Any]] = []
+    seen: set[str] = set()
+    for tr in soup.find_all("tr"):
+        a = tr.find("a", href=True)
+        if not a:
+            continue
+        text = " ".join(tr.get_text(" ", strip=True).split())
+        m_date = re.search(r"(20\d{2}-\d{2}-\d{2})", text)
+        if not m_date:
+            continue
+        title = " ".join((a.get_text() or "").split()).strip()
+        title = re.sub(r"^\[?입찰\s*재공고\]?\s*", "", title)
+        title = re.sub(r"^[\(\[]?입찰공고[\)\]]?\s*", "", title)
+        title = title.strip()
+        if len(title) < 4:
+            continue
+        href = str(a.get("href") or "").strip()
+        detail = urljoin("https://www.fss.or.kr", href)
+        if detail in seen:
+            continue
+        seen.add(detail)
+        items.append({
+            "title": title[:200],
+            "posted": m_date.group(1),
+            "link": detail,
+            "source": "official",
+        })
+    return items
+
+
 def fetch_shinhan_notices() -> list[dict[str, Any]]:
     """신한금융그룹 PR 공지 API → 상세(boardNo) 링크."""
     api = "https://www.shinhangroup.com/api/v1/pr/notice/list"
@@ -199,8 +333,27 @@ def fetch_shinhan_notices() -> list[dict[str, Any]]:
             "posted": posted,
             "link": link,
             "board_no": board_no,
+            "source": "official",
         })
     return items
+
+
+def merge_notices_prefer_official(
+    official: list[dict[str, Any]],
+    secondary: list[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    """공식 공고를 우선하고, 없는 제목만 보조(모두입찰)로 채움."""
+    merged: list[dict[str, Any]] = []
+    seen: set[str] = set()
+    for n in official + secondary:
+        if n.get("error"):
+            continue
+        key = _title_dedupe_key(str(n.get("title") or ""))
+        if not key or key in seen:
+            continue
+        seen.add(key)
+        merged.append(n)
+    return merged
 
 
 def filter_period(items: list[dict[str, Any]], start: date, end: date) -> list[dict[str, Any]]:
@@ -462,63 +615,109 @@ def refresh_survey() -> dict[str, Any]:
             new_rows.append(row)
             continue
 
-        notices: list[dict[str, Any]] = []
-        shinhan_board = "shinhangroup.com/kr/pr/notice" in str(base.get("link") or "")
-        if shinhan_board or "신한금융" in company:
-            notices = filter_period(fetch_shinhan_notices(), start, end)
+        official_cfg = OFFICIAL_BOARDS.get(company) or {}
+        official_url = str(official_cfg.get("url") or "").strip()
+        base_link = str(base.get("link") or "").strip()
+        if not official_url and base_link and not is_aggregator_url(base_link):
+            official_url = base_link
+
+        org_keys = base.get("org_keys") or [base.get("org_key")]
+        org_keys = [k for k in org_keys if k]
+        if official_cfg.get("org_key") and official_cfg["org_key"] not in org_keys:
+            org_keys.append(official_cfg["org_key"])
+
+        official_notices: list[dict[str, Any]] = []
+        secondary_notices: list[dict[str, Any]] = []
+        channels: list[str] = []
+
+        # 1) 공식·계열·정부 게시판 우선
+        fetcher = official_cfg.get("fetcher")
+        if fetcher == "shinhan" or "신한금융" in company or "shinhangroup.com/kr/pr/notice" in base_link:
+            official_notices = filter_period(fetch_shinhan_notices(), start, end)
+            official_url = official_url or "https://www.shinhangroup.com/kr/pr/notice"
+            channels.append("공식(신한)")
+        elif fetcher == "fss":
+            official_notices = filter_period(fetch_fss_notices(), start, end)
+            channels.append("공식(금감원)")
+        elif base.get("source") == "board" and not is_aggregator_url(base_link):
+            channels.append("공식게시판")
+
+        # 2) 모두입찰 등 중계는 후순위
+        #    - 순수 공식게시판(은행·증권 등 수동 유지)은 중계로 덮지 않음
+        #    - 공식 fetcher hit가 있으면 중계 생략, 없을 때만 보조 수집
+        official_has_target = any(
+            _is_target(str(n.get("title") or "")) for n in official_notices
+        )
+        pure_board = (
+            base.get("source") == "board"
+            and not is_aggregator_url(base_link)
+            and not fetcher
+        )
+        use_secondary = bool(org_keys) and not pure_board and not official_has_target
+
+        if use_secondary:
+            for k in org_keys:
+                secondary_notices.extend(filter_period(fetch_modoobid(k), start, end))
+            if secondary_notices:
+                channels.append("모두입찰(보조)")
+
+        if official_notices or secondary_notices:
+            notices = merge_notices_prefer_official(official_notices, secondary_notices)
             built = build_rows_for_company(base, notices, start, end)
-            # 기관 목록용 기본 링크는 게시판 유지, hit 행은 상세 링크 유지
+            list_link = official_url or (
+                f"https://www.modoobid.co.kr/bid/org/{quote(org_keys[0])}" if org_keys else base_link
+            )
+            channel_note = " · ".join(channels) if channels else "수집"
             for row in built:
+                row["list_link"] = list_link
                 if not row.get("hit"):
-                    row["link"] = "https://www.shinhangroup.com/kr/pr/notice"
-            new_rows.extend(built)
-        elif base.get("source") == "modoobid" or base.get("org_key") or base.get("org_keys"):
-            keys = base.get("org_keys") or [base.get("org_key")]
-            keys = [k for k in keys if k]
-            for k in keys:
-                notices.extend(filter_period(fetch_modoobid(k), start, end))
-            # 중복 제목 제거 (동일 상세 URL 우선)
-            seen: set[str] = set()
-            uniq = []
-            for n in notices:
-                key = n.get("link") or n.get("title", "")
-                if key in seen:
-                    continue
-                seen.add(key)
-                uniq.append(n)
-            notices = uniq
-            built = build_rows_for_company(base, notices, start, end)
-            new_rows.extend(built)
-        else:
-            # 홈페이지 게시판: 네트워크 제약이 많아 기간만 갱신하고 기존 집계 유지 안내
-            row = deepcopy(base)
-            if row.get("hit"):
-                # 기존 hit는 기간 밖이면 공고 없음으로 전환 시도는 불가 → 유지 + 기간 문구
-                ad = _parse_date(row.get("announce_date") or "")
-                if ad and not (start <= ad <= end):
-                    row["hit"] = False
-                    row["title"] = "공고 없음 (총 확인필요)"
-                    row["announce_date"] = "-"
-                    row["deadline"] = "-"
-                    row["budget"] = "-"
-                    row["note"] = (
-                        f"홈페이지 게시판 자동전수 제한. 조회기간 {start}~{end} "
-                        f"(이전 hit 공고일이 기간 외)"
-                    )
+                    row["link"] = list_link
+                    if is_aggregator_url(row.get("link")) and official_url:
+                        row["link"] = official_url
+                # hit 링크가 중계이면 유지하되, 기관 목록은 공식 URL
+                if row.get("hit") and is_aggregator_url(row.get("link")) and official_url:
+                    row["note"] = (row.get("note") or "") + f" · 수집우선: {channel_note}"
+                elif row.get("hit"):
+                    row["note"] = (row.get("note") or "") + f" · 수집우선: {channel_note}"
                 else:
-                    row["note"] = (row.get("note") or "") + f" · 조회기간 {start}~{end}"
-                    enrich_hit_deadline(row)
-            else:
-                # 총 N건 유지하되 기간 문구 갱신
-                m = re.search(r"총\s*(\d+)건", row.get("title") or "")
-                total = m.group(1) if m else "?"
-                if row.get("title", "").startswith("공고 없음"):
-                    row["title"] = f"공고 없음 (총 {total}건)" if total != "?" else row["title"]
+                    row["note"] = (row.get("note") or "") + f" · 수집우선: {channel_note}"
+                if official_url:
+                    row["official_link"] = official_url
+            new_rows.extend(built)
+            continue
+
+        # 공식 자동수집 미연동 게시판: 기존 집계 유지 (중계로 대체하지 않음)
+        row = deepcopy(base)
+        if official_url:
+            row["list_link"] = official_url
+            row["official_link"] = official_url
+            if not row.get("hit"):
+                row["link"] = official_url
+        if row.get("hit"):
+            ad = _parse_date(row.get("announce_date") or "")
+            if ad and not (start <= ad <= end):
+                row["hit"] = False
+                row["title"] = "공고 없음 (총 확인필요)"
+                row["announce_date"] = "-"
+                row["deadline"] = "-"
+                row["budget"] = "-"
                 row["note"] = (
-                    f"홈페이지 게시판(수동전수 기준 유지). "
-                    f"나라장터 자동갱신 대상 아님. 조회기간 {start}~{end}"
+                    f"공식 게시판 자동전수 제한. 조회기간 {start}~{end} "
+                    f"(이전 hit 공고일이 기간 외)"
                 )
-            new_rows.append(row)
+            else:
+                row["note"] = (row.get("note") or "") + f" · 조회기간 {start}~{end} · 수집우선: 공식게시판"
+                enrich_hit_deadline(row)
+        else:
+            m = re.search(r"총\s*(\d+)건", row.get("title") or "")
+            total = m.group(1) if m else "?"
+            if row.get("title", "").startswith("공고 없음"):
+                row["title"] = f"공고 없음 (총 {total}건)" if total != "?" else row["title"]
+            row["note"] = (
+                f"공식 게시판(수동전수 기준 유지). "
+                f"중계사이트 미사용. 조회기간 {start}~{end}"
+            )
+        new_rows.append(row)
 
     data["period_start"] = start.isoformat()
     data["period_end"] = end.isoformat()
