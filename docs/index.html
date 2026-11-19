@@ -133,6 +133,20 @@
       word-break: break-all;
       font-size: 0.85rem;
     }
+    .title-cell {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.45rem;
+    }
+    .site-icon {
+      width: 16px;
+      height: 16px;
+      margin-top: 0.2rem;
+      flex-shrink: 0;
+      border-radius: 3px;
+      background: #eee;
+    }
+    .title-cell a { line-height: 1.4; }
     ul { margin: 0; padding-left: 1.2rem; }
     .links a { margin-right: 1rem; }
     footer {
@@ -202,13 +216,24 @@
               <tr v-for="(row, i) in hits" :key="'hit-' + i">
                 <td>{{ row.company }}</td>
                 <td>
-                  <a
-                    v-if="row.link"
-                    :href="row.link"
-                    target="_blank"
-                    rel="noopener"
-                  >{{ row.title }}</a>
-                  <template v-else>{{ row.title }}</template>
+                  <div class="title-cell">
+                    <img
+                      v-if="siteIcon(row.link)"
+                      class="site-icon"
+                      :src="siteIcon(row.link)"
+                      :alt="siteHost(row.link) || ''"
+                      loading="lazy"
+                      referrerpolicy="no-referrer"
+                      @error="onIconError"
+                    />
+                    <a
+                      v-if="row.link"
+                      :href="row.link"
+                      target="_blank"
+                      rel="noopener"
+                    >{{ row.title }}</a>
+                    <template v-else>{{ row.title }}</template>
+                  </div>
                 </td>
                 <td>{{ row.announce_date || "-" }}</td>
                 <td>{{ displayDeadline(row.deadline) }}</td>
@@ -344,6 +369,28 @@
           return link;
         }
 
+        function siteHost(link) {
+          const raw = String(link || "").trim();
+          if (!raw) return "";
+          if (raw.includes("redirect-shinhan")) return "www.shinhangroup.com";
+          try {
+            const href = raw.startsWith("http") ? raw : new URL(raw, location.href).href;
+            return new URL(href).hostname;
+          } catch {
+            return "";
+          }
+        }
+
+        function siteIcon(link) {
+          const host = siteHost(link);
+          if (!host) return "";
+          return "https://www.google.com/s2/favicons?domain=" + encodeURIComponent(host) + "&sz=32";
+        }
+
+        function onIconError(e) {
+          if (e?.target) e.target.style.visibility = "hidden";
+        }
+
         onMounted(async () => {
           try {
             const res = await fetch("data.json", { cache: "no-store" });
@@ -362,6 +409,9 @@
           asof,
           displayDeadline,
           institutionLink,
+          siteHost,
+          siteIcon,
+          onIconError,
         };
       },
     }).mount("#app");
