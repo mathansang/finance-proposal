@@ -231,11 +231,11 @@
                 <td>{{ row.company }}</td>
                 <td class="url">
                   <a
-                    v-if="row.link"
-                    :href="row.link"
+                    v-if="institutionLink(row)"
+                    :href="institutionLink(row)"
                     target="_blank"
                     rel="noopener"
-                  >{{ row.link }}</a>
+                  >{{ institutionLink(row) }}</a>
                   <template v-else>—</template>
                 </td>
               </tr>
@@ -313,6 +313,18 @@
           return text;
         }
 
+        function institutionLink(row) {
+          const listLink = String(row?.list_link || "").trim();
+          if (listLink) return listLink;
+          const link = String(row?.link || "").trim();
+          if (!link) return "";
+          if (link.includes("redirect-shinhan")) {
+            return "https://www.shinhangroup.com/kr/pr/notice";
+          }
+          // 개별 공고 URL이면 기관 목록(/bid/org/)로 되돌리지 않고 그대로 둠
+          return link;
+        }
+
         onMounted(async () => {
           try {
             const res = await fetch("data.json", { cache: "no-store" });
@@ -330,6 +342,7 @@
           institutions,
           asof,
           displayDeadline,
+          institutionLink,
         };
       },
     }).mount("#app");

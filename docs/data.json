@@ -2,7 +2,7 @@
   "survey_date": "2026-11-19",
   "period_start": "2026-10-19",
   "period_end": "2026-11-19",
-  "last_refresh": "2026-11-19 14:33:24",
+  "last_refresh": "2026-11-19 14:49:15",
   "message": "갱신 완료 (2026-10-19 ~ 2026-11-19)",
   "rows": [
     {
@@ -22,14 +22,15 @@
       "no": "2",
       "company": "신한금융그룹·신한은행",
       "public_list": "Y",
-      "title": "신한금융그룹 비시장성유가증권 공정가치평가 적정성 검토 용역",
+      "title": "신한금융그룹 비시장성유가증권 공정가치평가 적정성 검토 용역 입찰 공고",
       "announce_date": "2026-11-17",
-      "deadline": "확인 불가",
-      "budget": "확인 불가",
-      "note": "그룹 PR 공지사항(https://www.shinhangroup.com/kr/pr/notice)에 입찰공고 다수. 동일 기간 내부회계 AI 자문·ESG Value Index·SEC 법률자문 등도 게시. 은행 ICT사업공시·신한DS 사업공시(ebiz) 별도. 배치 자동전수 미연동. · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19",
-      "link": "https://www.shinhangroup.com/kr/pr/notice",
+      "deadline": "-",
+      "budget": "-",
+      "note": "조회기간 내 공개목록 총 7건 중 목표분야 해당 (2026-10-19~2026-11-19)",
+      "link": "redirect-shinhan.html?boardNo=33538",
       "source": "board",
-      "hit": true
+      "hit": true,
+      "list_link": "https://www.shinhangroup.com/kr/pr/notice"
     },
     {
       "no": "3",
@@ -78,11 +79,27 @@
       "announce_date": "2026-11-16",
       "deadline": "-",
       "budget": "-",
-      "note": "조회기간 내 공개목록 총 52건 중 목표분야 해당 (2026-10-19~2026-11-19)",
-      "link": "https://www.modoobid.co.kr/bid/org/%EC%A4%91%EC%86%8C%EA%B8%B0%EC%97%85%EC%9D%80%ED%96%89",
+      "note": "조회기간 내 공개목록 총 53건 중 목표분야 해당 (2026-10-19~2026-11-19)",
+      "link": "https://www.modoobid.co.kr/bid/2611S01831664000/2026",
       "source": "modoobid",
       "org_key": "중소기업은행",
-      "hit": true
+      "hit": true,
+      "list_link": "https://www.modoobid.co.kr/bid/org/%EC%A4%91%EC%86%8C%EA%B8%B0%EC%97%85%EC%9D%80%ED%96%89"
+    },
+    {
+      "no": "6-1",
+      "company": "IBK기업은행",
+      "public_list": "Y",
+      "title": "여신포트폴리오 체계 개편 및 시스템 재구축을 위한 컨설팅",
+      "announce_date": "2026-11-09",
+      "deadline": "-",
+      "budget": "-",
+      "note": "조회기간 내 공개목록 총 53건 중 목표분야 해당 (2026-10-19~2026-11-19)",
+      "link": "https://www.modoobid.co.kr/bid/2611S01750676001/2026",
+      "source": "modoobid",
+      "org_key": "중소기업은행",
+      "hit": true,
+      "list_link": "https://www.modoobid.co.kr/bid/org/%EC%A4%91%EC%86%8C%EA%B8%B0%EC%97%85%EC%9D%80%ED%96%89"
     },
     {
       "no": "7",
@@ -92,11 +109,12 @@
       "announce_date": "2026-11-02",
       "deadline": "-",
       "budget": "-",
-      "note": "조회기간 내 공개목록 총 25건 중 목표분야 해당 (2026-10-19~2026-11-19)",
-      "link": "https://www.modoobid.co.kr/bid/org/%ED%95%9C%EA%B5%AD%EC%82%B0%EC%97%85%EC%9D%80%ED%96%89",
+      "note": "조회기간 내 공개목록 총 28건 중 목표분야 해당 (2026-10-19~2026-11-19)",
+      "link": "https://www.modoobid.co.kr/bid/2611S01802616000/2026",
       "source": "modoobid",
       "org_key": "한국산업은행",
-      "hit": true
+      "hit": true,
+      "list_link": "https://www.modoobid.co.kr/bid/org/%ED%95%9C%EA%B5%AD%EC%82%B0%EC%97%85%EC%9D%80%ED%96%89"
     },
     {
       "no": "7-1",
@@ -106,25 +124,27 @@
       "announce_date": "2026-10-19",
       "deadline": "-",
       "budget": "-",
-      "note": "조회기간 내 공개목록 총 25건 중 목표분야 해당 (2026-10-19~2026-11-19)",
-      "link": "https://www.modoobid.co.kr/bid/org/%ED%95%9C%EA%B5%AD%EC%82%B0%EC%97%85%EC%9D%80%ED%96%89",
+      "note": "조회기간 내 공개목록 총 28건 중 목표분야 해당 (2026-10-19~2026-11-19)",
+      "link": "https://www.modoobid.co.kr/bid/2610S01777242000/2026",
       "source": "modoobid",
       "org_key": "한국산업은행",
-      "hit": true
+      "hit": true,
+      "list_link": "https://www.modoobid.co.kr/bid/org/%ED%95%9C%EA%B5%AD%EC%82%B0%EC%97%85%EC%9D%80%ED%96%89"
     },
     {
       "no": "8",
       "company": "한국수출입은행",
       "public_list": "Y",
-      "title": "공고 없음 (총 12건)",
+      "title": "공고 없음 (총 13건)",
       "announce_date": "-",
       "deadline": "-",
       "budget": "-",
-      "note": "조회기간 내 공개목록 전수 12건, 목표분야 미해당 (2026-10-19~2026-11-19)",
+      "note": "조회기간 내 공개목록 전수 13건, 목표분야 미해당 (2026-10-19~2026-11-19)",
       "link": "https://www.modoobid.co.kr/bid/org/한국수출입은행",
       "source": "modoobid",
       "org_key": "한국수출입은행",
-      "hit": false
+      "hit": false,
+      "list_link": "https://www.modoobid.co.kr/bid/org/한국수출입은행"
     },
     {
       "no": "9",
@@ -342,7 +362,7 @@
       "announce_date": "2026-10-29",
       "deadline": "2026-11-04 (마감)",
       "budget": "확인 불가",
-      "note": "K-ICS·IFRS9/17 외부검증 · 조회기간 2026-10-16~2026-11-16 · 조회기간 2026-10-16~2026-11-16 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19",
+      "note": "K-ICS·IFRS9/17 외부검증 · 조회기간 2026-10-16~2026-11-16 · 조회기간 2026-10-16~2026-11-16 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19",
       "link": "https://work.00data.kr/projects/R26BK01798197",
       "source": "board",
       "hit": true
@@ -450,35 +470,38 @@
       "link": "https://www.modoobid.co.kr/bid/org/금융감독원",
       "source": "modoobid",
       "org_key": "금융감독원",
-      "hit": false
+      "hit": false,
+      "list_link": "https://www.modoobid.co.kr/bid/org/금융감독원"
     },
     {
       "no": "34",
       "company": "금융위원회",
       "public_list": "Y",
-      "title": "공고 없음 (총 4건)",
+      "title": "공고 없음 (총 8건)",
       "announce_date": "-",
       "deadline": "-",
       "budget": "-",
-      "note": "조회기간 내 공개목록 전수 4건, 목표분야 미해당 (2026-10-19~2026-11-19)",
+      "note": "조회기간 내 공개목록 전수 8건, 목표분야 미해당 (2026-10-19~2026-11-19)",
       "link": "https://www.modoobid.co.kr/bid/org/금융위원회",
       "source": "modoobid",
       "org_key": "금융위원회",
-      "hit": false
+      "hit": false,
+      "list_link": "https://www.modoobid.co.kr/bid/org/금융위원회"
     },
     {
       "no": "35",
       "company": "한국은행",
       "public_list": "Y",
-      "title": "공고 없음 (총 4건)",
+      "title": "공고 없음 (총 5건)",
       "announce_date": "-",
       "deadline": "-",
       "budget": "-",
-      "note": "조회기간 내 공개목록 전수 4건, 목표분야 미해당 (2026-10-19~2026-11-19)",
+      "note": "조회기간 내 공개목록 전수 5건, 목표분야 미해당 (2026-10-19~2026-11-19)",
       "link": "https://www.modoobid.co.kr/bid/org/한국은행",
       "source": "modoobid",
       "org_key": "한국은행",
-      "hit": false
+      "hit": false,
+      "list_link": "https://www.modoobid.co.kr/bid/org/한국은행"
     },
     {
       "no": "36",
@@ -496,7 +519,8 @@
         "(주)한국거래소",
         "(주)한국거래소 서울사옥"
       ],
-      "hit": false
+      "hit": false,
+      "list_link": "https://www.modoobid.co.kr/bid/org/(주)한국거래소"
     },
     {
       "no": "37",
@@ -510,21 +534,23 @@
       "link": "https://www.modoobid.co.kr/bid/org/금융결제원",
       "source": "modoobid",
       "org_key": "금융결제원",
-      "hit": false
+      "hit": false,
+      "list_link": "https://www.modoobid.co.kr/bid/org/금융결제원"
     },
     {
       "no": "38",
       "company": "한국예탁결제원",
       "public_list": "Y",
-      "title": "공고 없음 (총 4건)",
+      "title": "공고 없음 (총 5건)",
       "announce_date": "-",
       "deadline": "-",
       "budget": "-",
-      "note": "조회기간 내 공개목록 전수 4건, 목표분야 미해당 (2026-10-19~2026-11-19)",
+      "note": "조회기간 내 공개목록 전수 5건, 목표분야 미해당 (2026-10-19~2026-11-19)",
       "link": "https://www.modoobid.co.kr/bid/org/한국예탁결제원",
       "source": "modoobid",
       "org_key": "한국예탁결제원",
-      "hit": false
+      "hit": false,
+      "list_link": "https://www.modoobid.co.kr/bid/org/한국예탁결제원"
     },
     {
       "no": "39",
@@ -538,49 +564,68 @@
       "link": "https://www.modoobid.co.kr/bid/org/예금보험공사",
       "source": "modoobid",
       "org_key": "예금보험공사",
-      "hit": false
+      "hit": false,
+      "list_link": "https://www.modoobid.co.kr/bid/org/예금보험공사"
     },
     {
       "no": "40",
       "company": "한국자산관리공사",
       "public_list": "Y",
-      "title": "공고 없음 (총 7건)",
+      "title": "공고 없음 (총 11건)",
       "announce_date": "-",
       "deadline": "-",
       "budget": "-",
-      "note": "조회기간 내 공개목록 전수 7건, 목표분야 미해당 (2026-10-19~2026-11-19)",
+      "note": "조회기간 내 공개목록 전수 11건, 목표분야 미해당 (2026-10-19~2026-11-19)",
       "link": "https://www.modoobid.co.kr/bid/org/한국자산관리공사",
       "source": "modoobid",
       "org_key": "한국자산관리공사",
-      "hit": false
+      "hit": false,
+      "list_link": "https://www.modoobid.co.kr/bid/org/한국자산관리공사"
     },
     {
       "no": "41",
       "company": "한국주택금융공사",
       "public_list": "Y",
-      "title": "공고 없음 (총 0건)",
-      "announce_date": "-",
+      "title": "KHFC MBS 2026년 12월 발행분 신용평가사 선정(재공고)",
+      "announce_date": "2026-11-19",
       "deadline": "-",
       "budget": "-",
-      "note": "조회기간 내 공개목록 전수 0건, 목표분야 미해당 (2026-10-19~2026-11-19)",
-      "link": "https://www.modoobid.co.kr/bid/org/한국주택금융공사",
+      "note": "조회기간 내 공개목록 총 5건 중 목표분야 해당 (2026-10-19~2026-11-19)",
+      "link": "https://www.modoobid.co.kr/bid/2611S01841412000/2026",
       "source": "modoobid",
       "org_key": "한국주택금융공사",
-      "hit": false
+      "hit": true,
+      "list_link": "https://www.modoobid.co.kr/bid/org/한국주택금융공사"
+    },
+    {
+      "no": "41-1",
+      "company": "한국주택금융공사",
+      "public_list": "Y",
+      "title": "KHFC MBS 2026년 12월 발행분 신용평가사 선정",
+      "announce_date": "2026-11-09",
+      "deadline": "-",
+      "budget": "-",
+      "note": "조회기간 내 공개목록 총 5건 중 목표분야 해당 (2026-10-19~2026-11-19)",
+      "link": "https://www.modoobid.co.kr/bid/2611S01818281000/2026",
+      "source": "modoobid",
+      "org_key": "한국주택금융공사",
+      "hit": true,
+      "list_link": "https://www.modoobid.co.kr/bid/org/한국주택금융공사"
     },
     {
       "no": "42",
       "company": "신용보증기금",
       "public_list": "Y",
-      "title": "공고 없음 (총 15건)",
+      "title": "공고 없음 (총 16건)",
       "announce_date": "-",
       "deadline": "-",
       "budget": "-",
-      "note": "조회기간 내 공개목록 전수 15건, 목표분야 미해당 (2026-10-19~2026-11-19)",
+      "note": "조회기간 내 공개목록 전수 16건, 목표분야 미해당 (2026-10-19~2026-11-19)",
       "link": "https://www.modoobid.co.kr/bid/org/신용보증기금",
       "source": "modoobid",
       "org_key": "신용보증기금",
-      "hit": false
+      "hit": false,
+      "list_link": "https://www.modoobid.co.kr/bid/org/신용보증기금"
     },
     {
       "no": "43",
@@ -594,10 +639,26 @@
       "link": "https://www.modoobid.co.kr/bid/org/기술보증기금",
       "source": "modoobid",
       "org_key": "기술보증기금",
-      "hit": false
+      "hit": false,
+      "list_link": "https://www.modoobid.co.kr/bid/org/기술보증기금"
     },
     {
       "no": "44",
+      "company": "한국해양진흥공사",
+      "public_list": "Y",
+      "title": "2026년 금융자산 평가용역",
+      "announce_date": "2026-11-12",
+      "deadline": "-",
+      "budget": "-",
+      "note": "조회기간 내 공개목록 총 3건 중 목표분야 해당 (2026-10-19~2026-11-19)",
+      "link": "https://www.modoobid.co.kr/bid/2611S01823665000/2026",
+      "source": "modoobid",
+      "org_key": "한국해양진흥공사",
+      "hit": true,
+      "list_link": "https://www.modoobid.co.kr/bid/org/%ED%95%9C%EA%B5%AD%ED%95%B4%EC%96%91%EC%A7%84%ED%9D%A5%EA%B3%B5%EC%82%AC"
+    },
+    {
+      "no": "44-1",
       "company": "한국해양진흥공사",
       "public_list": "Y",
       "title": "신규 신용평가시스템 구축 용역",
@@ -605,13 +666,14 @@
       "deadline": "-",
       "budget": "-",
       "note": "조회기간 내 공개목록 총 3건 중 목표분야 해당 (2026-10-19~2026-11-19)",
-      "link": "https://www.modoobid.co.kr/bid/org/%ED%95%9C%EA%B5%AD%ED%95%B4%EC%96%91%EC%A7%84%ED%9D%A5%EA%B3%B5%EC%82%AC",
+      "link": "https://www.modoobid.co.kr/bid/2611S01783501000/2026",
       "source": "modoobid",
       "org_key": "한국해양진흥공사",
-      "hit": true
+      "hit": true,
+      "list_link": "https://www.modoobid.co.kr/bid/org/%ED%95%9C%EA%B5%AD%ED%95%B4%EC%96%91%EC%A7%84%ED%9D%A5%EA%B3%B5%EC%82%AC"
     },
     {
-      "no": "44-1",
+      "no": "44-2",
       "company": "한국해양진흥공사",
       "public_list": "Y",
       "title": "2026년 금융자산 평가용역",
@@ -619,10 +681,11 @@
       "deadline": "-",
       "budget": "-",
       "note": "조회기간 내 공개목록 총 3건 중 목표분야 해당 (2026-10-19~2026-11-19)",
-      "link": "https://www.modoobid.co.kr/bid/org/%ED%95%9C%EA%B5%AD%ED%95%B4%EC%96%91%EC%A7%84%ED%9D%A5%EA%B3%B5%EC%82%AC",
+      "link": "https://www.modoobid.co.kr/bid/2611S01804424000/2026",
       "source": "modoobid",
       "org_key": "한국해양진흥공사",
-      "hit": true
+      "hit": true,
+      "list_link": "https://www.modoobid.co.kr/bid/org/%ED%95%9C%EA%B5%AD%ED%95%B4%EC%96%91%EC%A7%84%ED%9D%A5%EA%B3%B5%EC%82%AC"
     },
     {
       "no": "45",
@@ -636,13 +699,14 @@
       "link": "https://www.modoobid.co.kr/bid/org/한국교직원공제회",
       "source": "modoobid",
       "org_key": "한국교직원공제회",
-      "hit": false
+      "hit": false,
+      "list_link": "https://www.modoobid.co.kr/bid/org/한국교직원공제회"
     }
   ],
   "archives": [
     "금융권_신규프로젝트_공고현황_20261119.md",
     "금융권_신규프로젝트_공고현황_20261116.md"
   ],
-  "page_updated_at": "2026-11-19 14:42:11 KST",
-  "page_version": "d2c6e36-20261119144211"
+  "page_updated_at": "2026-11-19 14:49:15 KST",
+  "page_version": "6837e66-20261119144915"
 }

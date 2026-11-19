@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <title>신한금융그룹 공지 이동</title>
+</head>
+<body>
+  <p>신한금융그룹 공지 상세로 이동 중…</p>
+  <form id="go" method="post" action="https://www.shinhangroup.com/kr/pr/notice/detail">
+    <input type="hidden" name="boardNo" id="boardNo" value="" />
+    <input type="hidden" name="searchText" value="" />
+  </form>
+  <script>
+    const boardNo = new URLSearchParams(location.search).get("boardNo");
+    if (!boardNo) {
+      document.body.textContent = "boardNo 가 없습니다.";
+    } else {
+      document.getElementById("boardNo").value = boardNo;
+      document.getElementById("go").submit();
+    }
+  </script>
+</body>
+</html>
