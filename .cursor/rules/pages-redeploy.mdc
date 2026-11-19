@@ -1,0 +1,24 @@
+---
+description: 수정 후 GitHub Pages 항상 재배포 (commit + push)
+alwaysApply: true
+---
+
+# Pages 재배포
+
+`proposal` 저장소에서 코드·데이터·템플릿·문서를 **수정하면 작업 끝에 항상 재배포**한다.
+
+1. 필요 시 `python -m batch --skip-fetch` 또는 수집 포함 `python -m batch` 로 `docs/` 갱신
+2. 관련 변경을 커밋한다 (사용자에게 커밋 여부를 다시 묻지 않음)
+3. `origin` 으로 **push** 하여 GitHub Pages가 반영되게 한다
+
+선호 명령:
+
+```powershell
+python -m batch --push
+# 또는 문서만 재생성
+python -m batch --skip-fetch --push
+```
+
+소스만 바뀌고 배치 산출물이 없으면 `git add` → `commit` → `git push origin HEAD` 로 배포한다.
+
+이 규칙은 전역 “커밋은 요청 시에만”보다 **이 저장소에서는 우선**한다.
