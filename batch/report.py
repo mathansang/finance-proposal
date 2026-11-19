@@ -18,6 +18,7 @@ BATCH_DIR = Path(__file__).resolve().parent
 DOCS_DIR = PROPOSAL_ROOT / "docs"
 ARCHIVE_DIR = DOCS_DIR / "archive"
 TEMPLATE_INDEX = BATCH_DIR / "templates" / "index.html"
+TEMPLATE_SHINHAN_REDIRECT = BATCH_DIR / "templates" / "redirect-shinhan.html"
 
 
 def _ymd(survey_date: str | None) -> str:
@@ -314,6 +315,10 @@ def write_docs(data: dict[str, Any], docs_dir: Path | None = None) -> dict[str, 
 
     index_path = root / "index.html"
     shutil.copyfile(TEMPLATE_INDEX, index_path)
+
+    shinhan_redirect = root / "redirect-shinhan.html"
+    if TEMPLATE_SHINHAN_REDIRECT.is_file():
+        shutil.copyfile(TEMPLATE_SHINHAN_REDIRECT, shinhan_redirect)
 
     data_path = root / "data.json"
     payload = build_pages_payload(data, archive_names)

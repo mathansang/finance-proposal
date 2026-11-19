@@ -9,7 +9,7 @@ from copy import deepcopy
 from datetime import date, datetime, timedelta
 from pathlib import Path
 from typing import Any
-from urllib.parse import quote
+from urllib.parse import quote, urljoin
 
 import requests
 from bs4 import BeautifulSoup
@@ -104,53 +104,95 @@ def _is_target(title: str) -> bool:
 
 
 def fetch_modoobid(org_name: str) -> list[dict[str, Any]]:
-    url = f"https://www.modoobid.co.kr/bid/org/{quote(org_name)}"
+    """기관 공개목록에서 개별 공고 상세 URL(/bid/…)을 추출."""
+    list_url = f"https://www.modoobid.co.kr/bid/org/{quote(org_name)}"
     try:
-        resp = requests.get(url, headers=HEADERS, timeout=25)
+        resp = requests.get(list_url, headers=HEADERS, timeout=25)
         resp.raise_for_status()
     except requests.RequestException as e:
         return [{"error": str(e), "title": "", "posted": None}]
 
     soup = BeautifulSoup(resp.text, "lxml")
-    text = soup.get_text("\n", strip=True)
     items: list[dict[str, Any]] = []
+    seen: set[str] = set()
 
-    # 패턴: 유형 제목 ... 게시 YYYY-MM-DD
-    chunks = re.split(r"\n(?=(?:물품|용역|공사)\s)", text)
-    for chunk in chunks:
-        if "게시 20" not in chunk:
+    for a in soup.find_all("a", href=True):
+        href = str(a.get("href") or "").strip()
+        if not re.match(r"^/bid/[A-Za-z0-9]+/\d{4}", href):
             continue
-        posted = _parse_date(chunk[chunk.find("게시") : chunk.find("게시") + 20])
-        lines = [ln.strip() for ln in chunk.splitlines() if ln.strip()]
-        if not lines:
+        detail = urljoin("https://www.modoobid.co.kr", href)
+        if detail in seen:
             continue
-        title_line = lines[0]
-        title = re.sub(r"^(물품|용역|공사)\s+", "", title_line).strip()
-        # 지역·카테고리 꼬리 제거 시도
-        title = re.split(r"\s+전국|\s+서울|\s+부산|\s+추정", title)[0].strip()
+        text = " ".join((a.get_text() or "").split())
+        m_title = re.search(r"(?:물품|용역|공사)\s+(.+?)(?:\s+전국|\s+서울|\s+부산|\s+게시\s+20)", text)
+        if m_title:
+            title = m_title.group(1).strip()
+        else:
+            title = re.sub(r"^(물품|용역|공사)\s+", "", text).strip()
+            title = re.split(r"\s+전국|\s+서울|\s+부산|\s+게시\s+20", title)[0].strip()
         if len(title) < 4:
             continue
+        posted = None
+        m_date = re.search(r"게시\s+(20\d{2}-\d{2}-\d{2})", text)
+        if m_date:
+            posted = m_date.group(1)
+        seen.add(detail)
         items.append({
-            "title": title,
-            "posted": posted.isoformat() if posted else None,
-            "link": url,
+            "title": title[:200],
+            "posted": posted,
+            "link": detail,
         })
 
-    # 보조: 게시 날짜만 나열된 경우 대비 정규식 스캔
-    if not items:
-        for m in re.finditer(
-            r"(물품|용역|공사)\s+(.+?)\s+게시\s+(20\d{2}-\d{2}-\d{2})",
-            text,
-            re.DOTALL,
-        ):
-            title = re.sub(r"\s+", " ", m.group(2)).strip()
-            title = re.split(r"\s+전국|\s+서울", title)[0].strip()
-            items.append({
-                "title": title[:120],
-                "posted": m.group(3),
-                "link": url,
-            })
+    return items
 
+
+def fetch_shinhan_notices() -> list[dict[str, Any]]:
+    """신한금융그룹 PR 공지 API → 상세(boardNo) 링크."""
+    api = "https://www.shinhangroup.com/api/v1/pr/notice/list"
+    headers = {
+        **HEADERS,
+        "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+        "Accept": "application/json, text/plain, */*",
+        "Origin": "https://www.shinhangroup.com",
+        "Referer": "https://www.shinhangroup.com/kr/pr/notice",
+    }
+    items: list[dict[str, Any]] = []
+    try:
+        resp = requests.post(
+            api,
+            headers=headers,
+            data={
+                "pageType": "FRONT",
+                "lang": "KOR",
+                "current": 1,
+                "searchText": "",
+            },
+            timeout=25,
+        )
+        resp.raise_for_status()
+        payload = resp.json()
+    except (requests.RequestException, ValueError) as e:
+        return [{"error": str(e), "title": "", "posted": None}]
+
+    rows = ((payload or {}).get("result") or {}).get("list") or []
+    for row in rows:
+        title = str(row.get("title") or "").strip()
+        board_no = row.get("boardNo")
+        if not title or board_no is None:
+            continue
+        # 사이트 상세는 POST only → Pages 리다이렉트로 연결
+        link = f"redirect-shinhan.html?boardNo={board_no}"
+        base_dt = str(row.get("baseDt") or "").replace(".", "-")
+        posted = None
+        d = _parse_date(base_dt)
+        if d:
+            posted = d.isoformat()
+        items.append({
+            "title": re.sub(r"^\[입찰안내\]\s*", "", title).strip(),
+            "posted": posted,
+            "link": link,
+            "board_no": board_no,
+        })
     return items
 
 
@@ -194,6 +236,7 @@ def build_rows_for_company(
             row["deadline"] = "-"
             row["budget"] = "-"
             row["note"] = f"조회기간 내 공개목록 총 {total}건 중 목표분야 해당 ({period_note})"
+            row["list_link"] = base.get("link") or ""
             row["link"] = h.get("link") or base.get("link") or ""
             row["hit"] = True
             rows.append(row)
@@ -202,6 +245,7 @@ def build_rows_for_company(
     row = deepcopy(base)
     row["no"] = str(base["no"]).split("-")[0]
     row["hit"] = False
+    row["list_link"] = base.get("link") or ""
     if base.get("public_list") == "N":
         row["title"] = ""
         row["note"] = ""
@@ -251,19 +295,28 @@ def refresh_survey() -> dict[str, Any]:
             continue
 
         notices: list[dict[str, Any]] = []
-        if base.get("source") == "modoobid" or base.get("org_key") or base.get("org_keys"):
+        shinhan_board = "shinhangroup.com/kr/pr/notice" in str(base.get("link") or "")
+        if shinhan_board or "신한금융" in company:
+            notices = filter_period(fetch_shinhan_notices(), start, end)
+            built = build_rows_for_company(base, notices, start, end)
+            # 기관 목록용 기본 링크는 게시판 유지, hit 행은 상세 링크 유지
+            for row in built:
+                if not row.get("hit"):
+                    row["link"] = "https://www.shinhangroup.com/kr/pr/notice"
+            new_rows.extend(built)
+        elif base.get("source") == "modoobid" or base.get("org_key") or base.get("org_keys"):
             keys = base.get("org_keys") or [base.get("org_key")]
             keys = [k for k in keys if k]
             for k in keys:
                 notices.extend(filter_period(fetch_modoobid(k), start, end))
-            # 중복 제목 제거
-            seen = set()
+            # 중복 제목 제거 (동일 상세 URL 우선)
+            seen: set[str] = set()
             uniq = []
             for n in notices:
-                t = n.get("title", "")
-                if t in seen:
+                key = n.get("link") or n.get("title", "")
+                if key in seen:
                     continue
-                seen.add(t)
+                seen.add(key)
                 uniq.append(n)
             notices = uniq
             built = build_rows_for_company(base, notices, start, end)
