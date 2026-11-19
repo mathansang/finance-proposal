@@ -49,9 +49,10 @@ def publish_docs(
             "detail": f"git 저장소가 아닙니다: {root}",
         }
 
-    # Pages 소스 + 배치가 함께 갱신하는 데이터
+    # Pages 산출물 + Vue 템플릿 + 배치가 갱신하는 데이터
     paths = [
         "docs",
+        "batch/templates",
         "results.md",
         "webapp/data/results.json",
     ]

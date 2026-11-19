@@ -36,7 +36,9 @@ python -m batch --push
 
 | 경로 | 설명 |
 |------|------|
-| `docs/index.html` | Pages 홈 (요약·hit 표·아카이브) |
+| `batch/templates/index.html` | Vue CDN 템플릿 (UI) |
+| `docs/index.html` | 템플릿 복사본 (Pages 홈) |
+| `docs/data.json` | 조사 데이터 (Vue가 fetch) |
 | `docs/latest.md` | 최신 보고서 |
 | `docs/archive/금융권_신규프로젝트_공고현황_YYYYMMDD.md` | 일자별 아카이브 |
 

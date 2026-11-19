@@ -1,17 +1,21 @@
-"""survey JSON → prompt.md §9 형식 MD + GitHub Pages용 정적 HTML."""
+"""survey JSON → prompt.md §9 형식 MD + Pages용 data.json (Vue 템플릿 분리)."""
 
 from __future__ import annotations
 
 import html
+import json
 import re
+import shutil
 from datetime import date
 from pathlib import Path
 from typing import Any
 
 
 PROPOSAL_ROOT = Path(__file__).resolve().parent.parent
+BATCH_DIR = Path(__file__).resolve().parent
 DOCS_DIR = PROPOSAL_ROOT / "docs"
 ARCHIVE_DIR = DOCS_DIR / "archive"
+TEMPLATE_INDEX = BATCH_DIR / "templates" / "index.html"
 
 
 def _ymd(survey_date: str | None) -> str:
@@ -228,198 +232,21 @@ def build_markdown(data: dict[str, Any]) -> str:
     return "\n".join(lines)
 
 
-def build_index_html(data: dict[str, Any], archive_names: list[str]) -> str:
-    rows = data.get("rows") or []
-    hits = _hits(rows)
-    survey_date = html.escape(str(data.get("survey_date") or "-"))
-    period_start = html.escape(str(data.get("period_start") or "-"))
-    period_end = html.escape(str(data.get("period_end") or "-"))
-    last_refresh = html.escape(str(data.get("last_refresh") or "-"))
-
-    hit_rows = []
-    if hits:
-        for r in hits:
-            link = r.get("link") or ""
-            title = html.escape(str(r.get("title") or ""))
-            company = html.escape(str(r.get("company") or ""))
-            posted = html.escape(str(r.get("announce_date") or "-"))
-            deadline = html.escape(_display_deadline(r.get("deadline")))
-            if link:
-                title_cell = f'<a href="{html.escape(link)}" target="_blank" rel="noopener">{title}</a>'
-            else:
-                title_cell = title
-            hit_rows.append(
-                f"<tr><td>{company}</td><td>{title_cell}</td>"
-                f"<td>{posted}</td><td>{deadline}</td></tr>"
-            )
-    else:
-        hit_rows.append(
-            '<tr><td colspan="4">목표분야 자동탐지 공고 없음</td></tr>'
-        )
-
-    institution_rows = []
-    for i, r in enumerate(_unique_institutions(rows), start=1):
-        company = html.escape(str(r.get("company") or ""))
-        link = (r.get("link") or "").strip()
-        if link:
-            safe_link = html.escape(link)
-            link_cell = (
-                f'<a href="{safe_link}" target="_blank" rel="noopener">{safe_link}</a>'
-            )
-        else:
-            link_cell = "—"
-        institution_rows.append(
-            f"<tr><td>{i}</td><td>{company}</td><td class=\"url\">{link_cell}</td></tr>"
-        )
-
-    archive_items = []
-    for name in archive_names:
-        safe = html.escape(name)
-        archive_items.append(f'<li><a href="archive/{safe}">{safe}</a></li>')
-    if not archive_items:
-        archive_items.append("<li>(아카이브 없음)</li>")
-
-    return f"""<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>금융권 신규프로젝트 공고현황</title>
-  <style>
-    :root {{
-      --bg: #f7f5f1;
-      --ink: #1a1a1a;
-      --muted: #5c5c5c;
-      --line: #d8d2c8;
-      --accent: #0b5fff;
-      --card: #ffffff;
-    }}
-    * {{ box-sizing: border-box; }}
-    body {{
-      margin: 0;
-      font-family: "Pretendard", "Noto Sans KR", "Malgun Gothic", sans-serif;
-      background: linear-gradient(180deg, #efebe3 0%, var(--bg) 40%);
-      color: var(--ink);
-      line-height: 1.55;
-    }}
-    main {{
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 2.5rem 1.25rem 4rem;
-    }}
-    h1 {{
-      font-size: clamp(1.6rem, 3vw, 2.1rem);
-      margin: 0 0 0.4rem;
-      letter-spacing: -0.02em;
-    }}
-    .meta {{ color: var(--muted); font-size: 0.95rem; margin-bottom: 1.5rem; }}
-    .stats {{
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      margin-bottom: 1.75rem;
-    }}
-    .stat {{
-      background: var(--card);
-      border: 1px solid var(--line);
-      padding: 0.85rem 1.1rem;
-      min-width: 8rem;
-    }}
-    .stat strong {{ display: block; font-size: 1.4rem; }}
-    .stat span {{ color: var(--muted); font-size: 0.85rem; }}
-    section {{
-      background: var(--card);
-      border: 1px solid var(--line);
-      padding: 1.25rem 1.35rem;
-      margin-bottom: 1.25rem;
-    }}
-    h2 {{
-      margin: 0 0 0.85rem;
-      font-size: 1.15rem;
-    }}
-    .table-wrap {{ overflow-x: auto; }}
-    table {{
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.92rem;
-    }}
-    th, td {{
-      border-bottom: 1px solid var(--line);
-      text-align: left;
-      padding: 0.55rem 0.4rem;
-      vertical-align: top;
-    }}
-    th {{ color: var(--muted); font-weight: 600; }}
-    a {{ color: var(--accent); }}
-    td.url a {{
-      word-break: break-all;
-      font-size: 0.85rem;
-    }}
-    ul {{ margin: 0; padding-left: 1.2rem; }}
-    .links a {{ margin-right: 1rem; }}
-    footer {{
-      color: var(--muted);
-      font-size: 0.85rem;
-      margin-top: 1.5rem;
-    }}
-  </style>
-</head>
-<body>
-  <main>
-    <h1>금융권 신규프로젝트 공고현황</h1>
-    <p class="meta">
-      조사 기준일 {survey_date} · 조회기간 {period_start} ~ {period_end}<br />
-      자동갱신 {last_refresh}
-    </p>
-    <div class="stats">
-      <div class="stat"><strong>{len(hits)}</strong><span>목표분야 hit</span></div>
-      <div class="stat"><strong>{_companies(rows)}</strong><span>조사 기관</span></div>
-    </div>
-    <section>
-      <h2>목표분야 해당 공고</h2>
-      <div class="table-wrap">
-      <table>
-        <thead><tr><th>기관</th><th>사업명</th><th>공고일</th><th>마감일</th></tr></thead>
-        <tbody>
-          {"".join(hit_rows)}
-        </tbody>
-      </table>
-      </div>
-    </section>
-    <section>
-      <h2>조사 기관 전체 목록</h2>
-      <div class="table-wrap">
-      <table>
-        <thead><tr><th>번호</th><th>기관</th><th>조사 링크</th></tr></thead>
-        <tbody>
-          {"".join(institution_rows)}
-        </tbody>
-      </table>
-      </div>
-    </section>
-    <section>
-      <h2>문서</h2>
-      <p class="links">
-        <a href="latest.md">최신 보고서 (Markdown)</a>
-        <a href="archive/">아카이브 폴더</a>
-      </p>
-      <h2>아카이브</h2>
-      <ul>
-        {"".join(archive_items)}
-      </ul>
-    </section>
-    <footer>
-      자동수집 결과입니다. 예산·마감·참가요건은 공식 원문으로 재확인하세요.
-      신용리스크 중심 사업은 키워드 필터로만 제외됩니다.
-    </footer>
-  </main>
-</body>
-</html>
-"""
+def build_pages_payload(data: dict[str, Any], archive_names: list[str]) -> dict[str, Any]:
+    """Vue가 fetch하는 data.json 본문."""
+    return {
+        "survey_date": data.get("survey_date"),
+        "period_start": data.get("period_start"),
+        "period_end": data.get("period_end"),
+        "last_refresh": data.get("last_refresh"),
+        "message": data.get("message"),
+        "rows": data.get("rows") or [],
+        "archives": archive_names,
+    }
 
 
 def write_docs(data: dict[str, Any], docs_dir: Path | None = None) -> dict[str, Path]:
-    """MD/HTML을 docs/에 기록하고 생성된 경로를 반환."""
+    """MD + data.json 기록, Vue 템플릿을 docs/index.html 로 복사."""
     root = docs_dir or DOCS_DIR
     archive = root / "archive"
     archive.mkdir(parents=True, exist_ok=True)
@@ -434,16 +261,24 @@ def write_docs(data: dict[str, Any], docs_dir: Path | None = None) -> dict[str, 
     latest_path = root / "latest.md"
     latest_path.write_text(md_text, encoding="utf-8")
 
-    # 기존 아카이브 목록 (최신순)
     archive_names = sorted(
         (p.name for p in archive.glob("금융권_신규프로젝트_공고현황_*.md")),
         reverse=True,
     )
 
-    index_path = root / "index.html"
-    index_path.write_text(build_index_html(data, archive_names), encoding="utf-8")
+    if not TEMPLATE_INDEX.is_file():
+        raise FileNotFoundError(f"Vue 템플릿 없음: {TEMPLATE_INDEX}")
 
-    # GitHub Pages가 디렉터리 링크를 열 때 빈 안내가 보이도록
+    index_path = root / "index.html"
+    shutil.copyfile(TEMPLATE_INDEX, index_path)
+
+    data_path = root / "data.json"
+    payload = build_pages_payload(data, archive_names)
+    data_path.write_text(
+        json.dumps(payload, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8",
+    )
+
     archive_index = archive / "index.html"
     items = "\n".join(
         f'<li><a href="{html.escape(n)}">{html.escape(n)}</a></li>' for n in archive_names
@@ -464,5 +299,6 @@ def write_docs(data: dict[str, Any], docs_dir: Path | None = None) -> dict[str, 
         "archive": archive_path,
         "latest": latest_path,
         "index": index_path,
+        "data": data_path,
         "archive_index": archive_index,
     }

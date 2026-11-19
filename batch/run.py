@@ -69,6 +69,7 @@ def main(argv: list[str] | None = None) -> int:
     print(f"[batch] 보고서: {paths['archive']}")
     print(f"[batch] latest:  {paths['latest']}")
     print(f"[batch] index:   {paths['index']}")
+    print(f"[batch] data:    {paths['data']}")
 
     if args.push or args.commit:
         result = publish_docs(
