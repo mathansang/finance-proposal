@@ -90,10 +90,9 @@ def build_markdown(data: dict[str, Any]) -> str:
         "|---|---|",
         f"| 조사 기준일 | {survey_date} |",
         f"| 조사 대상 기관 수 | {n_companies} |",
-        f"| 공개목록 조회 가능(Y) | {n_public} |",
         "| 검색 방식 | 모두입찰(modoobid) 공개목록 + 기존 홈페이지 게시판 집계 유지 |",
         f"| 목표분야 hit 공고 수 | **{len(hits)}** |",
-        f"| 공개목록 내 목표분야 미해당(공고 없음) | {n_closed_public} |",
+        f"| 목표분야 미해당(공고 없음 표기) | {n_closed_public} |",
         "| 신용리스크 제외 | 키워드 필터로 순수 신용 중심 제목 제외 (상세 원문 검증은 별도) |",
         "",
         "### 핵심 결론",
@@ -156,35 +155,33 @@ def build_markdown(data: dict[str, Any]) -> str:
             "",
             "## 9.4 조사 기관 전체 목록",
             "",
-            "| 번호 | 기관 | 공개목록 | 조사 링크 |",
-            "|---:|---|:---:|---|",
+            "| 번호 | 기관 | 조사 링크 |",
+            "|---:|---|---|",
         ]
     )
 
     for i, r in enumerate(_unique_institutions(rows), start=1):
-        link = r.get("link") or ""
-        link_cell = f"[조사 링크]({link})" if link else "확인 불가"
-        lines.append(
-            f"| {i} | {r.get('company', '')} | {r.get('public_list', '')} | {link_cell} |"
-        )
+        link = (r.get("link") or "").strip()
+        link_cell = f"[{link}]({link})" if link else "—"
+        lines.append(f"| {i} | {r.get('company', '')} | {link_cell} |")
 
     lines.extend(
         [
             "",
             "### 기관별 조회 결과 상세",
             "",
-            "| 번호 | 기관 | 공개목록 | 사업명/결과 | 공고일 | 마감일 | 비고 | 링크 |",
-            "|---:|---|:---:|---|---|---|---|---|",
+            "| 번호 | 기관 | 사업명/결과 | 공고일 | 마감일 | 비고 | 링크 |",
+            "|---:|---|---|---|---|---|---|",
         ]
     )
 
     for r in rows:
-        link = r.get("link") or ""
-        link_cell = f"[링크]({link})" if link else ""
-        title = r.get("title") or ("(공개목록 N)" if r.get("public_list") == "N" else "")
+        link = (r.get("link") or "").strip()
+        link_cell = f"[{link}]({link})" if link else "—"
+        title = r.get("title") or "—"
         deadline = _display_deadline(r.get("deadline"))
         lines.append(
-            f"| {r.get('no', '')} | {r.get('company', '')} | {r.get('public_list', '')} | "
+            f"| {r.get('no', '')} | {r.get('company', '')} | "
             f"{title} | {r.get('announce_date', '-')} | {deadline} | "
             f"{r.get('note', '')} | {link_cell} |"
         )
@@ -219,7 +216,8 @@ def build_markdown(data: dict[str, Any]) -> str:
             "1. 본 배치는 나라장터 API·기관 로그인 게시판 전수를 수행하지 않습니다.",
             "2. 모두입찰 공개목록 및 기존 수동 집계를 기준으로 하며, 제목 키워드로 목표분야를 판별합니다.",
             "3. 예산·마감·입찰방식·참가요건·RFP는 원문 확인 없이 추정하지 않습니다.",
-            "4. 공개목록이 N인 기관은 사업명·내용을 공란으로 둡니다.",
+            "4. 로그인·회원 전용 게시판만 있는 기관은 자동전수하지 못했으며, "
+            "링크가 기관 홈페이지 수준이면 입찰목록 URL을 아직 확보하지 못한 것입니다.",
             "5. 신용리스크 중심 사업은 제목 키워드 필터로만 제외하며, 혼합형 사업은 원문 재검토가 필요합니다.",
             "",
             f"**검색 한계 명시:** 조사 기준일 {survey_date}, 조회기간 {period_start}~{period_end}, "
@@ -263,18 +261,16 @@ def build_index_html(data: dict[str, Any], archive_names: list[str]) -> str:
     institution_rows = []
     for i, r in enumerate(_unique_institutions(rows), start=1):
         company = html.escape(str(r.get("company") or ""))
-        public_list = html.escape(str(r.get("public_list") or "-"))
-        link = r.get("link") or ""
+        link = (r.get("link") or "").strip()
         if link:
+            safe_link = html.escape(link)
             link_cell = (
-                f'<a href="{html.escape(link)}" target="_blank" rel="noopener">'
-                f"조사 링크</a>"
+                f'<a href="{safe_link}" target="_blank" rel="noopener">{safe_link}</a>'
             )
         else:
-            link_cell = "확인 불가"
+            link_cell = "—"
         institution_rows.append(
-            f"<tr><td>{i}</td><td>{company}</td><td>{public_list}</td>"
-            f"<td>{link_cell}</td></tr>"
+            f"<tr><td>{i}</td><td>{company}</td><td class=\"url\">{link_cell}</td></tr>"
         )
 
     archive_items = []
@@ -356,6 +352,10 @@ def build_index_html(data: dict[str, Any], archive_names: list[str]) -> str:
     }}
     th {{ color: var(--muted); font-weight: 600; }}
     a {{ color: var(--accent); }}
+    td.url a {{
+      word-break: break-all;
+      font-size: 0.85rem;
+    }}
     ul {{ margin: 0; padding-left: 1.2rem; }}
     .links a {{ margin-right: 1rem; }}
     footer {{
@@ -375,7 +375,6 @@ def build_index_html(data: dict[str, Any], archive_names: list[str]) -> str:
     <div class="stats">
       <div class="stat"><strong>{len(hits)}</strong><span>목표분야 hit</span></div>
       <div class="stat"><strong>{_companies(rows)}</strong><span>조사 기관</span></div>
-      <div class="stat"><strong>{len(_public_y(rows))}</strong><span>공개목록 Y</span></div>
     </div>
     <section>
       <h2>목표분야 해당 공고</h2>
@@ -392,7 +391,7 @@ def build_index_html(data: dict[str, Any], archive_names: list[str]) -> str:
       <h2>조사 기관 전체 목록</h2>
       <div class="table-wrap">
       <table>
-        <thead><tr><th>번호</th><th>기관</th><th>공개목록</th><th>조사 링크</th></tr></thead>
+        <thead><tr><th>번호</th><th>기관</th><th>조사 링크</th></tr></thead>
         <tbody>
           {"".join(institution_rows)}
         </tbody>
