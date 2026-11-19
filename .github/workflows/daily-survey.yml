@@ -3,8 +3,8 @@ name: daily-survey
 
 on:
   schedule:
-    # GitHub cron 기본은 UTC. timezone으로 한국 시각 고정.
-    - cron: "0 1 * * *"
+    # 임시 테스트: 16:10 KST (확인 후 01:00으로 되돌릴 것)
+    - cron: "10 16 * * *"
       timezone: Asia/Seoul
   workflow_dispatch: # Actions 탭에서 수동 실행
 
