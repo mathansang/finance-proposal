@@ -19,7 +19,7 @@ RESULTS_MD = Path(__file__).parent.parent / "results.md"
 
 # 페이지 '목표분야 판별'에 노출하는 기준 키워드와 동일하게 유지
 TARGET_KEYWORDS = [
-    "시장리스크", "FRTB", "ALM", "K-ICS", "KICS", "IFRS",
+    "시장리스크", "FRTB", "ALM", "K-ICS", "KICS", "IFRS", "RMS",
     "헤지회계", "위험회피", "FVO", "파생", "공정가치", "가격평가",
     "산금채", "자기자본비율",
     "신용리스크", "신용평가", "IRB", "PD", "LGD", "EAD",
@@ -28,7 +28,7 @@ TARGET_KEYWORDS = [
 
 # UI 표기용 (검색 동의어 KICS·스트레스 테스트 공백형은 숨김)
 TARGET_KEYWORDS_DISPLAY = [
-    "시장리스크", "FRTB", "ALM", "K-ICS", "IFRS",
+    "시장리스크", "FRTB", "ALM", "K-ICS", "IFRS", "RMS",
     "헤지회계", "위험회피", "FVO", "파생", "공정가치", "가격평가",
     "산금채", "자기자본비율",
     "신용리스크", "신용평가", "IRB", "PD", "LGD", "EAD",
