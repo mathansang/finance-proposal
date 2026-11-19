@@ -24,8 +24,17 @@ def _ymd(survey_date: str | None) -> str:
     return date.today().strftime("%Y%m%d")
 
 
+def _announce_sort_key(value: Any) -> tuple[int, int, int]:
+    text = str(value or "")
+    m = re.search(r"(20\d{2})[-./](\d{1,2})[-./](\d{1,2})", text)
+    if not m:
+        return (0, 0, 0)
+    return (int(m.group(1)), int(m.group(2)), int(m.group(3)))
+
+
 def _hits(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
-    return [r for r in rows if r.get("hit")]
+    hits = [r for r in rows if r.get("hit")]
+    return sorted(hits, key=lambda r: _announce_sort_key(r.get("announce_date")), reverse=True)
 
 
 def _public_y(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
