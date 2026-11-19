@@ -224,10 +224,7 @@
           공고 제목에 아래 키워드가 포함되면 hit로 표시합니다.
           (원문 과업·예산·참가요건은 추정하지 않음)
         </p>
-        <div class="kw">
-          시장리스크·FRTB·ALM·K-ICS·IFRS·헤지회계·위험회피·FVO·파생·공정가치·가격평가·산금채·자기자본비율,
-          신용리스크·신용평가·IRB·PD/LGD/EAD·부도율·여신포트폴리오·스트레스테스트 등
-        </div>
+        <div class="kw">{{ (payload.target_keywords || []).join(" · ") }}</div>
       </section>
 
       <section>
