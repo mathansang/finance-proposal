@@ -354,6 +354,16 @@
         function displayDeadline(value) {
           let text = String(value || "").trim();
           text = text.replace(/^개찰\s*/, "").replace(/\s*\(마감\)\s*$/, "").trim();
+          const m = text.match(/(20\d{2})[-./](\d{1,2})[-./](\d{1,2})/);
+          if (m) {
+            return (
+              m[1] +
+              "-" +
+              String(m[2]).padStart(2, "0") +
+              "-" +
+              String(m[3]).padStart(2, "0")
+            );
+          }
           if (!text || text === "-") return "확인 불가";
           return text;
         }
