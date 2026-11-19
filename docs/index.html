@@ -352,7 +352,8 @@
         });
 
         function displayDeadline(value) {
-          const text = String(value || "").trim();
+          let text = String(value || "").trim();
+          text = text.replace(/^개찰\s*/, "").replace(/\s*\(마감\)\s*$/, "").trim();
           if (!text || text === "-") return "확인 불가";
           return text;
         }
