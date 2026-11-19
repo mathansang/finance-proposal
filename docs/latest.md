@@ -48,7 +48,7 @@
 | 번호 | 기관 | 조사 링크 |
 |---:|---|---|
 | 1 | KB금융그룹·KB국민은행 | [https://omoney.kbstar.com/quics?page=C018592](https://omoney.kbstar.com/quics?page=C018592) |
-| 2 | 신한금융그룹·신한은행 | [https://www.shinhan.com](https://www.shinhan.com) |
+| 2 | 신한금융그룹·신한은행 | [https://www.shinhands.co.kr/insight/business-notice](https://www.shinhands.co.kr/insight/business-notice) |
 | 3 | 하나금융그룹·하나은행 | [https://banking.kebhana.com/cont/news/news01/index.jsp](https://banking.kebhana.com/cont/news/news01/index.jsp) |
 | 4 | 우리금융그룹·우리은행 | [https://www.woorifis.com/kor/company/announceList](https://www.woorifis.com/kor/company/announceList) |
 | 5 | NH농협금융·NH농협은행 | [https://www.nonghyup.com/ecenter/bid/bidList.do](https://www.nonghyup.com/ecenter/bid/bidList.do) |
@@ -98,7 +98,7 @@
 | 번호 | 기관 | 사업명/결과 | 공고일 | 마감일 | 비고 | 링크 |
 |---:|---|---|---|---|---|---|
 | 1 | KB금융그룹·KB국민은행 | 공고 없음 (총 33건) | - | 확인 불가 | 홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-16~2026-11-16 | [https://omoney.kbstar.com/quics?page=C018592](https://omoney.kbstar.com/quics?page=C018592) |
-| 2 | 신한금융그룹·신한은행 | — | - | 확인 불가 |  | [https://www.shinhan.com](https://www.shinhan.com) |
+| 2 | 신한금융그룹·신한은행 | 공고 있음 (자동전수 미연동 · ICT사업공시/신한DS 확인) | - | 확인 불가 | 신한은행 홈페이지 ICT사업공시 게시판에 입찰공고 게시(예: 2026-11-17 ICT 기술표준 관리체계, 2026-11-18 마이데이터 GW라이선스 재입찰). 그룹 IT는 신한DS 사업공시·전자구매(ebiz) 병행. 배치 자동수집 대상에 미포함되어 수동 확인 필요. | [https://www.shinhands.co.kr/insight/business-notice](https://www.shinhands.co.kr/insight/business-notice) |
 | 3 | 하나금융그룹·하나은행 | 공고 없음 (총 16건) | - | 확인 불가 | 홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-16~2026-11-16 | [https://banking.kebhana.com/cont/news/news01/index.jsp](https://banking.kebhana.com/cont/news/news01/index.jsp) |
 | 4 | 우리금융그룹·우리은행 | 공고 없음 (총 7건) | - | 확인 불가 | 홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-16~2026-11-16 | [https://www.woorifis.com/kor/company/announceList](https://www.woorifis.com/kor/company/announceList) |
 | 5 | NH농협금융·NH농협은행 | 공고 없음 (총 59건) | - | 확인 불가 | 홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-16~2026-11-16 | [https://www.nonghyup.com/ecenter/bid/bidList.do](https://www.nonghyup.com/ecenter/bid/bidList.do) |
