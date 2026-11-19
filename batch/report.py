@@ -6,9 +6,11 @@ import html
 import json
 import re
 import shutil
-from datetime import date
+import subprocess
+from datetime import date, datetime
 from pathlib import Path
 from typing import Any
+from zoneinfo import ZoneInfo
 
 
 PROPOSAL_ROOT = Path(__file__).resolve().parent.parent
@@ -241,8 +243,39 @@ def build_markdown(data: dict[str, Any]) -> str:
     return "\n".join(lines)
 
 
+def _git_short_sha(repo: Path | None = None) -> str:
+    root = repo or PROPOSAL_ROOT
+    try:
+        r = subprocess.run(
+            ["git", "rev-parse", "--short", "HEAD"],
+            cwd=str(root),
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+            errors="replace",
+            check=False,
+        )
+        sha = (r.stdout or "").strip()
+        return sha if r.returncode == 0 and sha else "unknown"
+    except OSError:
+        return "unknown"
+
+
+def _page_build_meta(repo: Path | None = None) -> dict[str, str]:
+    """배포 확인용: 페이지 생성 시각 + git 버전."""
+    now = datetime.now(ZoneInfo("Asia/Seoul"))
+    updated = now.strftime("%Y-%m-%d %H:%M:%S KST")
+    sha = _git_short_sha(repo)
+    stamp = now.strftime("%Y%m%d%H%M%S")
+    return {
+        "page_updated_at": updated,
+        "page_version": f"{sha}-{stamp}",
+    }
+
+
 def build_pages_payload(data: dict[str, Any], archive_names: list[str]) -> dict[str, Any]:
     """Vue가 fetch하는 data.json 본문."""
+    meta = _page_build_meta()
     return {
         "survey_date": data.get("survey_date"),
         "period_start": data.get("period_start"),
@@ -251,6 +284,7 @@ def build_pages_payload(data: dict[str, Any], archive_names: list[str]) -> dict[
         "message": data.get("message"),
         "rows": data.get("rows") or [],
         "archives": archive_names,
+        **meta,
     }
 
 
