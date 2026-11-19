@@ -105,6 +105,17 @@
       color: var(--muted);
       font-size: 0.85rem;
     }
+    .method ol {
+      margin: 0;
+      padding-left: 1.2rem;
+    }
+    .method li { margin-bottom: 0.45rem; }
+    .method li:last-child { margin-bottom: 0; }
+    .method .kw {
+      color: var(--ink);
+      font-size: 0.88rem;
+      line-height: 1.45;
+    }
     .table-wrap { overflow-x: auto; }
     table {
       width: 100%;
@@ -206,6 +217,43 @@
             </tbody>
           </table>
         </div>
+      </section>
+
+      <section class="method">
+        <h2>검색 방법론</h2>
+        <ol>
+          <li>
+            <strong>조회기간</strong> —
+            조사 기준일 기준 최근 1개월
+            ({{ payload.period_start || "-" }} ~ {{ payload.period_end || "-" }})
+            공고만 대상으로 합니다.
+          </li>
+          <li>
+            <strong>수집 채널</strong> —
+            공개목록이 있는 기관은 모두입찰(modoobid) 기관 페이지를 전수하고,
+            신한금융그룹은 PR 공지 API를 조회합니다.
+            그 외 홈페이지·로그인형 게시판은 자동전수 제한으로 기존 조사 링크·집계를 유지합니다.
+          </li>
+          <li>
+            <strong>목표분야 판별</strong> —
+            공고 제목에 아래 키워드가 포함되면 hit로 표시합니다.
+            (원문 과업·예산·참가요건은 추정하지 않음)
+            <div class="kw">
+              시장리스크·FRTB·ALM·K-ICS·IFRS·헤지회계·위험회피·FVO·파생·공정가치·가격평가·산금채·자기자본비율,
+              신용리스크·신용평가·IRB·PD/LGD/EAD·부도율·여신포트폴리오·스트레스테스트 등
+            </div>
+          </li>
+          <li>
+            <strong>링크</strong> —
+            hit 사업명은 가능하면 개별 공고 상세 URL로 연결합니다.
+            (모두입찰 상세, 신한 공지는 boardNo 상세 리다이렉트)
+          </li>
+          <li>
+            <strong>한계</strong> —
+            나라장터 API·회원 전용 구매시스템 전수는 하지 않으며,
+            제목 키워드 매칭이므로 관련 공고 누락·오탐 가능성이 있습니다.
+          </li>
+        </ol>
       </section>
 
       <section>
