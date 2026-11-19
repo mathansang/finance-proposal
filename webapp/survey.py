@@ -217,6 +217,110 @@ def filter_period(items: list[dict[str, Any]], start: date, end: date) -> list[d
     return out
 
 
+def _fmt_ymd(y: str | int, m: str | int, d: str | int) -> str:
+    return f"{int(y):04d}-{int(m):02d}-{int(d):02d}"
+
+
+def _fmt_deadline(ymd: str, hour: str | int | None = None, minute: str | int | None = None) -> str:
+    if hour is None or hour == "":
+        return ymd
+    return f"{ymd} {int(hour):02d}:{int(minute or 0):02d}"
+
+
+def parse_deadline_from_text(text: str) -> str | None:
+    """상세 본문/텍스트에서 마감·제출기한·개찰일 추출."""
+    if not text:
+        return None
+    compact = re.sub(r"[ \t]+", " ", text)
+
+    # 모두입찰 라벨: 마감일 2026-11-26 / 마감일 —
+    m = re.search(r"마감일\s*(?:\||:|：)?\s*([^\n|]{1,24})", compact)
+    if m:
+        raw = m.group(1).strip()
+        d = _parse_date(raw)
+        if d:
+            return d.isoformat()
+
+    # 한글 제출기한/마감: 2026년 11월 30일(월) 17시
+    m = re.search(
+        r"(?:제출기한|접수\s*마감|입찰\s*마감|투찰\s*마감|제안서\s*제출|마감일(?:시)?|마감)\s*[:：]?\s*"
+        r"(20\d{2})\s*년\s*(\d{1,2})\s*월\s*(\d{1,2})\s*일"
+        r"(?:\s*\([^)]*\))?\s*(?:(\d{1,2})\s*시(?:\s*(\d{1,2})\s*분)?)?",
+        compact,
+    )
+    if m:
+        return _fmt_deadline(_fmt_ymd(m.group(1), m.group(2), m.group(3)), m.group(4), m.group(5))
+
+    # 점/하이픈 + 시각: 마감 2026.11.04.(수) 18:00
+    m = re.search(
+        r"(?:제출기한|접수\s*마감|입찰\s*마감|투찰\s*마감|마감일(?:시)?|마감)\s*[:：]?\s*"
+        r"(20\d{2})[./-](\d{1,2})[./-](\d{1,2})"
+        r"(?:[.\s]*\([^)]*\))?\s*(?:(\d{1,2}):(\d{2}))?",
+        compact,
+    )
+    if m:
+        return _fmt_deadline(_fmt_ymd(m.group(1), m.group(2), m.group(3)), m.group(4), m.group(5))
+
+    # 개찰일 대용 (마감 비공개일 때)
+    m = re.search(r"개찰일\s*(?:\||:|：)?\s*(20\d{2}[-./]\d{1,2}[-./]\d{1,2})", compact)
+    if m:
+        d = _parse_date(m.group(1))
+        if d:
+            return f"개찰 {d.isoformat()}"
+
+    return None
+
+
+def fetch_deadline_for_notice(notice_or_row: dict[str, Any]) -> str | None:
+    """hit 상세 페이지에서 마감일 조회."""
+    link = str(notice_or_row.get("link") or "").strip()
+    board_no = notice_or_row.get("board_no")
+    if board_no is None:
+        m = re.search(r"boardNo=(\d+)", link)
+        if m:
+            board_no = m.group(1)
+
+    try:
+        if board_no is not None or "redirect-shinhan" in link or "shinhangroup.com" in link:
+            if board_no is None:
+                return None
+            resp = requests.post(
+                "https://www.shinhangroup.com/kr/pr/notice/detail",
+                headers={
+                    **HEADERS,
+                    "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+                    "Referer": "https://www.shinhangroup.com/kr/pr/notice",
+                    "Origin": "https://www.shinhangroup.com",
+                },
+                data={"boardNo": str(board_no), "searchText": ""},
+                timeout=25,
+            )
+            resp.raise_for_status()
+            text = BeautifulSoup(resp.text, "lxml").get_text("\n", strip=True)
+            return parse_deadline_from_text(text)
+
+        if not link.startswith("http"):
+            return None
+
+        resp = requests.get(link, headers=HEADERS, timeout=25)
+        resp.raise_for_status()
+        text = BeautifulSoup(resp.text, "lxml").get_text("\n", strip=True)
+        return parse_deadline_from_text(text)
+    except (requests.RequestException, ValueError):
+        return None
+
+
+def enrich_hit_deadline(row: dict[str, Any]) -> dict[str, Any]:
+    """기존 마감이 비어 있으면 상세에서 채움."""
+    cur = str(row.get("deadline") or "").strip()
+    if cur and cur not in ("-", "확인 불가"):
+        return row
+    found = fetch_deadline_for_notice(row)
+    if found:
+        row["deadline"] = found
+    return row
+
+
 def build_rows_for_company(
     base: dict[str, Any],
     notices: list[dict[str, Any]],
@@ -240,12 +344,15 @@ def build_rows_for_company(
                 row["no"] = f"{base['no'].split('-')[0]}-{i}"
             row["title"] = h["title"]
             row["announce_date"] = h.get("posted") or "-"
-            row["deadline"] = "-"
+            row["deadline"] = h.get("deadline") or "-"
             row["budget"] = "-"
             row["note"] = f"조회기간 내 공개목록 총 {total}건 중 목표분야 해당 ({period_note})"
             row["list_link"] = base.get("link") or ""
             row["link"] = h.get("link") or base.get("link") or ""
+            if h.get("board_no") is not None:
+                row["board_no"] = h.get("board_no")
             row["hit"] = True
+            enrich_hit_deadline(row)
             rows.append(row)
         return rows
 
@@ -346,6 +453,7 @@ def refresh_survey() -> dict[str, Any]:
                     )
                 else:
                     row["note"] = (row.get("note") or "") + f" · 조회기간 {start}~{end}"
+                    enrich_hit_deadline(row)
             else:
                 # 총 N건 유지하되 기간 문구 갱신
                 m = re.search(r"총\s*(\d+)건", row.get("title") or "")
