@@ -277,13 +277,22 @@
       return order.map((c) => byCompany[c]);
     }
 
+    function announceSortKey(value) {
+      const m = String(value || "").match(/(20\d{2})[-./](\d{1,2})[-./](\d{1,2})/);
+      if (!m) return 0;
+      return Date.UTC(Number(m[1]), Number(m[2]) - 1, Number(m[3]));
+    }
+
     createApp({
       setup() {
         const payload = ref(null);
         const error = ref(null);
 
         const hits = computed(() =>
-          (payload.value?.rows || []).filter((r) => r.hit)
+          (payload.value?.rows || [])
+            .filter((r) => r.hit)
+            .slice()
+            .sort((a, b) => announceSortKey(b.announce_date) - announceSortKey(a.announce_date))
         );
         const institutions = computed(() =>
           uniqueInstitutions(payload.value?.rows || [])
