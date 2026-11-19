@@ -3,7 +3,7 @@
   "period_end": "2026-11-19",
   "survey_date": "2026-11-19",
   "status": "idle",
-  "last_refresh": "2026-11-19 15:46:37",
+  "last_refresh": "2026-11-19 15:55:12",
   "message": "갱신 완료 (2026-10-19 ~ 2026-11-19)",
   "rows": [
     {
@@ -155,12 +155,12 @@
       "deadline": "-",
       "budget": "-",
       "note": "조회기간 내 공개목록 전수 11건, 목표분야 미해당 (2026-10-19~2026-11-19) · 수집우선: 모두입찰(보조)",
-      "link": "https://www.koreaexim.go.kr",
+      "link": "https://www.alio.go.kr/item/itemOrganList.do?apbaId=C0223&reportFormRootNo=B1030",
       "source": "modoobid",
       "org_key": "한국수출입은행",
       "hit": false,
-      "list_link": "https://www.koreaexim.go.kr",
-      "official_link": "https://www.koreaexim.go.kr"
+      "list_link": "https://www.alio.go.kr/item/itemOrganList.do?apbaId=C0223&reportFormRootNo=B1030",
+      "official_link": "https://www.alio.go.kr/item/itemOrganList.do?apbaId=C0223&reportFormRootNo=B1030"
     },
     {
       "no": "9",
@@ -276,9 +276,11 @@
       "deadline": "-",
       "budget": "-",
       "note": "",
-      "link": "https://www.kiwoom.com",
+      "link": "https://www3.kiwoom.com/h/ir/info/VAnnounceInfoView",
       "source": null,
-      "hit": false
+      "hit": false,
+      "list_link": "https://www3.kiwoom.com/h/ir/info/VAnnounceInfoView",
+      "official_link": "https://www3.kiwoom.com/h/ir/info/VAnnounceInfoView"
     },
     {
       "no": "17",
@@ -364,11 +366,11 @@
       "deadline": "-",
       "budget": "-",
       "note": "공식 게시판(수동전수 기준 유지). 중계사이트 미사용. 조회기간 2026-10-19~2026-11-19",
-      "link": "https://www.shinhanlife.co.kr/hp/cdhi0010.do",
+      "link": "https://www.shinhanlife.co.kr/hp/cdhi0510.do",
       "source": "board",
       "hit": false,
-      "list_link": "https://www.shinhanlife.co.kr/hp/cdhi0010.do",
-      "official_link": "https://www.shinhanlife.co.kr/hp/cdhi0010.do"
+      "list_link": "https://www.shinhanlife.co.kr/hp/cdhi0510.do",
+      "official_link": "https://www.shinhanlife.co.kr/hp/cdhi0510.do"
     },
     {
       "no": "23",
@@ -379,9 +381,11 @@
       "deadline": "-",
       "budget": "-",
       "note": "",
-      "link": "https://www.kblife.co.kr",
+      "link": "https://www.kblife.co.kr/customer-common/managementPublicNoticeOffice.do",
       "source": null,
-      "hit": false
+      "hit": false,
+      "list_link": "https://www.kblife.co.kr/customer-common/managementPublicNoticeOffice.do",
+      "official_link": "https://www.kblife.co.kr/customer-common/managementPublicNoticeOffice.do"
     },
     {
       "no": "24",
@@ -392,9 +396,11 @@
       "deadline": "-",
       "budget": "-",
       "note": "",
-      "link": "https://www.imlife.co.kr",
+      "link": "https://www.imlifeins.co.kr",
       "source": null,
-      "hit": false
+      "hit": false,
+      "list_link": "https://www.imlifeins.co.kr",
+      "official_link": "https://www.imlifeins.co.kr"
     },
     {
       "no": "25",
@@ -404,14 +410,14 @@
       "announce_date": "2026-10-29",
       "deadline": "2026-11-04",
       "budget": "확인 불가",
-      "note": "K-ICS·IFRS9/17 외부검증 · 조회기간 2026-10-16~2026-11-16 · 조회기간 2026-10-16~2026-11-16 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 수집우선: 공식게시판 · 조회기간 2026-10-19~2026-11-19 · 수집우선: 공식게시판 · 조회기간 2026-10-19~2026-11-19 · 수집우선: 공식게시판 · 조회기간 2026-10-19~2026-11-19 · 수집우선: 공식게시판 · 조회기간 2026-10-19~2026-11-19 · 수집우선: 공식게시판",
+      "note": "K-ICS·IFRS9/17 외부검증 · 조회기간 2026-10-16~2026-11-16 · 조회기간 2026-10-16~2026-11-16 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 수집우선: 공식게시판 · 조회기간 2026-10-19~2026-11-19 · 수집우선: 공식게시판 · 조회기간 2026-10-19~2026-11-19 · 수집우선: 공식게시판 · 조회기간 2026-10-19~2026-11-19 · 수집우선: 공식게시판 · 조회기간 2026-10-19~2026-11-19 · 수집우선: 공식게시판 · 조회기간 2026-10-19~2026-11-19 · 수집우선: 공식게시판",
       "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01798197&bidPbancOrd=000",
       "source": "board",
       "hit": true,
       "bid_no": "R26BK01798197",
       "bid_ord": "000",
-      "list_link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01798197&bidPbancOrd=000",
-      "official_link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01798197&bidPbancOrd=000"
+      "list_link": "https://www.ibki.co.kr/process/HP_PBANO_MGMT_PEL_LIST?pbano_sctn_cod=0006",
+      "official_link": "https://www.ibki.co.kr/process/HP_PBANO_MGMT_PEL_LIST?pbano_sctn_cod=0006"
     },
     {
       "no": "26",
@@ -452,9 +458,11 @@
       "deadline": "-",
       "budget": "-",
       "note": "",
-      "link": "https://www.hi.co.kr",
+      "link": "https://www.hi.co.kr/serviceAction.do?menuId=200000",
       "source": null,
-      "hit": false
+      "hit": false,
+      "list_link": "https://www.hi.co.kr/serviceAction.do?menuId=200000",
+      "official_link": "https://www.hi.co.kr/serviceAction.do?menuId=200000"
     },
     {
       "no": "29",
@@ -480,9 +488,11 @@
       "deadline": "-",
       "budget": "-",
       "note": "",
-      "link": "https://www.meritzfire.com",
+      "link": "https://www.meritzfire.com/footer/notice.do",
       "source": null,
-      "hit": false
+      "hit": false,
+      "list_link": "https://www.meritzfire.com/footer/notice.do",
+      "official_link": "https://www.meritzfire.com/footer/notice.do"
     },
     {
       "no": "31",
@@ -508,11 +518,11 @@
       "deadline": "-",
       "budget": "-",
       "note": "공식 게시판(수동전수 기준 유지). 중계사이트 미사용. 조회기간 2026-10-19~2026-11-19",
-      "link": "https://www.lotteins.co.kr",
+      "link": "https://www.lotteins.co.kr/web/C/D/cdl0220.jsp",
       "source": "board",
       "hit": false,
-      "list_link": "https://www.lotteins.co.kr",
-      "official_link": "https://www.lotteins.co.kr"
+      "list_link": "https://www.lotteins.co.kr/web/C/D/cdl0220.jsp",
+      "official_link": "https://www.lotteins.co.kr/web/C/D/cdl0220.jsp"
     },
     {
       "no": "33",
@@ -539,12 +549,12 @@
       "deadline": "-",
       "budget": "-",
       "note": "조회기간 내 공개목록 전수 4건, 목표분야 미해당 (2026-10-19~2026-11-19) · 수집우선: 모두입찰(보조)",
-      "link": "https://www.fsc.go.kr/no010101",
+      "link": "https://www.fsc.go.kr/no010104",
       "source": "modoobid",
       "org_key": "금융위원회",
       "hit": false,
-      "list_link": "https://www.fsc.go.kr/no010101",
-      "official_link": "https://www.fsc.go.kr/no010101"
+      "list_link": "https://www.fsc.go.kr/no010104",
+      "official_link": "https://www.fsc.go.kr/no010104"
     },
     {
       "no": "35",
@@ -719,12 +729,12 @@
       "deadline": "-",
       "budget": "-",
       "note": "조회기간 내 공개목록 전수 3건, 목표분야 미해당 (2026-10-19~2026-11-19) · 수집우선: 모두입찰(보조)",
-      "link": "https://www.tp.or.kr",
+      "link": "https://www.ktcu.or.kr/IN/IPW-INE-100201",
       "source": "modoobid",
       "org_key": "한국교직원공제회",
       "hit": false,
-      "list_link": "https://www.tp.or.kr",
-      "official_link": "https://www.tp.or.kr"
+      "list_link": "https://www.ktcu.or.kr/IN/IPW-INE-100201",
+      "official_link": "https://www.ktcu.or.kr/IN/IPW-INE-100201"
     }
   ]
 }
