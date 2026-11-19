@@ -2,7 +2,7 @@
 
 **조사 기준일:** 2026-11-19  
 **조회기간:** 2026-10-19 ~ 2026-11-19  
-**자동갱신:** 2026-11-19 15:45:56  
+**자동갱신:** 2026-11-19 15:46:37  
 
 > 본 문서는 공개목록 자동수집(모두입찰·기관 공개목록) 결과입니다. 예산·마감·RFP·참가요건은 원문 확인 전 **확인 불가**로 표시합니다.
 
@@ -89,7 +89,7 @@
 | 35 | 한국은행 | [https://www.bok.or.kr/portal/bbs/B0000235/list.do?menuNo=200786](https://www.bok.or.kr/portal/bbs/B0000235/list.do?menuNo=200786) |
 | 36 | 한국거래소 | [https://info.krx.co.kr/board/KRX06040000T3/bbs](https://info.krx.co.kr/board/KRX06040000T3/bbs) |
 | 37 | 금융결제원 | [https://www.kftc.or.kr/notice/bidAll](https://www.kftc.or.kr/notice/bidAll) |
-| 38 | 한국예탁결제원 | [https://www.alio.go.kr/item/itemOrganList.do?apbaId=C0131&reportFormRootNo=B1030](https://www.alio.go.kr/item/itemOrganList.do?apbaId=C0131&reportFormRootNo=B1030) |
+| 38 | 한국예탁결제원 | [https://www.ksd.or.kr/ko/about-ksd/ksd-news/bid-notice](https://www.ksd.or.kr/ko/about-ksd/ksd-news/bid-notice) |
 | 39 | 예금보험공사 | [https://www.kdic.or.kr/di/pbcr/selectPbcrNtcList.do](https://www.kdic.or.kr/di/pbcr/selectPbcrNtcList.do) |
 | 40 | 한국자산관리공사 | [https://www.kamco.or.kr/portal/bbs/list.do?mId=0701020000&ptIdx=480](https://www.kamco.or.kr/portal/bbs/list.do?mId=0701020000&ptIdx=480) |
 | 41 | 한국주택금융공사 | [https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01841412&bidPbancOrd=000](https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01841412&bidPbancOrd=000) |
@@ -128,7 +128,7 @@
 | 22 | 신한라이프 | 공시실 입찰공시 (이메일 RFP 병행) | - | 확인 불가 | 공식 게시판(수동전수 기준 유지). 중계사이트 미사용. 조회기간 2026-10-19~2026-11-19 | [https://www.shinhanlife.co.kr/hp/cdhi0010.do](https://www.shinhanlife.co.kr/hp/cdhi0010.do) |
 | 23 | KB라이프 | — | - | 확인 불가 |  | [https://www.kblife.co.kr](https://www.kblife.co.kr) |
 | 24 | iM라이프 | — | - | 확인 불가 |  | [https://www.imlife.co.kr](https://www.imlife.co.kr) |
-| 25 | IBK연금보험 | K-ICS검증 용역계약 (재입찰) | 2026-10-29 | 2026-11-04 | K-ICS·IFRS9/17 외부검증 · 조회기간 2026-10-16~2026-11-16 · 조회기간 2026-10-16~2026-11-16 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 수집우선: 공식게시판 · 조회기간 2026-10-19~2026-11-19 · 수집우선: 공식게시판 · 조회기간 2026-10-19~2026-11-19 · 수집우선: 공식게시판 · 조회기간 2026-10-19~2026-11-19 · 수집우선: 공식게시판 | [https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01798197&bidPbancOrd=000](https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01798197&bidPbancOrd=000) |
+| 25 | IBK연금보험 | K-ICS검증 용역계약 (재입찰) | 2026-10-29 | 2026-11-04 | K-ICS·IFRS9/17 외부검증 · 조회기간 2026-10-16~2026-11-16 · 조회기간 2026-10-16~2026-11-16 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 수집우선: 공식게시판 · 조회기간 2026-10-19~2026-11-19 · 수집우선: 공식게시판 · 조회기간 2026-10-19~2026-11-19 · 수집우선: 공식게시판 · 조회기간 2026-10-19~2026-11-19 · 수집우선: 공식게시판 · 조회기간 2026-10-19~2026-11-19 · 수집우선: 공식게시판 | [https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01798197&bidPbancOrd=000](https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01798197&bidPbancOrd=000) |
 | 26 | 삼성화재 | 공고 없음 (총 0건) | - | 확인 불가 | 공식 게시판(수동전수 기준 유지). 중계사이트 미사용. 조회기간 2026-10-19~2026-11-19 | [https://www.samsungfire.com/vh/page/VH.HPIF0100.do](https://www.samsungfire.com/vh/page/VH.HPIF0100.do) |
 | 27 | DB손해보험 | 공고 없음 (총 2건) | - | 확인 불가 | 공식 게시판(수동전수 기준 유지). 중계사이트 미사용. 조회기간 2026-10-19~2026-11-19 | [https://idbins.com/pc/bizxpress/contentTemplet/cmy/pr/an/list.jsp](https://idbins.com/pc/bizxpress/contentTemplet/cmy/pr/an/list.jsp) |
 | 28 | 현대해상 | — | - | 확인 불가 |  | [https://www.hi.co.kr](https://www.hi.co.kr) |
@@ -141,7 +141,7 @@
 | 35 | 한국은행 | 공고 없음 (총 4건) | - | 확인 불가 | 조회기간 내 공개목록 전수 4건, 목표분야 미해당 (2026-10-19~2026-11-19) · 수집우선: 모두입찰(보조) | [https://www.bok.or.kr/portal/bbs/B0000235/list.do?menuNo=200786](https://www.bok.or.kr/portal/bbs/B0000235/list.do?menuNo=200786) |
 | 36 | 한국거래소 | 공고 없음 (총 4건) | - | 확인 불가 | 조회기간 내 공개목록 전수 4건, 목표분야 미해당 (2026-10-19~2026-11-19) · 수집우선: 모두입찰(보조) | [https://info.krx.co.kr/board/KRX06040000T3/bbs](https://info.krx.co.kr/board/KRX06040000T3/bbs) |
 | 37 | 금융결제원 | 공고 없음 (총 3건) | - | 확인 불가 | 조회기간 내 공개목록 전수 3건, 목표분야 미해당 (2026-10-19~2026-11-19) · 수집우선: 모두입찰(보조) | [https://www.kftc.or.kr/notice/bidAll](https://www.kftc.or.kr/notice/bidAll) |
-| 38 | 한국예탁결제원 | 공고 없음 (총 4건) | - | 확인 불가 | 조회기간 내 공개목록 전수 4건, 목표분야 미해당 (2026-10-19~2026-11-19) · 수집우선: 모두입찰(보조) | [https://www.alio.go.kr/item/itemOrganList.do?apbaId=C0131&reportFormRootNo=B1030](https://www.alio.go.kr/item/itemOrganList.do?apbaId=C0131&reportFormRootNo=B1030) |
+| 38 | 한국예탁결제원 | 공고 없음 (총 4건) | - | 확인 불가 | 조회기간 내 공개목록 전수 4건, 목표분야 미해당 (2026-10-19~2026-11-19) · 수집우선: 모두입찰(보조) | [https://www.ksd.or.kr/ko/about-ksd/ksd-news/bid-notice](https://www.ksd.or.kr/ko/about-ksd/ksd-news/bid-notice) |
 | 39 | 예금보험공사 | 공고 없음 (총 3건) | - | 확인 불가 | 조회기간 내 공개목록 전수 3건, 목표분야 미해당 (2026-10-19~2026-11-19) · 수집우선: 모두입찰(보조) | [https://www.kdic.or.kr/di/pbcr/selectPbcrNtcList.do](https://www.kdic.or.kr/di/pbcr/selectPbcrNtcList.do) |
 | 40 | 한국자산관리공사 | 공고 없음 (총 6건) | - | 확인 불가 | 조회기간 내 공개목록 전수 6건, 목표분야 미해당 (2026-10-19~2026-11-19) · 수집우선: 모두입찰(보조) | [https://www.kamco.or.kr/portal/bbs/list.do?mId=0701020000&ptIdx=480](https://www.kamco.or.kr/portal/bbs/list.do?mId=0701020000&ptIdx=480) |
 | 41 | 한국주택금융공사 | KHFC MBS 2026년 12월 발행분 신용평가사 선정(재공고) | 2026-11-19 | 2026-11-26 | 조회기간 내 공개목록 총 3건 중 목표분야 해당 (2026-10-19~2026-11-19) · 수집우선: 모두입찰(보조) · 나라장터(원문) | [https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01841412&bidPbancOrd=000](https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01841412&bidPbancOrd=000) |
