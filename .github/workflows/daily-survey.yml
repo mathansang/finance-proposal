@@ -3,8 +3,8 @@ name: daily-survey
 
 on:
   schedule:
-    # 임시 테스트: 16:25 KST = 07:25 UTC (timezone 키 없이 UTC cron)
-    - cron: "25 7 * * *"
+    # 매일 01:00 KST = 16:00 UTC (전날)
+    - cron: "0 16 * * *"
   workflow_dispatch: # Actions 탭에서 수동 실행 (로그인 필요)
 
 permissions:
