@@ -65,7 +65,7 @@ OFFICIAL_BOARDS: dict[str, dict[str, Any]] = {
         "prefer_g2b": True,
     },
     "한국예탁결제원": {
-        "url": "https://www.alio.go.kr/item/itemOrganList.do?apbaId=C0131&reportFormRootNo=B1030",
+        "url": "https://www.ksd.or.kr/ko/about-ksd/ksd-news/bid-notice",
         "org_key": "한국예탁결제원",
         "prefer_g2b": True,
     },
