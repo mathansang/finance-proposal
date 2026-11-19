@@ -21,9 +21,12 @@ TARGET_KEYWORDS = [
     "K-ICS", "KICS", "IFRS", "헤지회계", "위험회피", "FVO",
     "시장리스크", "FRTB", "ALM", "파생", "공정가치", "가격평가",
     "금융자산 평가", "산금채", "자기자본비율", "시장위험",
+    # 신용리스크
+    "신용리스크", "신용위험", "신용평가", "신용등급", "신용 RWA", "신용RWA",
+    "내부등급", "IRB", "PD", "LGD", "EAD", "부도율", "부도확률",
+    "여신심사 시스템", "여신심사모형", "여신심사체계", "여신포트폴리오",
+    "스트레스 테스트", "스트레스테스트",
 ]
-
-CREDIT_EXCLUDE = ["신용평가모형", "부도율", "신용리스크 산출"]
 
 HEADERS = {
     "User-Agent": (
@@ -89,11 +92,15 @@ def _parse_date(text: str) -> date | None:
 
 def _is_target(title: str) -> bool:
     t = title.upper()
-    if any(ex in title for ex in CREDIT_EXCLUDE) and "시장" not in title and "헤지" not in title:
-        # 순수 신용 중심은 제외하되, 헤지/시장 혼합은 유지
-        if not any(k.upper() in t or k in title for k in ["헤지", "IFRS", "K-ICS", "FVO", "시장리스크", "ALM", "파생", "가격평가"]):
-            return False
-    return any(k.upper() in t or k in title for k in TARGET_KEYWORDS)
+    for k in TARGET_KEYWORDS:
+        ku = k.upper()
+        # 짧은 영문 약어(PD/LGD 등)는 단어 경계로 매칭 (PDF 오탐 방지)
+        if len(ku) <= 3 and ku.isascii() and ku.isalpha():
+            if re.search(rf"(?<![A-Z0-9]){re.escape(ku)}(?![A-Z0-9])", t):
+                return True
+        elif ku in t or k in title:
+            return True
+    return False
 
 
 def fetch_modoobid(org_name: str) -> list[dict[str, Any]]:
