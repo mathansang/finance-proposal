@@ -102,18 +102,31 @@ def publish_docs(
             ),
         }
 
-    pushed = _run(["git", "push", "origin", "HEAD"], root)
-    if pushed.returncode != 0:
-        return {
-            "ok": False,
-            "committed": True,
-            "pushed": False,
-            "detail": (pushed.stderr or pushed.stdout or "git push 실패").strip(),
-        }
+    # CI에서 조사 중 다른 커밋이 들어오면 non-fast-forward 가 난다.
+    # push 전 rebase로 맞춘 뒤, 거절되면 한 번 더 재시도한다.
+    detail = "git push 실패"
+    for attempt in range(2):
+        _run(["git", "pull", "--rebase", "--autostash", "origin", "HEAD"], root)
+        pushed = _run(["git", "push", "origin", "HEAD"], root)
+        if pushed.returncode == 0:
+            return {
+                "ok": True,
+                "committed": True,
+                "pushed": True,
+                "detail": "커밋 및 push 완료",
+            }
+        detail = (pushed.stderr or pushed.stdout or "git push 실패").strip()
+        if attempt == 0 and (
+            "fetch first" in detail
+            or "non-fast-forward" in detail
+            or "rejected" in detail
+        ):
+            continue
+        break
 
     return {
-        "ok": True,
+        "ok": False,
         "committed": True,
-        "pushed": True,
-        "detail": "커밋 및 push 완료",
+        "pushed": False,
+        "detail": detail,
     }

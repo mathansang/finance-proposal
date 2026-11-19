@@ -24,6 +24,7 @@ jobs:
         with:
           # push 시 최신 기본 브랜치에 커밋
           fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
