@@ -65,7 +65,6 @@ def build_markdown(data: dict[str, Any]) -> str:
     period_end = data.get("period_end") or "-"
     last_refresh = data.get("last_refresh") or "-"
     n_companies = _companies(rows)
-    n_public = len(_public_y(rows))
     n_closed_public = sum(
         1
         for r in _public_y(rows)
