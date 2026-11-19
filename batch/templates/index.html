@@ -188,6 +188,20 @@
       margin-top: 1.5rem;
       word-break: keep-all;
     }
+    .footer-contact {
+      margin-top: 0.65rem;
+      font-size: 0.84rem;
+    }
+    .footer-contact a {
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 1px;
+    }
+    .footer-contact a:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
     .build-meta {
       margin-top: 0.75rem;
       padding-top: 0.75rem;
@@ -436,6 +450,10 @@
       <footer>
         자동수집 결과입니다. 예산·마감·참가요건은 공식 원문으로 재확인하세요.
         시장·신용리스크, ALM, K-ICS, IFRS, 파생 등 키워드 hit를 표시합니다.
+        <div class="footer-contact">
+          문의
+          <a href="mailto:sanghyeonahn@kr.kpmg.com">sanghyeonahn@kr.kpmg.com</a>
+        </div>
         <div class="build-meta">
           page 업데이트
           <code>{{ payload.page_updated_at || "-" }}</code>
