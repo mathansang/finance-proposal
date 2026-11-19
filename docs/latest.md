@@ -15,13 +15,13 @@
 | 조사 기준일 | 2026-11-16 |
 | 조사 대상 기관 수 | 45 |
 | 검색 방식 | 모두입찰(modoobid) 공개목록 + 기존 홈페이지 게시판 집계 유지 |
-| 목표분야 hit 공고 수 | **3** |
+| 목표분야 hit 공고 수 | **4** |
 | 목표분야 미해당(공고 없음 표기) | 29 |
 | 신용리스크 제외 | 키워드 필터로 순수 신용 중심 제목 제외 (상세 원문 검증은 별도) |
 
 ### 핵심 결론
 
-조회기간 내 목표분야(시장리스크·ALM·K-ICS·IFRS·파생·공정가치 등) **관련 공고 3건**이 자동 탐지되었습니다. 접수 가능 여부는 원문 마감일 확인이 필요합니다.
+조회기간 내 목표분야(시장리스크·ALM·K-ICS·IFRS·파생·공정가치 등) **관련 공고 4건**이 자동 탐지되었습니다. 접수 가능 여부는 원문 마감일 확인이 필요합니다.
 
 ---
 
@@ -29,9 +29,10 @@
 
 | 번호 | 기관 | 사업명 | 예산 | 마감 | 분야 | 참여 방식 | 공고 링크 |
 |---|---|---|---:|---|---|---|---|
-| 1 | 한국산업은행 | 한국산업은행 위험회피회계 및 FVO 적용 대상 원·외화 산금채 가격평가기관 선정 | 확인 불가 | 확인 불가 | 확인 불가 | 확인 불가 | [링크](https://www.modoobid.co.kr/bid/org/%ED%95%9C%EA%B5%AD%EC%82%B0%EC%97%85%EC%9D%80%ED%96%89) |
-| 2 | IBK연금보험 | K-ICS검증 용역계약 (재입찰) | 확인 불가 | 2026-11-04 (마감) | 확인 불가 | 확인 불가 | [링크](https://work.00data.kr/projects/R26BK01798197) |
-| 3 | 한국해양진흥공사 | 2026년 금융자산 평가용역 | 확인 불가 | 확인 불가 | 확인 불가 | 확인 불가 | [링크](https://www.modoobid.co.kr/bid/org/%ED%95%9C%EA%B5%AD%ED%95%B4%EC%96%91%EC%A7%84%ED%9D%A5%EA%B3%B5%EC%82%AC) |
+| 1 | 신한금융그룹·신한은행 | 신한금융그룹 비시장성유가증권 공정가치평가 적정성 검토 용역 | 확인 불가 | 확인 불가 | 확인 불가 | 확인 불가 | [링크](https://www.shinhangroup.com/kr/pr/notice) |
+| 2 | 한국산업은행 | 한국산업은행 위험회피회계 및 FVO 적용 대상 원·외화 산금채 가격평가기관 선정 | 확인 불가 | 확인 불가 | 확인 불가 | 확인 불가 | [링크](https://www.modoobid.co.kr/bid/org/%ED%95%9C%EA%B5%AD%EC%82%B0%EC%97%85%EC%9D%80%ED%96%89) |
+| 3 | IBK연금보험 | K-ICS검증 용역계약 (재입찰) | 확인 불가 | 2026-11-04 (마감) | 확인 불가 | 확인 불가 | [링크](https://work.00data.kr/projects/R26BK01798197) |
+| 4 | 한국해양진흥공사 | 2026년 금융자산 평가용역 | 확인 불가 | 확인 불가 | 확인 불가 | 확인 불가 | [링크](https://www.modoobid.co.kr/bid/org/%ED%95%9C%EA%B5%AD%ED%95%B4%EC%96%91%EC%A7%84%ED%9D%A5%EA%B3%B5%EC%82%AC) |
 
 ---
 
@@ -48,7 +49,7 @@
 | 번호 | 기관 | 조사 링크 |
 |---:|---|---|
 | 1 | KB금융그룹·KB국민은행 | [https://omoney.kbstar.com/quics?page=C018592](https://omoney.kbstar.com/quics?page=C018592) |
-| 2 | 신한금융그룹·신한은행 | [https://www.shinhands.co.kr/insight/business-notice](https://www.shinhands.co.kr/insight/business-notice) |
+| 2 | 신한금융그룹·신한은행 | [https://www.shinhangroup.com/kr/pr/notice](https://www.shinhangroup.com/kr/pr/notice) |
 | 3 | 하나금융그룹·하나은행 | [https://banking.kebhana.com/cont/news/news01/index.jsp](https://banking.kebhana.com/cont/news/news01/index.jsp) |
 | 4 | 우리금융그룹·우리은행 | [https://www.woorifis.com/kor/company/announceList](https://www.woorifis.com/kor/company/announceList) |
 | 5 | NH농협금융·NH농협은행 | [https://www.nonghyup.com/ecenter/bid/bidList.do](https://www.nonghyup.com/ecenter/bid/bidList.do) |
@@ -98,7 +99,7 @@
 | 번호 | 기관 | 사업명/결과 | 공고일 | 마감일 | 비고 | 링크 |
 |---:|---|---|---|---|---|---|
 | 1 | KB금융그룹·KB국민은행 | 공고 없음 (총 33건) | - | 확인 불가 | 홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-16~2026-11-16 | [https://omoney.kbstar.com/quics?page=C018592](https://omoney.kbstar.com/quics?page=C018592) |
-| 2 | 신한금융그룹·신한은행 | 공고 있음 (자동전수 미연동 · ICT사업공시/신한DS 확인) | - | 확인 불가 | 신한은행 홈페이지 ICT사업공시 게시판에 입찰공고 게시(예: 2026-11-17 ICT 기술표준 관리체계, 2026-11-18 마이데이터 GW라이선스 재입찰). 그룹 IT는 신한DS 사업공시·전자구매(ebiz) 병행. 배치 자동수집 대상에 미포함되어 수동 확인 필요. | [https://www.shinhands.co.kr/insight/business-notice](https://www.shinhands.co.kr/insight/business-notice) |
+| 2 | 신한금융그룹·신한은행 | 신한금융그룹 비시장성유가증권 공정가치평가 적정성 검토 용역 | 2026-11-17 | 확인 불가 | 그룹 PR 공지사항(https://www.shinhangroup.com/kr/pr/notice)에 입찰공고 다수. 동일 기간 내부회계 AI 자문·ESG Value Index·SEC 법률자문 등도 게시. 은행 ICT사업공시·신한DS 사업공시(ebiz) 별도. 배치 자동전수 미연동. | [https://www.shinhangroup.com/kr/pr/notice](https://www.shinhangroup.com/kr/pr/notice) |
 | 3 | 하나금융그룹·하나은행 | 공고 없음 (총 16건) | - | 확인 불가 | 홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-16~2026-11-16 | [https://banking.kebhana.com/cont/news/news01/index.jsp](https://banking.kebhana.com/cont/news/news01/index.jsp) |
 | 4 | 우리금융그룹·우리은행 | 공고 없음 (총 7건) | - | 확인 불가 | 홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-16~2026-11-16 | [https://www.woorifis.com/kor/company/announceList](https://www.woorifis.com/kor/company/announceList) |
 | 5 | NH농협금융·NH농협은행 | 공고 없음 (총 59건) | - | 확인 불가 | 홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-16~2026-11-16 | [https://www.nonghyup.com/ecenter/bid/bidList.do](https://www.nonghyup.com/ecenter/bid/bidList.do) |
@@ -149,9 +150,10 @@
 
 | 순위 | 사업명 | 직접/협력 참여 | 적합도 | 판단 근거 |
 |---|---|---|---|---|
-| 1 | 한국산업은행 위험회피회계 및 FVO 적용 대상 원·외화 산금채 가격평가기관 선정 | 확인 불가 | 자동탐지 | 키워드 매칭 · 원문·참가요건 미검증 |
-| 2 | K-ICS검증 용역계약 (재입찰) | 확인 불가 | 자동탐지 | 키워드 매칭 · 원문·참가요건 미검증 |
-| 3 | 2026년 금융자산 평가용역 | 확인 불가 | 자동탐지 | 키워드 매칭 · 원문·참가요건 미검증 |
+| 1 | 신한금융그룹 비시장성유가증권 공정가치평가 적정성 검토 용역 | 확인 불가 | 자동탐지 | 키워드 매칭 · 원문·참가요건 미검증 |
+| 2 | 한국산업은행 위험회피회계 및 FVO 적용 대상 원·외화 산금채 가격평가기관 선정 | 확인 불가 | 자동탐지 | 키워드 매칭 · 원문·참가요건 미검증 |
+| 3 | K-ICS검증 용역계약 (재입찰) | 확인 불가 | 자동탐지 | 키워드 매칭 · 원문·참가요건 미검증 |
+| 4 | 2026년 금융자산 평가용역 | 확인 불가 | 자동탐지 | 키워드 매칭 · 원문·참가요건 미검증 |
 
 ---
 
