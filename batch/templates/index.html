@@ -2,7 +2,8 @@
 <html lang="ko">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light" />
   <title>금융권 신규프로젝트 공고현황</title>
   <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
   <style>
@@ -13,8 +14,12 @@
       --line: #d8d2c8;
       --accent: #0b5fff;
       --card: #ffffff;
+      --pad-x: 1.25rem;
+      --safe-b: env(safe-area-inset-bottom, 0px);
+      --safe-t: env(safe-area-inset-top, 0px);
     }
     * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
     body {
       margin: 0;
       font-family: "Pretendard", "Noto Sans KR", "Malgun Gothic", sans-serif;
@@ -25,7 +30,7 @@
     main {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 2.5rem 1.25rem 4rem;
+      padding: calc(2.5rem + var(--safe-t)) var(--pad-x) calc(4rem + var(--safe-b));
     }
     .page-head {
       display: flex;
@@ -36,11 +41,12 @@
     }
     .page-head-text { min-width: 0; flex: 1; }
     h1 {
-      font-size: clamp(1.6rem, 3vw, 2.1rem);
+      font-size: clamp(1.35rem, 4.5vw, 2.1rem);
       margin: 0 0 0.4rem;
       letter-spacing: -0.02em;
+      word-break: keep-all;
     }
-    .meta { color: var(--muted); font-size: 0.95rem; margin: 0; }
+    .meta { color: var(--muted); font-size: 0.95rem; margin: 0; word-break: keep-all; }
     .asof {
       flex-shrink: 0;
       text-align: right;
@@ -66,14 +72,6 @@
       letter-spacing: -0.01em;
       white-space: nowrap;
     }
-    @media (max-width: 640px) {
-      .page-head { flex-direction: column; }
-      .asof {
-        align-self: stretch;
-        text-align: left;
-        min-width: 0;
-      }
-    }
     section {
       background: var(--card);
       border: 1px solid var(--line);
@@ -90,6 +88,7 @@
     .section-head h2 {
       margin: 0;
       font-size: 1.15rem;
+      word-break: keep-all;
     }
     .section-count {
       flex-shrink: 0;
@@ -113,9 +112,11 @@
     .method .kw {
       color: var(--ink);
       font-size: 0.88rem;
-      line-height: 1.45;
+      line-height: 1.55;
+      word-break: keep-all;
+      overflow-wrap: anywhere;
     }
-    .table-wrap { overflow-x: auto; }
+    .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
     table {
       width: 100%;
       border-collapse: collapse;
@@ -128,11 +129,15 @@
       vertical-align: top;
     }
     th { color: var(--muted); font-weight: 600; }
-    a { color: var(--accent); }
+    a {
+      color: var(--accent);
+      text-underline-offset: 2px;
+    }
     td.url a {
       word-break: break-all;
       font-size: 0.85rem;
     }
+    .url-short { display: none; }
     .title-cell {
       display: flex;
       align-items: flex-start;
@@ -146,13 +151,16 @@
       border-radius: 3px;
       background: #eee;
     }
-    .title-cell a { line-height: 1.4; }
-    ul { margin: 0; padding-left: 1.2rem; }
-    .links a { margin-right: 1rem; }
+    .title-cell a {
+      line-height: 1.4;
+      word-break: keep-all;
+      overflow-wrap: anywhere;
+    }
     footer {
       color: var(--muted);
       font-size: 0.85rem;
       margin-top: 1.5rem;
+      word-break: keep-all;
     }
     .build-meta {
       margin-top: 0.75rem;
@@ -169,9 +177,108 @@
     }
     .status {
       color: var(--muted);
-      padding: 2rem 0;
+      padding: 2rem var(--pad-x);
     }
     .status.error { color: #b42318; }
+
+    @media (max-width: 720px) {
+      :root { --pad-x: 0.9rem; }
+      main {
+        padding: calc(1.25rem + var(--safe-t)) var(--pad-x) calc(2.5rem + var(--safe-b));
+      }
+      .page-head {
+        flex-direction: column;
+        gap: 0.75rem;
+        margin-bottom: 1rem;
+      }
+      .asof {
+        align-self: stretch;
+        text-align: left;
+        min-width: 0;
+        padding: 0.7rem 0.85rem;
+      }
+      .asof-value {
+        white-space: normal;
+        font-size: 0.98rem;
+        line-height: 1.35;
+      }
+      section {
+        padding: 1rem 0.9rem;
+        margin-bottom: 0.9rem;
+        border-radius: 0;
+      }
+      .section-head {
+        align-items: center;
+        margin-bottom: 0.7rem;
+      }
+      .section-head h2 { font-size: 1.05rem; }
+      .section-count strong { font-size: 1.2rem; }
+      .table-wrap { overflow: visible; }
+      table.responsive,
+      table.responsive thead,
+      table.responsive tbody,
+      table.responsive th,
+      table.responsive td,
+      table.responsive tr {
+        display: block;
+        width: 100%;
+      }
+      table.responsive thead { display: none; }
+      table.responsive tr {
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        padding: 0.75rem 0.85rem;
+        margin-bottom: 0.7rem;
+        background: #fff;
+      }
+      table.responsive tr:last-child { margin-bottom: 0; }
+      table.responsive td {
+        border: 0;
+        padding: 0.28rem 0;
+        display: grid;
+        grid-template-columns: 4.2rem minmax(0, 1fr);
+        gap: 0.45rem;
+        align-items: start;
+        font-size: 0.92rem;
+      }
+      table.responsive td::before {
+        content: attr(data-label);
+        color: var(--muted);
+        font-size: 0.78rem;
+        font-weight: 600;
+        line-height: 1.45;
+        padding-top: 0.1rem;
+      }
+      table.responsive td[data-label="사업명"] {
+        padding-top: 0.45rem;
+        margin-top: 0.2rem;
+        border-top: 1px dashed var(--line);
+      }
+      table.responsive td[data-label="조사 링크"] {
+        padding-top: 0.45rem;
+        margin-top: 0.2rem;
+        border-top: 1px dashed var(--line);
+      }
+      .title-cell a {
+        display: inline-block;
+        padding: 0.1rem 0;
+        min-height: 1.4rem;
+      }
+      .site-icon {
+        width: 18px;
+        height: 18px;
+        margin-top: 0.15rem;
+      }
+      .url-full { display: none; }
+      .url-short { display: inline; font-size: 0.92rem; word-break: break-all; }
+      .method .kw { font-size: 0.84rem; }
+      footer { font-size: 0.8rem; }
+      .build-meta {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -200,7 +307,7 @@
           </div>
         </div>
         <div class="table-wrap">
-          <table>
+          <table class="responsive">
             <thead>
               <tr>
                 <th>기관</th>
@@ -211,11 +318,11 @@
             </thead>
             <tbody>
               <tr v-if="!hits.length">
-                <td colspan="4">목표분야 자동탐지 공고 없음</td>
+                <td data-label="결과">목표분야 자동탐지 공고 없음</td>
               </tr>
               <tr v-for="(row, i) in hits" :key="'hit-' + i">
-                <td>{{ row.company }}</td>
-                <td>
+                <td data-label="기관">{{ row.company }}</td>
+                <td data-label="사업명">
                   <div class="title-cell">
                     <img
                       v-if="siteIcon(row.link)"
@@ -235,8 +342,8 @@
                     <template v-else>{{ row.title }}</template>
                   </div>
                 </td>
-                <td>{{ row.announce_date || "-" }}</td>
-                <td>{{ displayDeadline(row.deadline) }}</td>
+                <td data-label="공고일">{{ row.announce_date || "-" }}</td>
+                <td data-label="마감일">{{ displayDeadline(row.deadline) }}</td>
               </tr>
             </tbody>
           </table>
@@ -259,7 +366,7 @@
           </div>
         </div>
         <div class="table-wrap">
-          <table>
+          <table class="responsive">
             <thead>
               <tr>
                 <th>번호</th>
@@ -269,15 +376,18 @@
             </thead>
             <tbody>
               <tr v-for="(row, i) in institutions" :key="'inst-' + i">
-                <td>{{ i + 1 }}</td>
-                <td>{{ row.company }}</td>
-                <td class="url">
+                <td data-label="번호">{{ i + 1 }}</td>
+                <td data-label="기관">{{ row.company }}</td>
+                <td class="url" data-label="조사 링크">
                   <a
                     v-if="institutionLink(row)"
                     :href="institutionLink(row)"
                     target="_blank"
                     rel="noopener"
-                  >{{ institutionLink(row) }}</a>
+                  >
+                    <span class="url-full">{{ institutionLink(row) }}</span>
+                    <span class="url-short">{{ siteHost(institutionLink(row)) || "바로가기" }}</span>
+                  </a>
                   <template v-else>—</template>
                 </td>
               </tr>
