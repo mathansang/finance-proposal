@@ -57,19 +57,19 @@
 | 7 | 한국산업은행 | [https://www.modoobid.co.kr/bid/org/%ED%95%9C%EA%B5%AD%EC%82%B0%EC%97%85%EC%9D%80%ED%96%89](https://www.modoobid.co.kr/bid/org/%ED%95%9C%EA%B5%AD%EC%82%B0%EC%97%85%EC%9D%80%ED%96%89) |
 | 8 | 한국수출입은행 | [https://www.modoobid.co.kr/bid/org/한국수출입은행](https://www.modoobid.co.kr/bid/org/한국수출입은행) |
 | 9 | 미래에셋증권 | [https://securities.miraeasset.com/bbs/board/message/list.do?categoryId=1959](https://securities.miraeasset.com/bbs/board/message/list.do?categoryId=1959) |
-| 10 | 한국투자증권 | [https://www.truefriend.com](https://www.truefriend.com) |
+| 10 | 한국투자증권 | [https://securities.koreainvestment.com/main/customer/notice/Notice.jsp](https://securities.koreainvestment.com/main/customer/notice/Notice.jsp) |
 | 11 | NH투자증권 | [https://www.nonghyup.com/ecenter/bid/bidList.do](https://www.nonghyup.com/ecenter/bid/bidList.do) |
-| 12 | 삼성증권 | [https://www.samsungpop.com](https://www.samsungpop.com) |
+| 12 | 삼성증권 | [https://www.samsungsecurities.co.kr/kor/invest/notice.do](https://www.samsungsecurities.co.kr/kor/invest/notice.do) |
 | 13 | KB증권 | [https://bbs.kbsec.com/BBS/45](https://bbs.kbsec.com/BBS/45) |
 | 14 | 신한투자증권 | [https://bbs2.shinhansec.com/board/message/list.do?boardName=itbusiness&gubun=new_ir](https://bbs2.shinhansec.com/board/message/list.do?boardName=itbusiness&gubun=new_ir) |
 | 15 | 하나증권 | [https://www.hanaw.com/corebbs5/bidAnnuce/list/list.cmd](https://www.hanaw.com/corebbs5/bidAnnuce/list/list.cmd) |
 | 16 | 키움증권 | [https://www.kiwoom.com](https://www.kiwoom.com) |
 | 17 | 메리츠증권 | [https://home.imeritz.com/bbs/BbsList.go?bbsGrpId=bascGrp&bbsId=bidding](https://home.imeritz.com/bbs/BbsList.go?bbsGrpId=bascGrp&bbsId=bidding) |
 | 18 | IBK투자증권 | [https://www.ibksystem.co.kr/board?brdId=BRD002](https://www.ibksystem.co.kr/board?brdId=BRD002) |
-| 19 | 삼성생명 | [https://www.samsunglife.com](https://www.samsunglife.com) |
-| 20 | 한화생명 | [https://www.hanwhalife.com](https://www.hanwhalife.com) |
+| 19 | 삼성생명 | [https://nepass.samsunglife.com/login](https://nepass.samsunglife.com/login) |
+| 20 | 한화생명 | [https://gaps.hanwhalife.com/cmm/form/login](https://gaps.hanwhalife.com/cmm/form/login) |
 | 21 | 교보생명 | [https://keps.kyobo.co.kr:447/epro/spLogin.do](https://keps.kyobo.co.kr:447/epro/spLogin.do) |
-| 22 | 신한라이프 | [https://www.shinhanlife.co.kr](https://www.shinhanlife.co.kr) |
+| 22 | 신한라이프 | [https://www.shinhanlife.co.kr/hp/cdhi0010.do](https://www.shinhanlife.co.kr/hp/cdhi0010.do) |
 | 23 | KB라이프 | [https://www.kblife.co.kr](https://www.kblife.co.kr) |
 | 24 | iM라이프 | [https://www.imlife.co.kr](https://www.imlife.co.kr) |
 | 25 | IBK연금보험 | [https://work.00data.kr/projects/R26BK01798197](https://work.00data.kr/projects/R26BK01798197) |
@@ -78,7 +78,7 @@
 | 28 | 현대해상 | [https://www.hi.co.kr](https://www.hi.co.kr) |
 | 29 | KB손해보험 | [https://sp.kbinsure.co.kr/splogin.jsp](https://sp.kbinsure.co.kr/splogin.jsp) |
 | 30 | 메리츠화재 | [https://www.meritzfire.com](https://www.meritzfire.com) |
-| 31 | 한화손해보험 | [https://www.hwgeneralins.com](https://www.hwgeneralins.com) |
+| 31 | 한화손해보험 | [https://www.hwgeneralins.com/intro/ir/general-list.do](https://www.hwgeneralins.com/intro/ir/general-list.do) |
 | 32 | 롯데손해보험 | [https://www.lotteins.co.kr](https://www.lotteins.co.kr) |
 | 33 | 금융감독원 | [https://www.modoobid.co.kr/bid/org/금융감독원](https://www.modoobid.co.kr/bid/org/금융감독원) |
 | 34 | 금융위원회 | [https://www.modoobid.co.kr/bid/org/금융위원회](https://www.modoobid.co.kr/bid/org/금융위원회) |
@@ -107,29 +107,29 @@
 | 7 | 한국산업은행 | 한국산업은행 위험회피회계 및 FVO 적용 대상 원·외화 산금채 가격평가기관 선정 | 2026-11-02 | 확인 불가 | 조회기간 내 공개목록 총 20건 중 목표분야 해당 (2026-10-16~2026-11-16) | [https://www.modoobid.co.kr/bid/org/%ED%95%9C%EA%B5%AD%EC%82%B0%EC%97%85%EC%9D%80%ED%96%89](https://www.modoobid.co.kr/bid/org/%ED%95%9C%EA%B5%AD%EC%82%B0%EC%97%85%EC%9D%80%ED%96%89) |
 | 8 | 한국수출입은행 | 공고 없음 (총 13건) | - | 확인 불가 | 조회기간 내 공개목록 전수 13건, 목표분야 미해당 (2026-10-16~2026-11-16) | [https://www.modoobid.co.kr/bid/org/한국수출입은행](https://www.modoobid.co.kr/bid/org/한국수출입은행) |
 | 9 | 미래에셋증권 | 공고 없음 (총 0건) | - | 확인 불가 | 홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-16~2026-11-16 | [https://securities.miraeasset.com/bbs/board/message/list.do?categoryId=1959](https://securities.miraeasset.com/bbs/board/message/list.do?categoryId=1959) |
-| 10 | 한국투자증권 | — | - | 확인 불가 |  | [https://www.truefriend.com](https://www.truefriend.com) |
+| 10 | 한국투자증권 | 공개 입찰게시판 미확인 (고객공지·비공개 RFP 위주) | - | 확인 불가 | 전용 공개 입찰게시판 URL 미확인. 고객 공지사항은 확인(https://securities.koreainvestment.com/main/customer/notice/Notice.jsp). 대형 IT는 비공개 RFP 배포 사례 있음. 자동전수 불가. | [https://securities.koreainvestment.com/main/customer/notice/Notice.jsp](https://securities.koreainvestment.com/main/customer/notice/Notice.jsp) |
 | 11 | NH투자증권 | 공고 없음 (총 7건) | - | 확인 불가 | 홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-16~2026-11-16 | [https://www.nonghyup.com/ecenter/bid/bidList.do](https://www.nonghyup.com/ecenter/bid/bidList.do) |
-| 12 | 삼성증권 | — | - | 확인 불가 |  | [https://www.samsungpop.com](https://www.samsungpop.com) |
+| 12 | 삼성증권 | 회사공고 게시판 확인 (자동전수 미연동) | - | 확인 불가 | 회사공고 게시판 확인. 입찰·IT사업 공고 여부 수시 확인 필요. 자동전수 미연동. | [https://www.samsungsecurities.co.kr/kor/invest/notice.do](https://www.samsungsecurities.co.kr/kor/invest/notice.do) |
 | 13 | KB증권 | 공고 없음 (총 0건) | - | 확인 불가 | 홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-16~2026-11-16 | [https://bbs.kbsec.com/BBS/45](https://bbs.kbsec.com/BBS/45) |
 | 14 | 신한투자증권 | 공고 없음 (총 8건) | - | 확인 불가 | 홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-16~2026-11-16 | [https://bbs2.shinhansec.com/board/message/list.do?boardName=itbusiness&gubun=new_ir](https://bbs2.shinhansec.com/board/message/list.do?boardName=itbusiness&gubun=new_ir) |
 | 15 | 하나증권 | 공고 없음 (총 1건) | - | 확인 불가 | 홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-16~2026-11-16 | [https://www.hanaw.com/corebbs5/bidAnnuce/list/list.cmd](https://www.hanaw.com/corebbs5/bidAnnuce/list/list.cmd) |
-| 16 | 키움증권 | — | - | 확인 불가 |  | [https://www.kiwoom.com](https://www.kiwoom.com) |
+| 16 | 키움증권 | 공개 입찰게시판 미확인 | - | 확인 불가 | 공개 입찰게시판 URL 미확인. 신원장 등 대형 IT는 비공개 컨설팅/RFP 가능성. 홈페이지·채용·뉴스 모니터링 병행. | [https://www.kiwoom.com](https://www.kiwoom.com) |
 | 17 | 메리츠증권 | 공고 없음 (총 1건) | - | 확인 불가 | 홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-16~2026-11-16 | [https://home.imeritz.com/bbs/BbsList.go?bbsGrpId=bascGrp&bbsId=bidding](https://home.imeritz.com/bbs/BbsList.go?bbsGrpId=bascGrp&bbsId=bidding) |
 | 18 | IBK투자증권 | 공고 없음 (총 2건) | - | 확인 불가 | 홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-16~2026-11-16 | [https://www.ibksystem.co.kr/board?brdId=BRD002](https://www.ibksystem.co.kr/board?brdId=BRD002) |
-| 19 | 삼성생명 | — | - | 확인 불가 |  | [https://www.samsunglife.com](https://www.samsunglife.com) |
-| 20 | 한화생명 | — | - | 확인 불가 |  | [https://www.hanwhalife.com](https://www.hanwhalife.com) |
+| 19 | 삼성생명 | 전자구매(NEPASS) 로그인형 | - | 확인 불가 | 협력업체용 전자구매시스템(NEPASS). 로그인 후 입찰공고 확인. 공개목록 자동전수 제한. | [https://nepass.samsunglife.com/login](https://nepass.samsunglife.com/login) |
+| 20 | 한화생명 | 전자구매(HGAPS) 로그인형 | - | 확인 불가 | HGAPS 통합구매시스템(로그인). 입찰공고 메뉴 제공. 공개목록 자동전수 제한. | [https://gaps.hanwhalife.com/cmm/form/login](https://gaps.hanwhalife.com/cmm/form/login) |
 | 21 | 교보생명 | 공고 없음 (총 0건) | - | 확인 불가 | 홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-16~2026-11-16 | [https://keps.kyobo.co.kr:447/epro/spLogin.do](https://keps.kyobo.co.kr:447/epro/spLogin.do) |
-| 22 | 신한라이프 | — | - | 확인 불가 |  | [https://www.shinhanlife.co.kr](https://www.shinhanlife.co.kr) |
-| 23 | KB라이프 | — | - | 확인 불가 |  | [https://www.kblife.co.kr](https://www.kblife.co.kr) |
-| 24 | iM라이프 | — | - | 확인 불가 |  | [https://www.imlife.co.kr](https://www.imlife.co.kr) |
+| 22 | 신한라이프 | 공시실 입찰공시 (이메일 RFP 병행) | - | 확인 불가 | 공시실에 입찰공시 항목 존재(총무팀). 실제 공고는 이메일 접수·RFP 발송 형태가 많음. 신한금융그룹 PR 공지사항도 교차 확인. | [https://www.shinhanlife.co.kr/hp/cdhi0010.do](https://www.shinhanlife.co.kr/hp/cdhi0010.do) |
+| 23 | KB라이프 | 공개 입찰게시판 미확인 | - | 확인 불가 | 공개 입찰·구매 게시판 URL 미확인(홈페이지 지역제한 응답). 비공개 RFP/구매시스템 가능성. | [https://www.kblife.co.kr](https://www.kblife.co.kr) |
+| 24 | iM라이프 | 공개 입찰게시판 미확인 | - | 확인 불가 | 공개 입찰게시판 URL 미확인(구 DGB생명). 홈페이지·그룹 공지 모니터링 필요. | [https://www.imlife.co.kr](https://www.imlife.co.kr) |
 | 25 | IBK연금보험 | K-ICS검증 용역계약 (재입찰) | 2026-10-29 | 2026-11-04 (마감) | K-ICS·IFRS9/17 외부검증 · 조회기간 2026-10-16~2026-11-16 · 조회기간 2026-10-16~2026-11-16 | [https://work.00data.kr/projects/R26BK01798197](https://work.00data.kr/projects/R26BK01798197) |
 | 26 | 삼성화재 | 공고 없음 (총 0건) | - | 확인 불가 | 홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-16~2026-11-16 | [https://www.samsungfire.com/vh/page/VH.HPIF0100.do](https://www.samsungfire.com/vh/page/VH.HPIF0100.do) |
 | 27 | DB손해보험 | 공고 없음 (총 2건) | - | 확인 불가 | 홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-16~2026-11-16 | [https://idbins.com/pc/bizxpress/contentTemplet/cmy/pr/an/list.jsp](https://idbins.com/pc/bizxpress/contentTemplet/cmy/pr/an/list.jsp) |
-| 28 | 현대해상 | — | - | 확인 불가 |  | [https://www.hi.co.kr](https://www.hi.co.kr) |
+| 28 | 현대해상 | 공개 입찰게시판 미확인 | - | 확인 불가 | 보험사 전용 공개 입찰게시판 URL 미확인. 현대계열 fcms.hyundai.co.kr 전자입찰은 계열사 공통 여부 불명(로그인형). | [https://www.hi.co.kr](https://www.hi.co.kr) |
 | 29 | KB손해보험 | 공고 없음 (총 2건) | - | 확인 불가 | 홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-16~2026-11-16 | [https://sp.kbinsure.co.kr/splogin.jsp](https://sp.kbinsure.co.kr/splogin.jsp) |
-| 30 | 메리츠화재 | — | - | 확인 불가 |  | [https://www.meritzfire.com](https://www.meritzfire.com) |
-| 31 | 한화손해보험 | — | - | 확인 불가 |  | [https://www.hwgeneralins.com](https://www.hwgeneralins.com) |
-| 32 | 롯데손해보험 | — | - | 확인 불가 |  | [https://www.lotteins.co.kr](https://www.lotteins.co.kr) |
+| 30 | 메리츠화재 | 공개 입찰게시판 미확인 | - | 확인 불가 | 전용 공개 전자입찰 게시판 URL 미확인. 행사·대행 입찰은 외부 비즈매칭 등에 게시되는 사례 있음. | [https://www.meritzfire.com](https://www.meritzfire.com) |
+| 31 | 한화손해보험 | 전자공고 페이지 확인 (자동전수 미연동) | - | 확인 불가 | 전자공고 페이지 확인. IT 입찰은 로그인/내부 포털·수의·지명 가능성. 계열 한화손해사정 공지에도 입찰이 별도 게시됨. | [https://www.hwgeneralins.com/intro/ir/general-list.do](https://www.hwgeneralins.com/intro/ir/general-list.do) |
+| 32 | 롯데손해보험 | 공개 게시판 미흡 · RFP PDF 게시 사례 | - | 확인 불가 | 전용 입찰목록 게시판 URL 미확인. 그룹웨어 고도화 등 RFP가 홈페이지 upload 경로로 공개된 사례 있음. 자동전수 불가, 수시 검색 필요. | [https://www.lotteins.co.kr](https://www.lotteins.co.kr) |
 | 33 | 금융감독원 | 공고 없음 (총 1건) | - | 확인 불가 | 조회기간 내 공개목록 전수 1건, 목표분야 미해당 (2026-10-16~2026-11-16) | [https://www.modoobid.co.kr/bid/org/금융감독원](https://www.modoobid.co.kr/bid/org/금융감독원) |
 | 34 | 금융위원회 | 공고 없음 (총 4건) | - | 확인 불가 | 조회기간 내 공개목록 전수 4건, 목표분야 미해당 (2026-10-16~2026-11-16) | [https://www.modoobid.co.kr/bid/org/금융위원회](https://www.modoobid.co.kr/bid/org/금융위원회) |
 | 35 | 한국은행 | 공고 없음 (총 2건) | - | 확인 불가 | 조회기간 내 공개목록 전수 2건, 목표분야 미해당 (2026-10-16~2026-11-16) | [https://www.modoobid.co.kr/bid/org/한국은행](https://www.modoobid.co.kr/bid/org/한국은행) |
