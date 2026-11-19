@@ -3,7 +3,7 @@
   "period_end": "2026-11-19",
   "survey_date": "2026-11-19",
   "status": "idle",
-  "last_refresh": "2026-11-19 15:14:52",
+  "last_refresh": "2026-11-19 15:31:06",
   "message": "갱신 완료 (2026-10-19 ~ 2026-11-19)",
   "rows": [
     {
@@ -14,10 +14,12 @@
       "announce_date": "-",
       "deadline": "-",
       "budget": "-",
-      "note": "홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-19~2026-11-19",
+      "note": "공식 게시판(수동전수 기준 유지). 중계사이트 미사용. 조회기간 2026-10-19~2026-11-19",
       "link": "https://omoney.kbstar.com/quics?page=C018592",
       "source": "board",
-      "hit": false
+      "hit": false,
+      "list_link": "https://omoney.kbstar.com/quics?page=C018592",
+      "official_link": "https://omoney.kbstar.com/quics?page=C018592"
     },
     {
       "no": "2",
@@ -27,12 +29,13 @@
       "announce_date": "2026-11-17",
       "deadline": "2026-11-30",
       "budget": "-",
-      "note": "조회기간 내 공개목록 총 7건 중 목표분야 해당 (2026-10-19~2026-11-19)",
+      "note": "조회기간 내 공개목록 총 7건 중 목표분야 해당 (2026-10-19~2026-11-19) · 수집우선: 공식(신한)",
       "link": "redirect-shinhan.html?boardNo=33538",
       "source": "board",
       "hit": true,
-      "list_link": "redirect-shinhan.html?boardNo=33538",
-      "board_no": 33538
+      "list_link": "https://www.shinhangroup.com/kr/pr/notice",
+      "board_no": 33538,
+      "official_link": "https://www.shinhangroup.com/kr/pr/notice"
     },
     {
       "no": "3",
@@ -42,10 +45,12 @@
       "announce_date": "-",
       "deadline": "-",
       "budget": "-",
-      "note": "홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-19~2026-11-19",
+      "note": "공식 게시판(수동전수 기준 유지). 중계사이트 미사용. 조회기간 2026-10-19~2026-11-19",
       "link": "https://banking.kebhana.com/cont/news/news01/index.jsp",
       "source": "board",
-      "hit": false
+      "hit": false,
+      "list_link": "https://banking.kebhana.com/cont/news/news01/index.jsp",
+      "official_link": "https://banking.kebhana.com/cont/news/news01/index.jsp"
     },
     {
       "no": "4",
@@ -55,10 +60,12 @@
       "announce_date": "-",
       "deadline": "-",
       "budget": "-",
-      "note": "홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-19~2026-11-19",
+      "note": "공식 게시판(수동전수 기준 유지). 중계사이트 미사용. 조회기간 2026-10-19~2026-11-19",
       "link": "https://www.woorifis.com/kor/company/announceList",
       "source": "board",
-      "hit": false
+      "hit": false,
+      "list_link": "https://www.woorifis.com/kor/company/announceList",
+      "official_link": "https://www.woorifis.com/kor/company/announceList"
     },
     {
       "no": "5",
@@ -68,10 +75,12 @@
       "announce_date": "-",
       "deadline": "-",
       "budget": "-",
-      "note": "홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-19~2026-11-19",
+      "note": "공식 게시판(수동전수 기준 유지). 중계사이트 미사용. 조회기간 2026-10-19~2026-11-19",
       "link": "https://www.nonghyup.com/ecenter/bid/bidList.do",
       "source": "board",
-      "hit": false
+      "hit": false,
+      "list_link": "https://www.nonghyup.com/ecenter/bid/bidList.do",
+      "official_link": "https://www.nonghyup.com/ecenter/bid/bidList.do"
     },
     {
       "no": "6",
@@ -81,12 +90,13 @@
       "announce_date": "2026-11-16",
       "deadline": "2026-11-27",
       "budget": "-",
-      "note": "조회기간 내 공개목록 총 53건 중 목표분야 해당 (2026-10-19~2026-11-19)",
+      "note": "조회기간 내 공개목록 총 52건 중 목표분야 해당 (2026-10-19~2026-11-19) · 수집우선: 모두입찰(보조)",
       "link": "https://www.modoobid.co.kr/bid/2611S01831664000/2026",
       "source": "modoobid",
       "org_key": "중소기업은행",
       "hit": true,
-      "list_link": "https://www.modoobid.co.kr/bid/2611S01831664000/2026"
+      "list_link": "https://www.ibk.co.kr",
+      "official_link": "https://www.ibk.co.kr"
     },
     {
       "no": "7",
@@ -96,12 +106,13 @@
       "announce_date": "2026-11-02",
       "deadline": "2026-11-13",
       "budget": "-",
-      "note": "조회기간 내 공개목록 총 28건 중 목표분야 해당 (2026-10-19~2026-11-19)",
+      "note": "조회기간 내 공개목록 총 23건 중 목표분야 해당 (2026-10-19~2026-11-19) · 수집우선: 모두입찰(보조)",
       "link": "https://www.modoobid.co.kr/bid/2611S01802616000/2026",
       "source": "modoobid",
       "org_key": "한국산업은행",
       "hit": true,
-      "list_link": "https://www.modoobid.co.kr/bid/2611S01802616000/2026"
+      "list_link": "https://www.kdb.co.kr",
+      "official_link": "https://www.kdb.co.kr"
     },
     {
       "no": "7-1",
@@ -111,12 +122,13 @@
       "announce_date": "2026-10-21",
       "deadline": "2026-12-01",
       "budget": "-",
-      "note": "조회기간 내 공개목록 총 28건 중 목표분야 해당 (2026-10-19~2026-11-19)",
+      "note": "조회기간 내 공개목록 총 23건 중 목표분야 해당 (2026-10-19~2026-11-19) · 수집우선: 모두입찰(보조)",
       "link": "https://www.modoobid.co.kr/bid/2610S01783542000/2026",
       "source": "modoobid",
       "org_key": "한국산업은행",
       "hit": true,
-      "list_link": "https://www.modoobid.co.kr/bid/2611S01802616000/2026"
+      "list_link": "https://www.kdb.co.kr",
+      "official_link": "https://www.kdb.co.kr"
     },
     {
       "no": "7-2",
@@ -126,27 +138,29 @@
       "announce_date": "2026-10-19",
       "deadline": "2026-12-01",
       "budget": "-",
-      "note": "조회기간 내 공개목록 총 28건 중 목표분야 해당 (2026-10-19~2026-11-19)",
+      "note": "조회기간 내 공개목록 총 23건 중 목표분야 해당 (2026-10-19~2026-11-19) · 수집우선: 모두입찰(보조)",
       "link": "https://www.modoobid.co.kr/bid/2610S01777242000/2026",
       "source": "modoobid",
       "org_key": "한국산업은행",
       "hit": true,
-      "list_link": "https://www.modoobid.co.kr/bid/2611S01802616000/2026"
+      "list_link": "https://www.kdb.co.kr",
+      "official_link": "https://www.kdb.co.kr"
     },
     {
       "no": "8",
       "company": "한국수출입은행",
       "public_list": "Y",
-      "title": "공고 없음 (총 13건)",
+      "title": "공고 없음 (총 11건)",
       "announce_date": "-",
       "deadline": "-",
       "budget": "-",
-      "note": "조회기간 내 공개목록 전수 13건, 목표분야 미해당 (2026-10-19~2026-11-19)",
-      "link": "https://www.modoobid.co.kr/bid/org/한국수출입은행",
+      "note": "조회기간 내 공개목록 전수 11건, 목표분야 미해당 (2026-10-19~2026-11-19) · 수집우선: 모두입찰(보조)",
+      "link": "https://www.koreaexim.go.kr",
       "source": "modoobid",
       "org_key": "한국수출입은행",
       "hit": false,
-      "list_link": "https://www.modoobid.co.kr/bid/org/한국수출입은행"
+      "list_link": "https://www.koreaexim.go.kr",
+      "official_link": "https://www.koreaexim.go.kr"
     },
     {
       "no": "9",
@@ -156,10 +170,12 @@
       "announce_date": "-",
       "deadline": "-",
       "budget": "-",
-      "note": "홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-19~2026-11-19",
+      "note": "공식 게시판(수동전수 기준 유지). 중계사이트 미사용. 조회기간 2026-10-19~2026-11-19",
       "link": "https://securities.miraeasset.com/bbs/board/message/list.do?categoryId=1959",
       "source": "board",
-      "hit": false
+      "hit": false,
+      "list_link": "https://securities.miraeasset.com/bbs/board/message/list.do?categoryId=1959",
+      "official_link": "https://securities.miraeasset.com/bbs/board/message/list.do?categoryId=1959"
     },
     {
       "no": "10",
@@ -169,10 +185,12 @@
       "announce_date": "-",
       "deadline": "-",
       "budget": "-",
-      "note": "홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-19~2026-11-19",
+      "note": "공식 게시판(수동전수 기준 유지). 중계사이트 미사용. 조회기간 2026-10-19~2026-11-19",
       "link": "https://securities.koreainvestment.com/main/customer/notice/Notice.jsp",
       "source": "board",
-      "hit": false
+      "hit": false,
+      "list_link": "https://securities.koreainvestment.com/main/customer/notice/Notice.jsp",
+      "official_link": "https://securities.koreainvestment.com/main/customer/notice/Notice.jsp"
     },
     {
       "no": "11",
@@ -182,10 +200,12 @@
       "announce_date": "-",
       "deadline": "-",
       "budget": "-",
-      "note": "홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-19~2026-11-19",
+      "note": "공식 게시판(수동전수 기준 유지). 중계사이트 미사용. 조회기간 2026-10-19~2026-11-19",
       "link": "https://www.nonghyup.com/ecenter/bid/bidList.do",
       "source": "board",
-      "hit": false
+      "hit": false,
+      "list_link": "https://www.nonghyup.com/ecenter/bid/bidList.do",
+      "official_link": "https://www.nonghyup.com/ecenter/bid/bidList.do"
     },
     {
       "no": "12",
@@ -195,10 +215,12 @@
       "announce_date": "-",
       "deadline": "-",
       "budget": "-",
-      "note": "홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-19~2026-11-19",
+      "note": "공식 게시판(수동전수 기준 유지). 중계사이트 미사용. 조회기간 2026-10-19~2026-11-19",
       "link": "https://www.samsungsecurities.co.kr/kor/invest/notice.do",
       "source": "board",
-      "hit": false
+      "hit": false,
+      "list_link": "https://www.samsungsecurities.co.kr/kor/invest/notice.do",
+      "official_link": "https://www.samsungsecurities.co.kr/kor/invest/notice.do"
     },
     {
       "no": "13",
@@ -208,10 +230,12 @@
       "announce_date": "-",
       "deadline": "-",
       "budget": "-",
-      "note": "홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-19~2026-11-19",
+      "note": "공식 게시판(수동전수 기준 유지). 중계사이트 미사용. 조회기간 2026-10-19~2026-11-19",
       "link": "https://bbs.kbsec.com/BBS/45",
       "source": "board",
-      "hit": false
+      "hit": false,
+      "list_link": "https://bbs.kbsec.com/BBS/45",
+      "official_link": "https://bbs.kbsec.com/BBS/45"
     },
     {
       "no": "14",
@@ -221,10 +245,12 @@
       "announce_date": "-",
       "deadline": "-",
       "budget": "-",
-      "note": "홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-19~2026-11-19",
+      "note": "공식 게시판(수동전수 기준 유지). 중계사이트 미사용. 조회기간 2026-10-19~2026-11-19",
       "link": "https://bbs2.shinhansec.com/board/message/list.do?boardName=itbusiness&gubun=new_ir",
       "source": "board",
-      "hit": false
+      "hit": false,
+      "list_link": "https://bbs2.shinhansec.com/board/message/list.do?boardName=itbusiness&gubun=new_ir",
+      "official_link": "https://bbs2.shinhansec.com/board/message/list.do?boardName=itbusiness&gubun=new_ir"
     },
     {
       "no": "15",
@@ -234,10 +260,12 @@
       "announce_date": "-",
       "deadline": "-",
       "budget": "-",
-      "note": "홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-19~2026-11-19",
+      "note": "공식 게시판(수동전수 기준 유지). 중계사이트 미사용. 조회기간 2026-10-19~2026-11-19",
       "link": "https://www.hanaw.com/corebbs5/bidAnnuce/list/list.cmd",
       "source": "board",
-      "hit": false
+      "hit": false,
+      "list_link": "https://www.hanaw.com/corebbs5/bidAnnuce/list/list.cmd",
+      "official_link": "https://www.hanaw.com/corebbs5/bidAnnuce/list/list.cmd"
     },
     {
       "no": "16",
@@ -260,10 +288,12 @@
       "announce_date": "-",
       "deadline": "-",
       "budget": "-",
-      "note": "홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-19~2026-11-19",
+      "note": "공식 게시판(수동전수 기준 유지). 중계사이트 미사용. 조회기간 2026-10-19~2026-11-19",
       "link": "https://home.imeritz.com/bbs/BbsList.go?bbsGrpId=bascGrp&bbsId=bidding",
       "source": "board",
-      "hit": false
+      "hit": false,
+      "list_link": "https://home.imeritz.com/bbs/BbsList.go?bbsGrpId=bascGrp&bbsId=bidding",
+      "official_link": "https://home.imeritz.com/bbs/BbsList.go?bbsGrpId=bascGrp&bbsId=bidding"
     },
     {
       "no": "18",
@@ -273,10 +303,12 @@
       "announce_date": "-",
       "deadline": "-",
       "budget": "-",
-      "note": "홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-19~2026-11-19",
+      "note": "공식 게시판(수동전수 기준 유지). 중계사이트 미사용. 조회기간 2026-10-19~2026-11-19",
       "link": "https://www.ibksystem.co.kr/board?brdId=BRD002",
       "source": "board",
-      "hit": false
+      "hit": false,
+      "list_link": "https://www.ibksystem.co.kr/board?brdId=BRD002",
+      "official_link": "https://www.ibksystem.co.kr/board?brdId=BRD002"
     },
     {
       "no": "19",
@@ -286,10 +318,12 @@
       "announce_date": "-",
       "deadline": "-",
       "budget": "-",
-      "note": "홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-19~2026-11-19",
+      "note": "공식 게시판(수동전수 기준 유지). 중계사이트 미사용. 조회기간 2026-10-19~2026-11-19",
       "link": "https://nepass.samsunglife.com/login",
       "source": "board",
-      "hit": false
+      "hit": false,
+      "list_link": "https://nepass.samsunglife.com/login",
+      "official_link": "https://nepass.samsunglife.com/login"
     },
     {
       "no": "20",
@@ -299,10 +333,12 @@
       "announce_date": "-",
       "deadline": "-",
       "budget": "-",
-      "note": "홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-19~2026-11-19",
+      "note": "공식 게시판(수동전수 기준 유지). 중계사이트 미사용. 조회기간 2026-10-19~2026-11-19",
       "link": "https://gaps.hanwhalife.com/cmm/form/login",
       "source": "board",
-      "hit": false
+      "hit": false,
+      "list_link": "https://gaps.hanwhalife.com/cmm/form/login",
+      "official_link": "https://gaps.hanwhalife.com/cmm/form/login"
     },
     {
       "no": "21",
@@ -312,10 +348,12 @@
       "announce_date": "-",
       "deadline": "-",
       "budget": "-",
-      "note": "홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-19~2026-11-19",
+      "note": "공식 게시판(수동전수 기준 유지). 중계사이트 미사용. 조회기간 2026-10-19~2026-11-19",
       "link": "https://keps.kyobo.co.kr:447/epro/spLogin.do",
       "source": "board",
-      "hit": false
+      "hit": false,
+      "list_link": "https://keps.kyobo.co.kr:447/epro/spLogin.do",
+      "official_link": "https://keps.kyobo.co.kr:447/epro/spLogin.do"
     },
     {
       "no": "22",
@@ -325,10 +363,12 @@
       "announce_date": "-",
       "deadline": "-",
       "budget": "-",
-      "note": "홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-19~2026-11-19",
+      "note": "공식 게시판(수동전수 기준 유지). 중계사이트 미사용. 조회기간 2026-10-19~2026-11-19",
       "link": "https://www.shinhanlife.co.kr/hp/cdhi0010.do",
       "source": "board",
-      "hit": false
+      "hit": false,
+      "list_link": "https://www.shinhanlife.co.kr/hp/cdhi0010.do",
+      "official_link": "https://www.shinhanlife.co.kr/hp/cdhi0010.do"
     },
     {
       "no": "23",
@@ -364,7 +404,7 @@
       "announce_date": "2026-10-29",
       "deadline": "2026-11-04",
       "budget": "확인 불가",
-      "note": "K-ICS·IFRS9/17 외부검증 · 조회기간 2026-10-16~2026-11-16 · 조회기간 2026-10-16~2026-11-16 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19",
+      "note": "K-ICS·IFRS9/17 외부검증 · 조회기간 2026-10-16~2026-11-16 · 조회기간 2026-10-16~2026-11-16 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 수집우선: 공식게시판",
       "link": "https://work.00data.kr/projects/R26BK01798197",
       "source": "board",
       "hit": true
@@ -377,10 +417,12 @@
       "announce_date": "-",
       "deadline": "-",
       "budget": "-",
-      "note": "홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-19~2026-11-19",
+      "note": "공식 게시판(수동전수 기준 유지). 중계사이트 미사용. 조회기간 2026-10-19~2026-11-19",
       "link": "https://www.samsungfire.com/vh/page/VH.HPIF0100.do",
       "source": "board",
-      "hit": false
+      "hit": false,
+      "list_link": "https://www.samsungfire.com/vh/page/VH.HPIF0100.do",
+      "official_link": "https://www.samsungfire.com/vh/page/VH.HPIF0100.do"
     },
     {
       "no": "27",
@@ -390,10 +432,12 @@
       "announce_date": "-",
       "deadline": "-",
       "budget": "-",
-      "note": "홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-19~2026-11-19",
+      "note": "공식 게시판(수동전수 기준 유지). 중계사이트 미사용. 조회기간 2026-10-19~2026-11-19",
       "link": "https://idbins.com/pc/bizxpress/contentTemplet/cmy/pr/an/list.jsp",
       "source": "board",
-      "hit": false
+      "hit": false,
+      "list_link": "https://idbins.com/pc/bizxpress/contentTemplet/cmy/pr/an/list.jsp",
+      "official_link": "https://idbins.com/pc/bizxpress/contentTemplet/cmy/pr/an/list.jsp"
     },
     {
       "no": "28",
@@ -416,10 +460,12 @@
       "announce_date": "-",
       "deadline": "-",
       "budget": "-",
-      "note": "홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-19~2026-11-19",
+      "note": "공식 게시판(수동전수 기준 유지). 중계사이트 미사용. 조회기간 2026-10-19~2026-11-19",
       "link": "https://sp.kbinsure.co.kr/splogin.jsp",
       "source": "board",
-      "hit": false
+      "hit": false,
+      "list_link": "https://sp.kbinsure.co.kr/splogin.jsp",
+      "official_link": "https://sp.kbinsure.co.kr/splogin.jsp"
     },
     {
       "no": "30",
@@ -442,10 +488,12 @@
       "announce_date": "-",
       "deadline": "-",
       "budget": "-",
-      "note": "홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-19~2026-11-19",
+      "note": "공식 게시판(수동전수 기준 유지). 중계사이트 미사용. 조회기간 2026-10-19~2026-11-19",
       "link": "https://www.hwgeneralins.com/intro/ir/general-list.do",
       "source": "board",
-      "hit": false
+      "hit": false,
+      "list_link": "https://www.hwgeneralins.com/intro/ir/general-list.do",
+      "official_link": "https://www.hwgeneralins.com/intro/ir/general-list.do"
     },
     {
       "no": "32",
@@ -455,10 +503,12 @@
       "announce_date": "-",
       "deadline": "-",
       "budget": "-",
-      "note": "홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-19~2026-11-19",
+      "note": "공식 게시판(수동전수 기준 유지). 중계사이트 미사용. 조회기간 2026-10-19~2026-11-19",
       "link": "https://www.lotteins.co.kr",
       "source": "board",
-      "hit": false
+      "hit": false,
+      "list_link": "https://www.lotteins.co.kr",
+      "official_link": "https://www.lotteins.co.kr"
     },
     {
       "no": "33",
@@ -468,42 +518,45 @@
       "announce_date": "-",
       "deadline": "-",
       "budget": "-",
-      "note": "조회기간 내 공개목록 전수 1건, 목표분야 미해당 (2026-10-19~2026-11-19)",
-      "link": "https://www.modoobid.co.kr/bid/org/금융감독원",
+      "note": "조회기간 내 공개목록 전수 1건, 목표분야 미해당 (2026-10-19~2026-11-19) · 수집우선: 공식(금감원) · 모두입찰(보조)",
+      "link": "https://www.fss.or.kr/fss/bbs/B0000191/list.do?menuNo=200222",
       "source": "modoobid",
       "org_key": "금융감독원",
       "hit": false,
-      "list_link": "https://www.modoobid.co.kr/bid/org/금융감독원"
+      "list_link": "https://www.fss.or.kr/fss/bbs/B0000191/list.do?menuNo=200222",
+      "official_link": "https://www.fss.or.kr/fss/bbs/B0000191/list.do?menuNo=200222"
     },
     {
       "no": "34",
       "company": "금융위원회",
       "public_list": "Y",
-      "title": "공고 없음 (총 8건)",
+      "title": "공고 없음 (총 4건)",
       "announce_date": "-",
       "deadline": "-",
       "budget": "-",
-      "note": "조회기간 내 공개목록 전수 8건, 목표분야 미해당 (2026-10-19~2026-11-19)",
-      "link": "https://www.modoobid.co.kr/bid/org/금융위원회",
+      "note": "조회기간 내 공개목록 전수 4건, 목표분야 미해당 (2026-10-19~2026-11-19) · 수집우선: 모두입찰(보조)",
+      "link": "https://www.fsc.go.kr",
       "source": "modoobid",
       "org_key": "금융위원회",
       "hit": false,
-      "list_link": "https://www.modoobid.co.kr/bid/org/금융위원회"
+      "list_link": "https://www.fsc.go.kr",
+      "official_link": "https://www.fsc.go.kr"
     },
     {
       "no": "35",
       "company": "한국은행",
       "public_list": "Y",
-      "title": "공고 없음 (총 5건)",
+      "title": "공고 없음 (총 4건)",
       "announce_date": "-",
       "deadline": "-",
       "budget": "-",
-      "note": "조회기간 내 공개목록 전수 5건, 목표분야 미해당 (2026-10-19~2026-11-19)",
-      "link": "https://www.modoobid.co.kr/bid/org/한국은행",
+      "note": "조회기간 내 공개목록 전수 4건, 목표분야 미해당 (2026-10-19~2026-11-19) · 수집우선: 모두입찰(보조)",
+      "link": "https://www.bok.or.kr",
       "source": "modoobid",
       "org_key": "한국은행",
       "hit": false,
-      "list_link": "https://www.modoobid.co.kr/bid/org/한국은행"
+      "list_link": "https://www.bok.or.kr",
+      "official_link": "https://www.bok.or.kr"
     },
     {
       "no": "36",
@@ -513,8 +566,8 @@
       "announce_date": "-",
       "deadline": "-",
       "budget": "-",
-      "note": "조회기간 내 공개목록 전수 4건, 목표분야 미해당 (2026-10-19~2026-11-19)",
-      "link": "https://www.modoobid.co.kr/bid/org/(주)한국거래소",
+      "note": "조회기간 내 공개목록 전수 4건, 목표분야 미해당 (2026-10-19~2026-11-19) · 수집우선: 모두입찰(보조)",
+      "link": "https://www.krx.co.kr",
       "source": "modoobid",
       "org_key": "(주)한국거래소",
       "org_keys": [
@@ -522,37 +575,40 @@
         "(주)한국거래소 서울사옥"
       ],
       "hit": false,
-      "list_link": "https://www.modoobid.co.kr/bid/org/(주)한국거래소"
+      "list_link": "https://www.krx.co.kr",
+      "official_link": "https://www.krx.co.kr"
     },
     {
       "no": "37",
       "company": "금융결제원",
       "public_list": "Y",
-      "title": "공고 없음 (총 5건)",
+      "title": "공고 없음 (총 3건)",
       "announce_date": "-",
       "deadline": "-",
       "budget": "-",
-      "note": "조회기간 내 공개목록 전수 5건, 목표분야 미해당 (2026-10-19~2026-11-19)",
-      "link": "https://www.modoobid.co.kr/bid/org/금융결제원",
+      "note": "조회기간 내 공개목록 전수 3건, 목표분야 미해당 (2026-10-19~2026-11-19) · 수집우선: 모두입찰(보조)",
+      "link": "https://www.kftc.or.kr",
       "source": "modoobid",
       "org_key": "금융결제원",
       "hit": false,
-      "list_link": "https://www.modoobid.co.kr/bid/org/금융결제원"
+      "list_link": "https://www.kftc.or.kr",
+      "official_link": "https://www.kftc.or.kr"
     },
     {
       "no": "38",
       "company": "한국예탁결제원",
       "public_list": "Y",
-      "title": "공고 없음 (총 5건)",
+      "title": "공고 없음 (총 4건)",
       "announce_date": "-",
       "deadline": "-",
       "budget": "-",
-      "note": "조회기간 내 공개목록 전수 5건, 목표분야 미해당 (2026-10-19~2026-11-19)",
-      "link": "https://www.modoobid.co.kr/bid/org/한국예탁결제원",
+      "note": "조회기간 내 공개목록 전수 4건, 목표분야 미해당 (2026-10-19~2026-11-19) · 수집우선: 모두입찰(보조)",
+      "link": "https://www.ksd.or.kr",
       "source": "modoobid",
       "org_key": "한국예탁결제원",
       "hit": false,
-      "list_link": "https://www.modoobid.co.kr/bid/org/한국예탁결제원"
+      "list_link": "https://www.ksd.or.kr",
+      "official_link": "https://www.ksd.or.kr"
     },
     {
       "no": "39",
@@ -562,27 +618,29 @@
       "announce_date": "-",
       "deadline": "-",
       "budget": "-",
-      "note": "조회기간 내 공개목록 전수 3건, 목표분야 미해당 (2026-10-19~2026-11-19)",
-      "link": "https://www.modoobid.co.kr/bid/org/예금보험공사",
+      "note": "조회기간 내 공개목록 전수 3건, 목표분야 미해당 (2026-10-19~2026-11-19) · 수집우선: 모두입찰(보조)",
+      "link": "https://www.kdic.or.kr",
       "source": "modoobid",
       "org_key": "예금보험공사",
       "hit": false,
-      "list_link": "https://www.modoobid.co.kr/bid/org/예금보험공사"
+      "list_link": "https://www.kdic.or.kr",
+      "official_link": "https://www.kdic.or.kr"
     },
     {
       "no": "40",
       "company": "한국자산관리공사",
       "public_list": "Y",
-      "title": "공고 없음 (총 11건)",
+      "title": "공고 없음 (총 6건)",
       "announce_date": "-",
       "deadline": "-",
       "budget": "-",
-      "note": "조회기간 내 공개목록 전수 11건, 목표분야 미해당 (2026-10-19~2026-11-19)",
-      "link": "https://www.modoobid.co.kr/bid/org/한국자산관리공사",
+      "note": "조회기간 내 공개목록 전수 6건, 목표분야 미해당 (2026-10-19~2026-11-19) · 수집우선: 모두입찰(보조)",
+      "link": "https://www.kamco.or.kr",
       "source": "modoobid",
       "org_key": "한국자산관리공사",
       "hit": false,
-      "list_link": "https://www.modoobid.co.kr/bid/org/한국자산관리공사"
+      "list_link": "https://www.kamco.or.kr",
+      "official_link": "https://www.kamco.or.kr"
     },
     {
       "no": "41",
@@ -592,27 +650,29 @@
       "announce_date": "2026-11-19",
       "deadline": "2026-11-26",
       "budget": "-",
-      "note": "조회기간 내 공개목록 총 5건 중 목표분야 해당 (2026-10-19~2026-11-19)",
+      "note": "조회기간 내 공개목록 총 3건 중 목표분야 해당 (2026-10-19~2026-11-19) · 수집우선: 모두입찰(보조)",
       "link": "https://www.modoobid.co.kr/bid/2611S01841412000/2026",
       "source": "modoobid",
       "org_key": "한국주택금융공사",
       "hit": true,
-      "list_link": "https://www.modoobid.co.kr/bid/2611S01841412000/2026"
+      "list_link": "https://www.hf.go.kr",
+      "official_link": "https://www.hf.go.kr"
     },
     {
       "no": "42",
       "company": "신용보증기금",
       "public_list": "Y",
-      "title": "공고 없음 (총 16건)",
+      "title": "공고 없음 (총 15건)",
       "announce_date": "-",
       "deadline": "-",
       "budget": "-",
-      "note": "조회기간 내 공개목록 전수 16건, 목표분야 미해당 (2026-10-19~2026-11-19)",
-      "link": "https://www.modoobid.co.kr/bid/org/신용보증기금",
+      "note": "조회기간 내 공개목록 전수 15건, 목표분야 미해당 (2026-10-19~2026-11-19) · 수집우선: 모두입찰(보조)",
+      "link": "https://www.kodit.co.kr",
       "source": "modoobid",
       "org_key": "신용보증기금",
       "hit": false,
-      "list_link": "https://www.modoobid.co.kr/bid/org/신용보증기금"
+      "list_link": "https://www.kodit.co.kr",
+      "official_link": "https://www.kodit.co.kr"
     },
     {
       "no": "43",
@@ -622,12 +682,13 @@
       "announce_date": "-",
       "deadline": "-",
       "budget": "-",
-      "note": "조회기간 내 공개목록 전수 5건, 목표분야 미해당 (2026-10-19~2026-11-19)",
-      "link": "https://www.modoobid.co.kr/bid/org/기술보증기금",
+      "note": "조회기간 내 공개목록 전수 5건, 목표분야 미해당 (2026-10-19~2026-11-19) · 수집우선: 모두입찰(보조)",
+      "link": "https://www.kibo.or.kr",
       "source": "modoobid",
       "org_key": "기술보증기금",
       "hit": false,
-      "list_link": "https://www.modoobid.co.kr/bid/org/기술보증기금"
+      "list_link": "https://www.kibo.or.kr",
+      "official_link": "https://www.kibo.or.kr"
     },
     {
       "no": "44",
@@ -637,12 +698,13 @@
       "announce_date": "2026-11-04",
       "deadline": "2026-11-16",
       "budget": "-",
-      "note": "조회기간 내 공개목록 총 3건 중 목표분야 해당 (2026-10-19~2026-11-19)",
+      "note": "조회기간 내 공개목록 총 2건 중 목표분야 해당 (2026-10-19~2026-11-19) · 수집우선: 모두입찰(보조)",
       "link": "https://www.modoobid.co.kr/bid/2611S01783501000/2026",
       "source": "modoobid",
       "org_key": "한국해양진흥공사",
       "hit": true,
-      "list_link": "https://www.modoobid.co.kr/bid/2611S01783501000/2026"
+      "list_link": "https://www.kobc.or.kr",
+      "official_link": "https://www.kobc.or.kr"
     },
     {
       "no": "45",
@@ -652,12 +714,13 @@
       "announce_date": "-",
       "deadline": "-",
       "budget": "-",
-      "note": "조회기간 내 공개목록 전수 3건, 목표분야 미해당 (2026-10-19~2026-11-19)",
-      "link": "https://www.modoobid.co.kr/bid/org/한국교직원공제회",
+      "note": "조회기간 내 공개목록 전수 3건, 목표분야 미해당 (2026-10-19~2026-11-19) · 수집우선: 모두입찰(보조)",
+      "link": "https://www.tp.or.kr",
       "source": "modoobid",
       "org_key": "한국교직원공제회",
       "hit": false,
-      "list_link": "https://www.modoobid.co.kr/bid/org/한국교직원공제회"
+      "list_link": "https://www.tp.or.kr",
+      "official_link": "https://www.tp.or.kr"
     }
   ]
 }

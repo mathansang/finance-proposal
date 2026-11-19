@@ -477,6 +477,8 @@
         }
 
         function institutionLink(row) {
+          const official = String(row?.official_link || "").trim();
+          if (official) return official;
           const listLink = String(row?.list_link || "").trim();
           if (listLink) return listLink;
           const link = String(row?.link || "").trim();
@@ -484,7 +486,6 @@
           if (link.includes("redirect-shinhan")) {
             return "https://www.shinhangroup.com/kr/pr/notice";
           }
-          // 개별 공고 URL이면 기관 목록(/bid/org/)로 되돌리지 않고 그대로 둠
           return link;
         }
 
