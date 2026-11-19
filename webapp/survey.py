@@ -55,16 +55,17 @@ OFFICIAL_BOARDS: dict[str, dict[str, Any]] = {
         "prefer_g2b": True,
     },
     "한국거래소": {
-        "url": "https://www.krx.co.kr",
+        "url": "https://info.krx.co.kr/board/KRX06040000T3/bbs",
         "org_key": "(주)한국거래소",
+        "prefer_g2b": True,
     },
     "금융결제원": {
-        "url": "https://www.kftc.or.kr",
+        "url": "https://www.kftc.or.kr/notice/bidAll",
         "org_key": "금융결제원",
         "prefer_g2b": True,
     },
     "한국예탁결제원": {
-        "url": "https://www.ksd.or.kr",
+        "url": "https://www.alio.go.kr/item/itemOrganList.do?apbaId=C0131&reportFormRootNo=B1030",
         "org_key": "한국예탁결제원",
         "prefer_g2b": True,
     },
