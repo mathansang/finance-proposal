@@ -244,21 +244,6 @@
         </div>
       </section>
 
-      <section>
-        <h2>문서</h2>
-        <p class="links">
-          <a href="latest.md">최신 보고서 (Markdown)</a>
-          <a href="archive/">아카이브 폴더</a>
-        </p>
-        <h2>아카이브</h2>
-        <ul>
-          <li v-if="!(payload.archives || []).length">(아카이브 없음)</li>
-          <li v-for="name in payload.archives" :key="name">
-            <a :href="'archive/' + name">{{ name }}</a>
-          </li>
-        </ul>
-      </section>
-
       <footer>
         자동수집 결과입니다. 예산·마감·참가요건은 공식 원문으로 재확인하세요.
         시장·신용리스크, ALM, K-ICS, IFRS, 파생 등 키워드 hit를 표시합니다.
