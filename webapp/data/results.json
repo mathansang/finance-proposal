@@ -3,7 +3,7 @@
   "period_end": "2026-11-19",
   "survey_date": "2026-11-19",
   "status": "idle",
-  "last_refresh": "2026-11-19 15:31:06",
+  "last_refresh": "2026-11-19 15:39:53",
   "message": "갱신 완료 (2026-10-19 ~ 2026-11-19)",
   "rows": [
     {
@@ -90,13 +90,13 @@
       "announce_date": "2026-11-16",
       "deadline": "2026-11-27",
       "budget": "-",
-      "note": "조회기간 내 공개목록 총 52건 중 목표분야 해당 (2026-10-19~2026-11-19) · 수집우선: 모두입찰(보조)",
-      "link": "https://www.modoobid.co.kr/bid/2611S01831664000/2026",
+      "note": "조회기간 내 공개목록 총 52건 중 목표분야 해당 (2026-10-19~2026-11-19) · 수집우선: 모두입찰(보조) · 나라장터(원문)",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01831664&bidPbancOrd=000",
       "source": "modoobid",
       "org_key": "중소기업은행",
       "hit": true,
-      "list_link": "https://www.ibk.co.kr",
-      "official_link": "https://www.ibk.co.kr"
+      "list_link": "https://www.ibk.co.kr/cyber/noticeListCyber.ibk?pageId=IR03010400",
+      "official_link": "https://www.ibk.co.kr/cyber/noticeListCyber.ibk?pageId=IR03010400"
     },
     {
       "no": "7",
@@ -106,13 +106,13 @@
       "announce_date": "2026-11-02",
       "deadline": "2026-11-13",
       "budget": "-",
-      "note": "조회기간 내 공개목록 총 23건 중 목표분야 해당 (2026-10-19~2026-11-19) · 수집우선: 모두입찰(보조)",
-      "link": "https://www.modoobid.co.kr/bid/2611S01802616000/2026",
+      "note": "조회기간 내 공개목록 총 23건 중 목표분야 해당 (2026-10-19~2026-11-19) · 수집우선: 모두입찰(보조) · 나라장터(원문)",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01802616&bidPbancOrd=000",
       "source": "modoobid",
       "org_key": "한국산업은행",
       "hit": true,
-      "list_link": "https://www.kdb.co.kr",
-      "official_link": "https://www.kdb.co.kr"
+      "list_link": "https://www.alio.go.kr/item/itemOrganList.do?apbaId=C0210&reportFormRootNo=B1030",
+      "official_link": "https://www.alio.go.kr/item/itemOrganList.do?apbaId=C0210&reportFormRootNo=B1030"
     },
     {
       "no": "7-1",
@@ -122,13 +122,13 @@
       "announce_date": "2026-10-21",
       "deadline": "2026-12-01",
       "budget": "-",
-      "note": "조회기간 내 공개목록 총 23건 중 목표분야 해당 (2026-10-19~2026-11-19) · 수집우선: 모두입찰(보조)",
-      "link": "https://www.modoobid.co.kr/bid/2610S01783542000/2026",
+      "note": "조회기간 내 공개목록 총 23건 중 목표분야 해당 (2026-10-19~2026-11-19) · 수집우선: 모두입찰(보조) · 나라장터(원문)",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01783542&bidPbancOrd=000",
       "source": "modoobid",
       "org_key": "한국산업은행",
       "hit": true,
-      "list_link": "https://www.kdb.co.kr",
-      "official_link": "https://www.kdb.co.kr"
+      "list_link": "https://www.alio.go.kr/item/itemOrganList.do?apbaId=C0210&reportFormRootNo=B1030",
+      "official_link": "https://www.alio.go.kr/item/itemOrganList.do?apbaId=C0210&reportFormRootNo=B1030"
     },
     {
       "no": "7-2",
@@ -138,13 +138,13 @@
       "announce_date": "2026-10-19",
       "deadline": "2026-12-01",
       "budget": "-",
-      "note": "조회기간 내 공개목록 총 23건 중 목표분야 해당 (2026-10-19~2026-11-19) · 수집우선: 모두입찰(보조)",
-      "link": "https://www.modoobid.co.kr/bid/2610S01777242000/2026",
+      "note": "조회기간 내 공개목록 총 23건 중 목표분야 해당 (2026-10-19~2026-11-19) · 수집우선: 모두입찰(보조) · 나라장터(원문)",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01777242&bidPbancOrd=000",
       "source": "modoobid",
       "org_key": "한국산업은행",
       "hit": true,
-      "list_link": "https://www.kdb.co.kr",
-      "official_link": "https://www.kdb.co.kr"
+      "list_link": "https://www.alio.go.kr/item/itemOrganList.do?apbaId=C0210&reportFormRootNo=B1030",
+      "official_link": "https://www.alio.go.kr/item/itemOrganList.do?apbaId=C0210&reportFormRootNo=B1030"
     },
     {
       "no": "8",
@@ -404,7 +404,7 @@
       "announce_date": "2026-10-29",
       "deadline": "2026-11-04",
       "budget": "확인 불가",
-      "note": "K-ICS·IFRS9/17 외부검증 · 조회기간 2026-10-16~2026-11-16 · 조회기간 2026-10-16~2026-11-16 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 수집우선: 공식게시판",
+      "note": "K-ICS·IFRS9/17 외부검증 · 조회기간 2026-10-16~2026-11-16 · 조회기간 2026-10-16~2026-11-16 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 수집우선: 공식게시판 · 조회기간 2026-10-19~2026-11-19 · 수집우선: 공식게시판",
       "link": "https://work.00data.kr/projects/R26BK01798197",
       "source": "board",
       "hit": true
@@ -535,12 +535,12 @@
       "deadline": "-",
       "budget": "-",
       "note": "조회기간 내 공개목록 전수 4건, 목표분야 미해당 (2026-10-19~2026-11-19) · 수집우선: 모두입찰(보조)",
-      "link": "https://www.fsc.go.kr",
+      "link": "https://www.fsc.go.kr/no010101",
       "source": "modoobid",
       "org_key": "금융위원회",
       "hit": false,
-      "list_link": "https://www.fsc.go.kr",
-      "official_link": "https://www.fsc.go.kr"
+      "list_link": "https://www.fsc.go.kr/no010101",
+      "official_link": "https://www.fsc.go.kr/no010101"
     },
     {
       "no": "35",
@@ -551,12 +551,12 @@
       "deadline": "-",
       "budget": "-",
       "note": "조회기간 내 공개목록 전수 4건, 목표분야 미해당 (2026-10-19~2026-11-19) · 수집우선: 모두입찰(보조)",
-      "link": "https://www.bok.or.kr",
+      "link": "https://www.bok.or.kr/portal/bbs/B0000235/list.do?menuNo=200786",
       "source": "modoobid",
       "org_key": "한국은행",
       "hit": false,
-      "list_link": "https://www.bok.or.kr",
-      "official_link": "https://www.bok.or.kr"
+      "list_link": "https://www.bok.or.kr/portal/bbs/B0000235/list.do?menuNo=200786",
+      "official_link": "https://www.bok.or.kr/portal/bbs/B0000235/list.do?menuNo=200786"
     },
     {
       "no": "36",
@@ -619,12 +619,12 @@
       "deadline": "-",
       "budget": "-",
       "note": "조회기간 내 공개목록 전수 3건, 목표분야 미해당 (2026-10-19~2026-11-19) · 수집우선: 모두입찰(보조)",
-      "link": "https://www.kdic.or.kr",
+      "link": "https://www.kdic.or.kr/di/pbcr/selectPbcrNtcList.do",
       "source": "modoobid",
       "org_key": "예금보험공사",
       "hit": false,
-      "list_link": "https://www.kdic.or.kr",
-      "official_link": "https://www.kdic.or.kr"
+      "list_link": "https://www.kdic.or.kr/di/pbcr/selectPbcrNtcList.do",
+      "official_link": "https://www.kdic.or.kr/di/pbcr/selectPbcrNtcList.do"
     },
     {
       "no": "40",
@@ -635,12 +635,12 @@
       "deadline": "-",
       "budget": "-",
       "note": "조회기간 내 공개목록 전수 6건, 목표분야 미해당 (2026-10-19~2026-11-19) · 수집우선: 모두입찰(보조)",
-      "link": "https://www.kamco.or.kr",
+      "link": "https://www.kamco.or.kr/portal/bbs/list.do?mId=0701020000&ptIdx=480",
       "source": "modoobid",
       "org_key": "한국자산관리공사",
       "hit": false,
-      "list_link": "https://www.kamco.or.kr",
-      "official_link": "https://www.kamco.or.kr"
+      "list_link": "https://www.kamco.or.kr/portal/bbs/list.do?mId=0701020000&ptIdx=480",
+      "official_link": "https://www.kamco.or.kr/portal/bbs/list.do?mId=0701020000&ptIdx=480"
     },
     {
       "no": "41",
@@ -650,13 +650,13 @@
       "announce_date": "2026-11-19",
       "deadline": "2026-11-26",
       "budget": "-",
-      "note": "조회기간 내 공개목록 총 3건 중 목표분야 해당 (2026-10-19~2026-11-19) · 수집우선: 모두입찰(보조)",
-      "link": "https://www.modoobid.co.kr/bid/2611S01841412000/2026",
+      "note": "조회기간 내 공개목록 총 3건 중 목표분야 해당 (2026-10-19~2026-11-19) · 수집우선: 모두입찰(보조) · 나라장터(원문)",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01841412&bidPbancOrd=000",
       "source": "modoobid",
       "org_key": "한국주택금융공사",
       "hit": true,
-      "list_link": "https://www.hf.go.kr",
-      "official_link": "https://www.hf.go.kr"
+      "list_link": "https://www.hf.go.kr/ko/sub05/sub05_06.do",
+      "official_link": "https://www.hf.go.kr/ko/sub05/sub05_06.do"
     },
     {
       "no": "42",
@@ -667,12 +667,12 @@
       "deadline": "-",
       "budget": "-",
       "note": "조회기간 내 공개목록 전수 15건, 목표분야 미해당 (2026-10-19~2026-11-19) · 수집우선: 모두입찰(보조)",
-      "link": "https://www.kodit.co.kr",
+      "link": "https://www.alio.go.kr/item/itemOrganList.do?apbaId=C0091&reportFormRootNo=B1030",
       "source": "modoobid",
       "org_key": "신용보증기금",
       "hit": false,
-      "list_link": "https://www.kodit.co.kr",
-      "official_link": "https://www.kodit.co.kr"
+      "list_link": "https://www.alio.go.kr/item/itemOrganList.do?apbaId=C0091&reportFormRootNo=B1030",
+      "official_link": "https://www.alio.go.kr/item/itemOrganList.do?apbaId=C0091&reportFormRootNo=B1030"
     },
     {
       "no": "43",
@@ -683,12 +683,12 @@
       "deadline": "-",
       "budget": "-",
       "note": "조회기간 내 공개목록 전수 5건, 목표분야 미해당 (2026-10-19~2026-11-19) · 수집우선: 모두입찰(보조)",
-      "link": "https://www.kibo.or.kr",
+      "link": "https://www.alio.go.kr/item/itemOrganList.do?apbaId=C0038&reportFormRootNo=B1030",
       "source": "modoobid",
       "org_key": "기술보증기금",
       "hit": false,
-      "list_link": "https://www.kibo.or.kr",
-      "official_link": "https://www.kibo.or.kr"
+      "list_link": "https://www.alio.go.kr/item/itemOrganList.do?apbaId=C0038&reportFormRootNo=B1030",
+      "official_link": "https://www.alio.go.kr/item/itemOrganList.do?apbaId=C0038&reportFormRootNo=B1030"
     },
     {
       "no": "44",
@@ -698,13 +698,13 @@
       "announce_date": "2026-11-04",
       "deadline": "2026-11-16",
       "budget": "-",
-      "note": "조회기간 내 공개목록 총 2건 중 목표분야 해당 (2026-10-19~2026-11-19) · 수집우선: 모두입찰(보조)",
-      "link": "https://www.modoobid.co.kr/bid/2611S01783501000/2026",
+      "note": "조회기간 내 공개목록 총 2건 중 목표분야 해당 (2026-10-19~2026-11-19) · 수집우선: 공식(해양진흥) · 모두입찰(보조) · 나라장터(원문)",
+      "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01783501&bidPbancOrd=000",
       "source": "modoobid",
       "org_key": "한국해양진흥공사",
       "hit": true,
-      "list_link": "https://www.kobc.or.kr",
-      "official_link": "https://www.kobc.or.kr"
+      "list_link": "https://www.kobc.or.kr/ebz/kor/bbs/list.do?mId=0603000000&ptIdx=264",
+      "official_link": "https://www.kobc.or.kr/ebz/kor/bbs/list.do?mId=0603000000&ptIdx=264"
     },
     {
       "no": "45",
