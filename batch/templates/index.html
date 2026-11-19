@@ -130,6 +130,19 @@
       font-size: 0.85rem;
       margin-top: 1.5rem;
     }
+    .build-meta {
+      margin-top: 0.75rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid var(--line);
+      font-size: 0.8rem;
+      font-variant-numeric: tabular-nums;
+      word-break: break-all;
+    }
+    .build-meta code {
+      font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
+      font-size: 0.78rem;
+      color: var(--ink);
+    }
     .status {
       color: var(--muted);
       padding: 2rem 0;
@@ -249,6 +262,12 @@
       <footer>
         자동수집 결과입니다. 예산·마감·참가요건은 공식 원문으로 재확인하세요.
         시장·신용리스크, ALM, K-ICS, IFRS, 파생 등 키워드 hit를 표시합니다.
+        <div class="build-meta">
+          page 업데이트
+          <code>{{ payload.page_updated_at || "-" }}</code>
+          · 버전
+          <code>{{ payload.page_version || "-" }}</code>
+        </div>
       </footer>
     </main>
 
