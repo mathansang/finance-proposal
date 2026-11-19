@@ -2,7 +2,7 @@
 
 **조사 기준일:** 2026-11-19  
 **조회기간:** 2026-10-19 ~ 2026-11-19  
-**자동갱신:** 2026-11-19 15:39:53  
+**자동갱신:** 2026-11-19 15:40:30  
 
 > 본 문서는 공개목록 자동수집(모두입찰·기관 공개목록) 결과입니다. 예산·마감·RFP·참가요건은 원문 확인 전 **확인 불가**로 표시합니다.
 
@@ -34,7 +34,7 @@
 | 3 | IBK기업은행 | 여신포트폴리오 체계 개편 및 시스템 재구축을 위한 컨설팅 | 확인 불가 | 2026-11-27 | 확인 불가 | 확인 불가 | [링크](https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01831664&bidPbancOrd=000) |
 | 4 | 한국해양진흥공사 | 신규 신용평가시스템 구축 용역 | 확인 불가 | 2026-11-16 | 확인 불가 | 확인 불가 | [링크](https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01783501&bidPbancOrd=000) |
 | 5 | 한국산업은행 | 한국산업은행 위험회피회계 및 FVO 적용 대상 원·외화 산금채 가격평가기관 선정 | 확인 불가 | 2026-11-13 | 확인 불가 | 확인 불가 | [링크](https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01802616&bidPbancOrd=000) |
-| 6 | IBK연금보험 | K-ICS검증 용역계약 (재입찰) | 확인 불가 | 2026-11-04 | 확인 불가 | 확인 불가 | [링크](https://work.00data.kr/projects/R26BK01798197) |
+| 6 | IBK연금보험 | K-ICS검증 용역계약 (재입찰) | 확인 불가 | 2026-11-04 | 확인 불가 | 확인 불가 | [링크](https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01798197&bidPbancOrd=000) |
 | 7 | 한국산업은행 | 첨단전략산업기금 편입에 따른 리스크관리 인프라 정합성 점검을 위한 용역 | 확인 불가 | 2026-12-01 | 확인 불가 | 확인 불가 | [링크](https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01783542&bidPbancOrd=000) |
 | 8 | 한국산업은행 | 미래 경기전망 및 위기상황 반영을 위한 부도율 추정 모형 개선 | 확인 불가 | 2026-12-01 | 확인 불가 | 확인 불가 | [링크](https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01777242&bidPbancOrd=000) |
 
@@ -76,7 +76,7 @@
 | 22 | 신한라이프 | [https://www.shinhanlife.co.kr/hp/cdhi0010.do](https://www.shinhanlife.co.kr/hp/cdhi0010.do) |
 | 23 | KB라이프 | [https://www.kblife.co.kr](https://www.kblife.co.kr) |
 | 24 | iM라이프 | [https://www.imlife.co.kr](https://www.imlife.co.kr) |
-| 25 | IBK연금보험 | [https://work.00data.kr/projects/R26BK01798197](https://work.00data.kr/projects/R26BK01798197) |
+| 25 | IBK연금보험 | [https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01798197&bidPbancOrd=000](https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01798197&bidPbancOrd=000) |
 | 26 | 삼성화재 | [https://www.samsungfire.com/vh/page/VH.HPIF0100.do](https://www.samsungfire.com/vh/page/VH.HPIF0100.do) |
 | 27 | DB손해보험 | [https://idbins.com/pc/bizxpress/contentTemplet/cmy/pr/an/list.jsp](https://idbins.com/pc/bizxpress/contentTemplet/cmy/pr/an/list.jsp) |
 | 28 | 현대해상 | [https://www.hi.co.kr](https://www.hi.co.kr) |
@@ -128,7 +128,7 @@
 | 22 | 신한라이프 | 공시실 입찰공시 (이메일 RFP 병행) | - | 확인 불가 | 공식 게시판(수동전수 기준 유지). 중계사이트 미사용. 조회기간 2026-10-19~2026-11-19 | [https://www.shinhanlife.co.kr/hp/cdhi0010.do](https://www.shinhanlife.co.kr/hp/cdhi0010.do) |
 | 23 | KB라이프 | — | - | 확인 불가 |  | [https://www.kblife.co.kr](https://www.kblife.co.kr) |
 | 24 | iM라이프 | — | - | 확인 불가 |  | [https://www.imlife.co.kr](https://www.imlife.co.kr) |
-| 25 | IBK연금보험 | K-ICS검증 용역계약 (재입찰) | 2026-10-29 | 2026-11-04 | K-ICS·IFRS9/17 외부검증 · 조회기간 2026-10-16~2026-11-16 · 조회기간 2026-10-16~2026-11-16 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 수집우선: 공식게시판 · 조회기간 2026-10-19~2026-11-19 · 수집우선: 공식게시판 | [https://work.00data.kr/projects/R26BK01798197](https://work.00data.kr/projects/R26BK01798197) |
+| 25 | IBK연금보험 | K-ICS검증 용역계약 (재입찰) | 2026-10-29 | 2026-11-04 | K-ICS·IFRS9/17 외부검증 · 조회기간 2026-10-16~2026-11-16 · 조회기간 2026-10-16~2026-11-16 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 수집우선: 공식게시판 · 조회기간 2026-10-19~2026-11-19 · 수집우선: 공식게시판 · 조회기간 2026-10-19~2026-11-19 · 수집우선: 공식게시판 | [https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01798197&bidPbancOrd=000](https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01798197&bidPbancOrd=000) |
 | 26 | 삼성화재 | 공고 없음 (총 0건) | - | 확인 불가 | 공식 게시판(수동전수 기준 유지). 중계사이트 미사용. 조회기간 2026-10-19~2026-11-19 | [https://www.samsungfire.com/vh/page/VH.HPIF0100.do](https://www.samsungfire.com/vh/page/VH.HPIF0100.do) |
 | 27 | DB손해보험 | 공고 없음 (총 2건) | - | 확인 불가 | 공식 게시판(수동전수 기준 유지). 중계사이트 미사용. 조회기간 2026-10-19~2026-11-19 | [https://idbins.com/pc/bizxpress/contentTemplet/cmy/pr/an/list.jsp](https://idbins.com/pc/bizxpress/contentTemplet/cmy/pr/an/list.jsp) |
 | 28 | 현대해상 | — | - | 확인 불가 |  | [https://www.hi.co.kr](https://www.hi.co.kr) |
