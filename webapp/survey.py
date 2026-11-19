@@ -32,7 +32,8 @@ AGGREGATOR_HOSTS = (
     "jodaln.com",
 )
 
-# 공식 게시판 (우선). fetcher가 있으면 해당 수집기를 먼저 사용.
+# 공식 게시판 (우선). url은 홈이 아니라 공고·입찰 목록으로 지정.
+# prefer_g2b=True 이면 중계 상세를 나라장터 원문 링크로 승격.
 OFFICIAL_BOARDS: dict[str, dict[str, Any]] = {
     "신한금융그룹·신한은행": {
         "url": "https://www.shinhangroup.com/kr/pr/notice",
@@ -41,15 +42,17 @@ OFFICIAL_BOARDS: dict[str, dict[str, Any]] = {
     "금융감독원": {
         "url": "https://www.fss.or.kr/fss/bbs/B0000191/list.do?menuNo=200222",
         "fetcher": "fss",
-        "org_key": "금융감독원",  # 공식 실패/공백 시 보조
+        "org_key": "금융감독원",
     },
     "금융위원회": {
-        "url": "https://www.fsc.go.kr",
+        "url": "https://www.fsc.go.kr/no010101",
         "org_key": "금융위원회",
+        "prefer_g2b": True,
     },
     "한국은행": {
-        "url": "https://www.bok.or.kr",
+        "url": "https://www.bok.or.kr/portal/bbs/B0000235/list.do?menuNo=200786",
         "org_key": "한국은행",
+        "prefer_g2b": True,
     },
     "한국거래소": {
         "url": "https://www.krx.co.kr",
@@ -58,57 +61,148 @@ OFFICIAL_BOARDS: dict[str, dict[str, Any]] = {
     "금융결제원": {
         "url": "https://www.kftc.or.kr",
         "org_key": "금융결제원",
+        "prefer_g2b": True,
     },
     "한국예탁결제원": {
         "url": "https://www.ksd.or.kr",
         "org_key": "한국예탁결제원",
+        "prefer_g2b": True,
     },
     "예금보험공사": {
-        "url": "https://www.kdic.or.kr",
+        "url": "https://www.kdic.or.kr/di/pbcr/selectPbcrNtcList.do",
         "org_key": "예금보험공사",
+        "prefer_g2b": True,
     },
     "한국자산관리공사": {
-        "url": "https://www.kamco.or.kr",
+        "url": "https://www.kamco.or.kr/portal/bbs/list.do?mId=0701020000&ptIdx=480",
         "org_key": "한국자산관리공사",
+        "prefer_g2b": True,
     },
     "한국주택금융공사": {
-        "url": "https://www.hf.go.kr",
+        "url": "https://www.hf.go.kr/ko/sub05/sub05_06.do",
         "org_key": "한국주택금융공사",
+        "prefer_g2b": True,
     },
     "신용보증기금": {
-        "url": "https://www.kodit.co.kr",
+        "url": "https://www.alio.go.kr/item/itemOrganList.do?apbaId=C0091&reportFormRootNo=B1030",
         "org_key": "신용보증기금",
+        "prefer_g2b": True,
     },
     "기술보증기금": {
-        "url": "https://www.kibo.or.kr",
+        "url": "https://www.alio.go.kr/item/itemOrganList.do?apbaId=C0038&reportFormRootNo=B1030",
         "org_key": "기술보증기금",
+        "prefer_g2b": True,
     },
     "한국해양진흥공사": {
-        "url": "https://www.kobc.or.kr",
+        "url": "https://www.kobc.or.kr/ebz/kor/bbs/list.do?mId=0603000000&ptIdx=264",
         "org_key": "한국해양진흥공사",
+        "fetcher": "kobc",
+        "prefer_g2b": True,
     },
     "한국교직원공제회": {
         "url": "https://www.tp.or.kr",
         "org_key": "한국교직원공제회",
+        "prefer_g2b": True,
     },
     "IBK기업은행": {
-        "url": "https://www.ibk.co.kr",
+        "url": "https://www.ibk.co.kr/cyber/noticeListCyber.ibk?pageId=IR03010400",
         "org_key": "중소기업은행",
+        "prefer_g2b": True,
     },
     "한국산업은행": {
-        "url": "https://www.kdb.co.kr",
+        "url": "https://www.alio.go.kr/item/itemOrganList.do?apbaId=C0210&reportFormRootNo=B1030",
         "org_key": "한국산업은행",
+        "prefer_g2b": True,
     },
     "한국수출입은행": {
         "url": "https://www.koreaexim.go.kr",
         "org_key": "한국수출입은행",
+        "prefer_g2b": True,
     },
 }
+
+BID_NO_RE = re.compile(r"(R\d{2}[A-Z]{2}\d{5,})(?:-(\d{3}))?")
 
 
 def is_aggregator_url(url: str | None) -> bool:
     u = (url or "").lower()
     return any(h in u for h in AGGREGATOR_HOSTS)
+
+
+def g2b_notice_url(bid_no: str, bid_ord: str | None = None) -> str:
+    """나라장터 입찰공고 상세 딥링크."""
+    no = (bid_no or "").strip()
+    ord_ = (bid_ord or "000").strip() or "000"
+    return (
+        "https://www.g2b.go.kr/link/PNPE027_01/single/"
+        f"?bidPbancNo={no}&bidPbancOrd={ord_}"
+    )
+
+
+def parse_bid_no(text: str) -> tuple[str, str] | None:
+    m = BID_NO_RE.search(text or "")
+    if not m:
+        return None
+    return m.group(1), (m.group(2) or "000")
+
+
+def extract_bid_no_from_page(url: str) -> tuple[str, str] | None:
+    """중계 상세에서 나라장터 공고번호 추출."""
+    try:
+        resp = requests.get(url, headers=HEADERS, timeout=25)
+        resp.raise_for_status()
+    except requests.RequestException:
+        return None
+    return parse_bid_no(resp.text)
+
+
+def upgrade_notice_to_g2b(notice: dict[str, Any]) -> dict[str, Any]:
+    """중계 링크를 나라장터 원문으로 승격. 마감은 중계에서 먼저 확보."""
+    link = str(notice.get("link") or "").strip()
+    if not is_aggregator_url(link):
+        return notice
+    if notice.get("bid_no"):
+        bid = str(notice["bid_no"])
+        ord_ = str(notice.get("bid_ord") or "000")
+        out = {**notice, "link": g2b_notice_url(bid, ord_), "source": "g2b"}
+        return out
+
+    # 마감·공고번호는 중계 상세에서
+    deadline = notice.get("deadline")
+    if not deadline or deadline == "-":
+        found = fetch_deadline_for_notice(notice)
+        if found:
+            deadline = found
+
+    parsed = extract_bid_no_from_page(link)
+    if not parsed:
+        if deadline:
+            return {**notice, "deadline": deadline}
+        return notice
+
+    bid, ord_ = parsed
+    out = {
+        **notice,
+        "bid_no": bid,
+        "bid_ord": ord_,
+        "link": g2b_notice_url(bid, ord_),
+        "source": "g2b",
+        "aggregator_link": link,
+    }
+    if deadline:
+        out["deadline"] = deadline
+    return out
+
+
+def upgrade_target_notices_to_g2b(notices: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """목표분야 hit만 나라장터 원문 링크로 교체."""
+    out: list[dict[str, Any]] = []
+    for n in notices:
+        if _is_target(str(n.get("title") or "")) and is_aggregator_url(n.get("link")):
+            out.append(upgrade_notice_to_g2b(n))
+        else:
+            out.append(n)
+    return out
 
 
 # 페이지 '목표분야 판별'에 노출하는 기준 키워드와 동일하게 유지
@@ -278,6 +372,50 @@ def fetch_fss_notices() -> list[dict[str, Any]]:
         if detail in seen:
             continue
         seen.add(detail)
+        items.append({
+            "title": title[:200],
+            "posted": m_date.group(1),
+            "link": detail,
+            "source": "official",
+        })
+    return items
+
+
+def fetch_kobc_notices() -> list[dict[str, Any]]:
+    """한국해양진흥공사 공식 입찰공고 게시판."""
+    list_url = "https://www.kobc.or.kr/ebz/kor/bbs/list.do?mId=0603000000&ptIdx=264"
+    try:
+        resp = requests.get(list_url, headers=HEADERS, timeout=25)
+        resp.raise_for_status()
+    except requests.RequestException as e:
+        return [{"error": str(e), "title": "", "posted": None}]
+
+    soup = BeautifulSoup(resp.text, "lxml")
+    items: list[dict[str, Any]] = []
+    seen: set[str] = set()
+    for tr in soup.find_all("tr"):
+        text = " ".join(tr.get_text(" ", strip=True).split())
+        m_date = re.search(r"(20\d{2}-\d{2}-\d{2})", text)
+        if not m_date:
+            continue
+        a = tr.find("a", href=True)
+        title = " ".join(((a.get_text() if a else "") or "").split()).strip()
+        if not title:
+            # 번호 제거 후 제목 추정
+            title = re.sub(r"^\d+\s+", "", text)
+            title = re.sub(r"\s+관리자\s+20\d{2}-\d{2}-\d{2}.*$", "", title).strip()
+        title = re.sub(r"^\[(?:입찰공고|사전규격|조달물자[^\]]*)\]\s*", "", title).strip()
+        if len(title) < 4:
+            continue
+        href = str((a.get("href") if a else "") or "").strip()
+        if href and href not in ("#", "javascript:;") and not href.startswith("javascript:"):
+            detail = urljoin(list_url, href)
+        else:
+            detail = list_url
+        key = f"{title}|{m_date.group(1)}"
+        if key in seen:
+            continue
+        seen.add(key)
         items.append({
             "title": title[:200],
             "posted": m_date.group(1),
@@ -632,6 +770,7 @@ def refresh_survey() -> dict[str, Any]:
 
         # 1) 공식·계열·정부 게시판 우선
         fetcher = official_cfg.get("fetcher")
+        prefer_g2b = bool(official_cfg.get("prefer_g2b"))
         if fetcher == "shinhan" or "신한금융" in company or "shinhangroup.com/kr/pr/notice" in base_link:
             official_notices = filter_period(fetch_shinhan_notices(), start, end)
             official_url = official_url or "https://www.shinhangroup.com/kr/pr/notice"
@@ -639,6 +778,9 @@ def refresh_survey() -> dict[str, Any]:
         elif fetcher == "fss":
             official_notices = filter_period(fetch_fss_notices(), start, end)
             channels.append("공식(금감원)")
+        elif fetcher == "kobc":
+            official_notices = filter_period(fetch_kobc_notices(), start, end)
+            channels.append("공식(해양진흥)")
         elif base.get("source") == "board" and not is_aggregator_url(base_link):
             channels.append("공식게시판")
 
@@ -660,6 +802,11 @@ def refresh_survey() -> dict[str, Any]:
                 secondary_notices.extend(filter_period(fetch_modoobid(k), start, end))
             if secondary_notices:
                 channels.append("모두입찰(보조)")
+                # 공공기관: 중계 hit → 나라장터 원문 링크로 승격
+                if prefer_g2b:
+                    secondary_notices = upgrade_target_notices_to_g2b(secondary_notices)
+                    if any(n.get("source") == "g2b" for n in secondary_notices):
+                        channels.append("나라장터(원문)")
 
         if official_notices or secondary_notices:
             notices = merge_notices_prefer_official(official_notices, secondary_notices)
@@ -674,13 +821,16 @@ def refresh_survey() -> dict[str, Any]:
                     row["link"] = list_link
                     if is_aggregator_url(row.get("link")) and official_url:
                         row["link"] = official_url
-                # hit 링크가 중계이면 유지하되, 기관 목록은 공식 URL
-                if row.get("hit") and is_aggregator_url(row.get("link")) and official_url:
-                    row["note"] = (row.get("note") or "") + f" · 수집우선: {channel_note}"
-                elif row.get("hit"):
-                    row["note"] = (row.get("note") or "") + f" · 수집우선: {channel_note}"
-                else:
-                    row["note"] = (row.get("note") or "") + f" · 수집우선: {channel_note}"
+                # hit가 아직 중계면 한 번 더 나라장터 승격 시도
+                if row.get("hit") and prefer_g2b and is_aggregator_url(row.get("link")):
+                    upgraded = upgrade_notice_to_g2b(row)
+                    row["link"] = upgraded.get("link") or row["link"]
+                    if upgraded.get("deadline") and upgraded["deadline"] != "-":
+                        row["deadline"] = normalize_deadline(upgraded["deadline"])
+                    if upgraded.get("bid_no"):
+                        row["bid_no"] = upgraded["bid_no"]
+                        row["bid_ord"] = upgraded.get("bid_ord") or "000"
+                row["note"] = (row.get("note") or "") + f" · 수집우선: {channel_note}"
                 if official_url:
                     row["official_link"] = official_url
             new_rows.extend(built)
@@ -693,6 +843,15 @@ def refresh_survey() -> dict[str, Any]:
             row["official_link"] = official_url
             if not row.get("hit"):
                 row["link"] = official_url
+        # 기존 hit가 중계·공공일감이면 나라장터 원문으로 승격
+        if row.get("hit") and is_aggregator_url(row.get("link")):
+            upgraded = upgrade_notice_to_g2b(row)
+            row["link"] = upgraded.get("link") or row["link"]
+            if upgraded.get("deadline") and upgraded["deadline"] != "-":
+                row["deadline"] = normalize_deadline(upgraded["deadline"])
+            if upgraded.get("bid_no"):
+                row["bid_no"] = upgraded["bid_no"]
+                row["bid_ord"] = upgraded.get("bid_ord") or "000"
         if row.get("hit"):
             ad = _parse_date(row.get("announce_date") or "")
             if ad and not (start <= ad <= end):
