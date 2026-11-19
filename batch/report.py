@@ -52,6 +52,9 @@ def _display_deadline(value: Any) -> str:
     text = str(value or "").strip()
     text = re.sub(r"^개찰\s*", "", text)
     text = re.sub(r"\s*\(마감\)\s*$", "", text).strip()
+    m = re.search(r"(20\d{2})[-./](\d{1,2})[-./](\d{1,2})", text)
+    if m:
+        return f"{int(m.group(1)):04d}-{int(m.group(2)):02d}-{int(m.group(3)):02d}"
     if not text or text == "-":
         return "확인 불가"
     return text

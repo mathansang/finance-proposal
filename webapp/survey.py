@@ -222,9 +222,9 @@ def _fmt_ymd(y: str | int, m: str | int, d: str | int) -> str:
 
 
 def _fmt_deadline(ymd: str, hour: str | int | None = None, minute: str | int | None = None) -> str:
-    if hour is None or hour == "":
-        return ymd
-    return f"{ymd} {int(hour):02d}:{int(minute or 0):02d}"
+    # 화면에는 날짜만 표기 (시각 파싱 인자는 호환용으로 유지)
+    _ = (hour, minute)
+    return ymd
 
 
 def parse_deadline_from_text(text: str) -> str | None:
@@ -272,13 +272,17 @@ def parse_deadline_from_text(text: str) -> str | None:
 
 
 def normalize_deadline(value: Any) -> str:
-    """표시용: '개찰 ' / '(마감)' 제거, 날짜·시각만 남김."""
+    """표시용: '개찰 ' / '(마감)' / 시각 제거, 날짜만 남김."""
     text = str(value or "").strip()
     if not text or text in ("-", "확인 불가"):
         return "-"
     text = re.sub(r"^개찰\s*", "", text)
     text = re.sub(r"\s*\(마감\)\s*$", "", text)
-    return text.strip() or "-"
+    text = text.strip()
+    d = _parse_date(text)
+    if d:
+        return d.isoformat()
+    return text or "-"
 
 
 def fetch_deadline_for_notice(notice_or_row: dict[str, Any]) -> str | None:
