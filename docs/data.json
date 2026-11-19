@@ -2,7 +2,7 @@
   "survey_date": "2026-11-19",
   "period_start": "2026-10-19",
   "period_end": "2026-11-19",
-  "last_refresh": "2026-11-19 15:40:30",
+  "last_refresh": "2026-11-19 15:45:56",
   "message": "갱신 완료 (2026-10-19 ~ 2026-11-19)",
   "rows": [
     {
@@ -403,12 +403,14 @@
       "announce_date": "2026-10-29",
       "deadline": "2026-11-04",
       "budget": "확인 불가",
-      "note": "K-ICS·IFRS9/17 외부검증 · 조회기간 2026-10-16~2026-11-16 · 조회기간 2026-10-16~2026-11-16 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 수집우선: 공식게시판 · 조회기간 2026-10-19~2026-11-19 · 수집우선: 공식게시판 · 조회기간 2026-10-19~2026-11-19 · 수집우선: 공식게시판",
+      "note": "K-ICS·IFRS9/17 외부검증 · 조회기간 2026-10-16~2026-11-16 · 조회기간 2026-10-16~2026-11-16 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 조회기간 2026-10-19~2026-11-19 · 수집우선: 공식게시판 · 조회기간 2026-10-19~2026-11-19 · 수집우선: 공식게시판 · 조회기간 2026-10-19~2026-11-19 · 수집우선: 공식게시판 · 조회기간 2026-10-19~2026-11-19 · 수집우선: 공식게시판",
       "link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01798197&bidPbancOrd=000",
       "source": "board",
       "hit": true,
       "bid_no": "R26BK01798197",
-      "bid_ord": "000"
+      "bid_ord": "000",
+      "list_link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01798197&bidPbancOrd=000",
+      "official_link": "https://www.g2b.go.kr/link/PNPE027_01/single/?bidPbancNo=R26BK01798197&bidPbancOrd=000"
     },
     {
       "no": "26",
@@ -568,7 +570,7 @@
       "deadline": "-",
       "budget": "-",
       "note": "조회기간 내 공개목록 전수 4건, 목표분야 미해당 (2026-10-19~2026-11-19) · 수집우선: 모두입찰(보조)",
-      "link": "https://www.krx.co.kr",
+      "link": "https://info.krx.co.kr/board/KRX06040000T3/bbs",
       "source": "modoobid",
       "org_key": "(주)한국거래소",
       "org_keys": [
@@ -576,8 +578,8 @@
         "(주)한국거래소 서울사옥"
       ],
       "hit": false,
-      "list_link": "https://www.krx.co.kr",
-      "official_link": "https://www.krx.co.kr"
+      "list_link": "https://info.krx.co.kr/board/KRX06040000T3/bbs",
+      "official_link": "https://info.krx.co.kr/board/KRX06040000T3/bbs"
     },
     {
       "no": "37",
@@ -588,12 +590,12 @@
       "deadline": "-",
       "budget": "-",
       "note": "조회기간 내 공개목록 전수 3건, 목표분야 미해당 (2026-10-19~2026-11-19) · 수집우선: 모두입찰(보조)",
-      "link": "https://www.kftc.or.kr",
+      "link": "https://www.kftc.or.kr/notice/bidAll",
       "source": "modoobid",
       "org_key": "금융결제원",
       "hit": false,
-      "list_link": "https://www.kftc.or.kr",
-      "official_link": "https://www.kftc.or.kr"
+      "list_link": "https://www.kftc.or.kr/notice/bidAll",
+      "official_link": "https://www.kftc.or.kr/notice/bidAll"
     },
     {
       "no": "38",
@@ -604,12 +606,12 @@
       "deadline": "-",
       "budget": "-",
       "note": "조회기간 내 공개목록 전수 4건, 목표분야 미해당 (2026-10-19~2026-11-19) · 수집우선: 모두입찰(보조)",
-      "link": "https://www.ksd.or.kr",
+      "link": "https://www.alio.go.kr/item/itemOrganList.do?apbaId=C0131&reportFormRootNo=B1030",
       "source": "modoobid",
       "org_key": "한국예탁결제원",
       "hit": false,
-      "list_link": "https://www.ksd.or.kr",
-      "official_link": "https://www.ksd.or.kr"
+      "list_link": "https://www.alio.go.kr/item/itemOrganList.do?apbaId=C0131&reportFormRootNo=B1030",
+      "official_link": "https://www.alio.go.kr/item/itemOrganList.do?apbaId=C0131&reportFormRootNo=B1030"
     },
     {
       "no": "39",
@@ -754,6 +756,6 @@
     "여신포트폴리오",
     "스트레스테스트"
   ],
-  "page_updated_at": "2026-11-19 15:40:30 KST",
-  "page_version": "5ff2b13-20261119154030"
+  "page_updated_at": "2026-11-19 15:45:56 KST",
+  "page_version": "fb80229-20261119154556"
 }
