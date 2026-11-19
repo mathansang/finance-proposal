@@ -277,6 +277,11 @@ def _page_build_meta(repo: Path | None = None) -> dict[str, str]:
 def build_pages_payload(data: dict[str, Any], archive_names: list[str]) -> dict[str, Any]:
     """Vue가 fetch하는 data.json 본문."""
     meta = _page_build_meta()
+    try:
+        from survey import TARGET_KEYWORDS_DISPLAY
+        keywords = list(TARGET_KEYWORDS_DISPLAY)
+    except Exception:  # noqa: BLE001
+        keywords = data.get("target_keywords") or []
     return {
         "survey_date": data.get("survey_date"),
         "period_start": data.get("period_start"),
@@ -285,6 +290,7 @@ def build_pages_payload(data: dict[str, Any], archive_names: list[str]) -> dict[
         "message": data.get("message"),
         "rows": data.get("rows") or [],
         "archives": archive_names,
+        "target_keywords": keywords,
         **meta,
     }
 
