@@ -336,6 +336,43 @@ def enrich_hit_deadline(row: dict[str, Any]) -> dict[str, Any]:
     return row
 
 
+def _title_dedupe_key(title: str) -> str:
+    """재공고·재입찰 표기 제거 후 동일 사업 판별 키."""
+    t = str(title or "").strip()
+    t = re.sub(r"\s*[\(\[【]?\s*재공고\s*[\)\]】]?", " ", t)
+    t = re.sub(r"\s*[\(\[【]?\s*재입찰\s*[\)\]】]?", " ", t)
+    t = re.sub(r"\s+", " ", t).strip()
+    return t
+
+
+def keep_latest_notices(notices: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """동일 사업(제목 키)은 공고일 최신 1건만 유지."""
+    best: dict[str, dict[str, Any]] = {}
+    order: list[str] = []
+    for n in notices:
+        key = _title_dedupe_key(str(n.get("title") or ""))
+        if not key:
+            continue
+        posted = _parse_date(str(n.get("posted") or "")) or date.min
+        if key not in best:
+            best[key] = n
+            order.append(key)
+            continue
+        prev = best[key]
+        prev_posted = _parse_date(str(prev.get("posted") or "")) or date.min
+        if posted > prev_posted:
+            best[key] = n
+        elif posted == prev_posted:
+            # 동일일이면 재공고/재입찰 표기가 있는 쪽 우선
+            cur_t = str(n.get("title") or "")
+            prev_t = str(prev.get("title") or "")
+            if ("재공고" in cur_t or "재입찰" in cur_t) and not (
+                "재공고" in prev_t or "재입찰" in prev_t
+            ):
+                best[key] = n
+    return [best[k] for k in order]
+
+
 def build_rows_for_company(
     base: dict[str, Any],
     notices: list[dict[str, Any]],
@@ -343,7 +380,9 @@ def build_rows_for_company(
     end: date,
 ) -> list[dict[str, Any]]:
     """기간 내 공고 → 목표분야 hit 행 또는 공고 없음 행."""
-    hits = [n for n in notices if _is_target(n.get("title", ""))]
+    hits = keep_latest_notices(
+        [n for n in notices if _is_target(n.get("title", ""))]
+    )
     total = len(notices)
     period_note = f"{start.isoformat()}~{end.isoformat()}"
 
