@@ -50,6 +50,8 @@ def _companies(rows: list[dict[str, Any]]) -> int:
 
 def _display_deadline(value: Any) -> str:
     text = str(value or "").strip()
+    text = re.sub(r"^개찰\s*", "", text)
+    text = re.sub(r"\s*\(마감\)\s*$", "", text).strip()
     if not text or text == "-":
         return "확인 불가"
     return text

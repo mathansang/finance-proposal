@@ -261,14 +261,24 @@ def parse_deadline_from_text(text: str) -> str | None:
     if m:
         return _fmt_deadline(_fmt_ymd(m.group(1), m.group(2), m.group(3)), m.group(4), m.group(5))
 
-    # 개찰일 대용 (마감 비공개일 때)
+    # 개찰일 대용 (마감 비공개일 때) — 날짜만 표시
     m = re.search(r"개찰일\s*(?:\||:|：)?\s*(20\d{2}[-./]\d{1,2}[-./]\d{1,2})", compact)
     if m:
         d = _parse_date(m.group(1))
         if d:
-            return f"개찰 {d.isoformat()}"
+            return d.isoformat()
 
     return None
+
+
+def normalize_deadline(value: Any) -> str:
+    """표시용: '개찰 ' / '(마감)' 제거, 날짜·시각만 남김."""
+    text = str(value or "").strip()
+    if not text or text in ("-", "확인 불가"):
+        return "-"
+    text = re.sub(r"^개찰\s*", "", text)
+    text = re.sub(r"\s*\(마감\)\s*$", "", text)
+    return text.strip() or "-"
 
 
 def fetch_deadline_for_notice(notice_or_row: dict[str, Any]) -> str | None:
@@ -311,13 +321,14 @@ def fetch_deadline_for_notice(notice_or_row: dict[str, Any]) -> str | None:
 
 
 def enrich_hit_deadline(row: dict[str, Any]) -> dict[str, Any]:
-    """기존 마감이 비어 있으면 상세에서 채움."""
-    cur = str(row.get("deadline") or "").strip()
-    if cur and cur not in ("-", "확인 불가"):
+    """기존 마감이 비어 있으면 상세에서 채움. 표기는 날짜만."""
+    cur = normalize_deadline(row.get("deadline"))
+    row["deadline"] = cur
+    if cur != "-":
         return row
     found = fetch_deadline_for_notice(row)
     if found:
-        row["deadline"] = found
+        row["deadline"] = normalize_deadline(found)
     return row
 
 
