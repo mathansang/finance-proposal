@@ -32,6 +32,31 @@ def _companies(rows: list[dict[str, Any]]) -> int:
     return len({r.get("company") for r in rows if r.get("company")})
 
 
+def _display_deadline(value: Any) -> str:
+    text = str(value or "").strip()
+    if not text or text == "-":
+        return "확인 불가"
+    return text
+
+
+def _unique_institutions(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """기관별 1행 (조사 링크·공개목록). hit가 있으면 해당 행 우선."""
+    by_company: dict[str, dict[str, Any]] = {}
+    order: list[str] = []
+    for r in rows:
+        company = str(r.get("company") or "").strip()
+        if not company:
+            continue
+        if company not in by_company:
+            by_company[company] = r
+            order.append(company)
+            continue
+        prev = by_company[company]
+        if r.get("hit") and not prev.get("hit"):
+            by_company[company] = r
+    return [by_company[c] for c in order]
+
+
 def build_markdown(data: dict[str, Any]) -> str:
     rows = data.get("rows") or []
     hits = _hits(rows)
@@ -104,9 +129,7 @@ def build_markdown(data: dict[str, Any]) -> str:
             budget = r.get("budget") or "확인 불가"
             if budget in ("-", ""):
                 budget = "확인 불가"
-            deadline = r.get("deadline") or "확인 불가"
-            if deadline in ("-", ""):
-                deadline = "확인 불가"
+            deadline = _display_deadline(r.get("deadline"))
             link = r.get("link") or ""
             link_cell = f"[링크]({link})" if link else "확인 불가"
             lines.append(
@@ -131,10 +154,27 @@ def build_markdown(data: dict[str, Any]) -> str:
             "",
             "---",
             "",
-            "## 9.4 기관별 조회 결과 (전체)",
+            "## 9.4 조사 기관 전체 목록",
             "",
-            "| 번호 | 기관 | 공개목록 | 사업명/결과 | 공고일 | 비고 | 링크 |",
-            "|---:|---|:---:|---|---|---|---|",
+            "| 번호 | 기관 | 공개목록 | 조사 링크 |",
+            "|---:|---|:---:|---|",
+        ]
+    )
+
+    for i, r in enumerate(_unique_institutions(rows), start=1):
+        link = r.get("link") or ""
+        link_cell = f"[조사 링크]({link})" if link else "확인 불가"
+        lines.append(
+            f"| {i} | {r.get('company', '')} | {r.get('public_list', '')} | {link_cell} |"
+        )
+
+    lines.extend(
+        [
+            "",
+            "### 기관별 조회 결과 상세",
+            "",
+            "| 번호 | 기관 | 공개목록 | 사업명/결과 | 공고일 | 마감일 | 비고 | 링크 |",
+            "|---:|---|:---:|---|---|---|---|---|",
         ]
     )
 
@@ -142,9 +182,11 @@ def build_markdown(data: dict[str, Any]) -> str:
         link = r.get("link") or ""
         link_cell = f"[링크]({link})" if link else ""
         title = r.get("title") or ("(공개목록 N)" if r.get("public_list") == "N" else "")
+        deadline = _display_deadline(r.get("deadline"))
         lines.append(
             f"| {r.get('no', '')} | {r.get('company', '')} | {r.get('public_list', '')} | "
-            f"{title} | {r.get('announce_date', '-')} | {r.get('note', '')} | {link_cell} |"
+            f"{title} | {r.get('announce_date', '-')} | {deadline} | "
+            f"{r.get('note', '')} | {link_cell} |"
         )
 
     lines.extend(
@@ -204,16 +246,35 @@ def build_index_html(data: dict[str, Any], archive_names: list[str]) -> str:
             title = html.escape(str(r.get("title") or ""))
             company = html.escape(str(r.get("company") or ""))
             posted = html.escape(str(r.get("announce_date") or "-"))
+            deadline = html.escape(_display_deadline(r.get("deadline")))
             if link:
                 title_cell = f'<a href="{html.escape(link)}" target="_blank" rel="noopener">{title}</a>'
             else:
                 title_cell = title
             hit_rows.append(
-                f"<tr><td>{company}</td><td>{title_cell}</td><td>{posted}</td></tr>"
+                f"<tr><td>{company}</td><td>{title_cell}</td>"
+                f"<td>{posted}</td><td>{deadline}</td></tr>"
             )
     else:
         hit_rows.append(
-            '<tr><td colspan="3">목표분야 자동탐지 공고 없음</td></tr>'
+            '<tr><td colspan="4">목표분야 자동탐지 공고 없음</td></tr>'
+        )
+
+    institution_rows = []
+    for i, r in enumerate(_unique_institutions(rows), start=1):
+        company = html.escape(str(r.get("company") or ""))
+        public_list = html.escape(str(r.get("public_list") or "-"))
+        link = r.get("link") or ""
+        if link:
+            link_cell = (
+                f'<a href="{html.escape(link)}" target="_blank" rel="noopener">'
+                f"조사 링크</a>"
+            )
+        else:
+            link_cell = "확인 불가"
+        institution_rows.append(
+            f"<tr><td>{i}</td><td>{company}</td><td>{public_list}</td>"
+            f"<td>{link_cell}</td></tr>"
         )
 
     archive_items = []
@@ -247,7 +308,7 @@ def build_index_html(data: dict[str, Any], archive_names: list[str]) -> str:
       line-height: 1.55;
     }}
     main {{
-      max-width: 960px;
+      max-width: 1100px;
       margin: 0 auto;
       padding: 2.5rem 1.25rem 4rem;
     }}
@@ -281,6 +342,7 @@ def build_index_html(data: dict[str, Any], archive_names: list[str]) -> str:
       margin: 0 0 0.85rem;
       font-size: 1.15rem;
     }}
+    .table-wrap {{ overflow-x: auto; }}
     table {{
       width: 100%;
       border-collapse: collapse;
@@ -317,12 +379,25 @@ def build_index_html(data: dict[str, Any], archive_names: list[str]) -> str:
     </div>
     <section>
       <h2>목표분야 해당 공고</h2>
+      <div class="table-wrap">
       <table>
-        <thead><tr><th>기관</th><th>사업명</th><th>공고일</th></tr></thead>
+        <thead><tr><th>기관</th><th>사업명</th><th>공고일</th><th>마감일</th></tr></thead>
         <tbody>
           {"".join(hit_rows)}
         </tbody>
       </table>
+      </div>
+    </section>
+    <section>
+      <h2>조사 기관 전체 목록</h2>
+      <div class="table-wrap">
+      <table>
+        <thead><tr><th>번호</th><th>기관</th><th>공개목록</th><th>조사 링크</th></tr></thead>
+        <tbody>
+          {"".join(institution_rows)}
+        </tbody>
+      </table>
+      </div>
     </section>
     <section>
       <h2>문서</h2>

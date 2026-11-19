@@ -44,55 +44,105 @@
 
 ---
 
-## 9.4 기관별 조회 결과 (전체)
+## 9.4 조사 기관 전체 목록
 
-| 번호 | 기관 | 공개목록 | 사업명/결과 | 공고일 | 비고 | 링크 |
-|---:|---|:---:|---|---|---|---|
-| 1 | KB금융그룹·KB국민은행 | Y | 공고 없음 (총 33건) | - | 홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-16~2026-11-16 | [링크](https://omoney.kbstar.com/quics?page=C018592) |
-| 2 | 신한금융그룹·신한은행 | N | (공개목록 N) | - |  | [링크](https://www.shinhan.com) |
-| 3 | 하나금융그룹·하나은행 | Y | 공고 없음 (총 16건) | - | 홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-16~2026-11-16 | [링크](https://banking.kebhana.com/cont/news/news01/index.jsp) |
-| 4 | 우리금융그룹·우리은행 | Y | 공고 없음 (총 7건) | - | 홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-16~2026-11-16 | [링크](https://www.woorifis.com/kor/company/announceList) |
-| 5 | NH농협금융·NH농협은행 | Y | 공고 없음 (총 59건) | - | 홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-16~2026-11-16 | [링크](https://www.nonghyup.com/ecenter/bid/bidList.do) |
-| 6 | IBK기업은행 | Y | 공고 없음 (총 50건) | - | 조회기간 내 공개목록 전수 50건, 목표분야 미해당 (2026-10-16~2026-11-16) | [링크](https://www.modoobid.co.kr/bid/org/중소기업은행) |
-| 7 | 한국산업은행 | Y | 한국산업은행 위험회피회계 및 FVO 적용 대상 원·외화 산금채 가격평가기관 선정 | 2026-11-02 | 조회기간 내 공개목록 총 20건 중 목표분야 해당 (2026-10-16~2026-11-16) | [링크](https://www.modoobid.co.kr/bid/org/%ED%95%9C%EA%B5%AD%EC%82%B0%EC%97%85%EC%9D%80%ED%96%89) |
-| 8 | 한국수출입은행 | Y | 공고 없음 (총 13건) | - | 조회기간 내 공개목록 전수 13건, 목표분야 미해당 (2026-10-16~2026-11-16) | [링크](https://www.modoobid.co.kr/bid/org/한국수출입은행) |
-| 9 | 미래에셋증권 | Y | 공고 없음 (총 0건) | - | 홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-16~2026-11-16 | [링크](https://securities.miraeasset.com/bbs/board/message/list.do?categoryId=1959) |
-| 10 | 한국투자증권 | N | (공개목록 N) | - |  | [링크](https://www.truefriend.com) |
-| 11 | NH투자증권 | Y | 공고 없음 (총 7건) | - | 홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-16~2026-11-16 | [링크](https://www.nonghyup.com/ecenter/bid/bidList.do) |
-| 12 | 삼성증권 | N | (공개목록 N) | - |  | [링크](https://www.samsungpop.com) |
-| 13 | KB증권 | Y | 공고 없음 (총 0건) | - | 홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-16~2026-11-16 | [링크](https://bbs.kbsec.com/BBS/45) |
-| 14 | 신한투자증권 | Y | 공고 없음 (총 8건) | - | 홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-16~2026-11-16 | [링크](https://bbs2.shinhansec.com/board/message/list.do?boardName=itbusiness&gubun=new_ir) |
-| 15 | 하나증권 | Y | 공고 없음 (총 1건) | - | 홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-16~2026-11-16 | [링크](https://www.hanaw.com/corebbs5/bidAnnuce/list/list.cmd) |
-| 16 | 키움증권 | N | (공개목록 N) | - |  | [링크](https://www.kiwoom.com) |
-| 17 | 메리츠증권 | Y | 공고 없음 (총 1건) | - | 홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-16~2026-11-16 | [링크](https://home.imeritz.com/bbs/BbsList.go?bbsGrpId=bascGrp&bbsId=bidding) |
-| 18 | IBK투자증권 | Y | 공고 없음 (총 2건) | - | 홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-16~2026-11-16 | [링크](https://www.ibksystem.co.kr/board?brdId=BRD002) |
-| 19 | 삼성생명 | N | (공개목록 N) | - |  | [링크](https://www.samsunglife.com) |
-| 20 | 한화생명 | N | (공개목록 N) | - |  | [링크](https://www.hanwhalife.com) |
-| 21 | 교보생명 | Y | 공고 없음 (총 0건) | - | 홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-16~2026-11-16 | [링크](https://keps.kyobo.co.kr:447/epro/spLogin.do) |
-| 22 | 신한라이프 | N | (공개목록 N) | - |  | [링크](https://www.shinhanlife.co.kr) |
-| 23 | KB라이프 | N | (공개목록 N) | - |  | [링크](https://www.kblife.co.kr) |
-| 24 | iM라이프 | N | (공개목록 N) | - |  | [링크](https://www.imlife.co.kr) |
-| 25 | IBK연금보험 | Y | K-ICS검증 용역계약 (재입찰) | 2026-10-29 | K-ICS·IFRS9/17 외부검증 · 조회기간 2026-10-16~2026-11-16 · 조회기간 2026-10-16~2026-11-16 | [링크](https://work.00data.kr/projects/R26BK01798197) |
-| 26 | 삼성화재 | Y | 공고 없음 (총 0건) | - | 홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-16~2026-11-16 | [링크](https://www.samsungfire.com/vh/page/VH.HPIF0100.do) |
-| 27 | DB손해보험 | Y | 공고 없음 (총 2건) | - | 홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-16~2026-11-16 | [링크](https://idbins.com/pc/bizxpress/contentTemplet/cmy/pr/an/list.jsp) |
-| 28 | 현대해상 | N | (공개목록 N) | - |  | [링크](https://www.hi.co.kr) |
-| 29 | KB손해보험 | Y | 공고 없음 (총 2건) | - | 홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-16~2026-11-16 | [링크](https://sp.kbinsure.co.kr/splogin.jsp) |
-| 30 | 메리츠화재 | N | (공개목록 N) | - |  | [링크](https://www.meritzfire.com) |
-| 31 | 한화손해보험 | N | (공개목록 N) | - |  | [링크](https://www.hwgeneralins.com) |
-| 32 | 롯데손해보험 | N | (공개목록 N) | - |  | [링크](https://www.lotteins.co.kr) |
-| 33 | 금융감독원 | Y | 공고 없음 (총 1건) | - | 조회기간 내 공개목록 전수 1건, 목표분야 미해당 (2026-10-16~2026-11-16) | [링크](https://www.modoobid.co.kr/bid/org/금융감독원) |
-| 34 | 금융위원회 | Y | 공고 없음 (총 4건) | - | 조회기간 내 공개목록 전수 4건, 목표분야 미해당 (2026-10-16~2026-11-16) | [링크](https://www.modoobid.co.kr/bid/org/금융위원회) |
-| 35 | 한국은행 | Y | 공고 없음 (총 2건) | - | 조회기간 내 공개목록 전수 2건, 목표분야 미해당 (2026-10-16~2026-11-16) | [링크](https://www.modoobid.co.kr/bid/org/한국은행) |
-| 36 | 한국거래소 | Y | 공고 없음 (총 4건) | - | 조회기간 내 공개목록 전수 4건, 목표분야 미해당 (2026-10-16~2026-11-16) | [링크](https://www.modoobid.co.kr/bid/org/(주)한국거래소) |
-| 37 | 금융결제원 | Y | 공고 없음 (총 5건) | - | 조회기간 내 공개목록 전수 5건, 목표분야 미해당 (2026-10-16~2026-11-16) | [링크](https://www.modoobid.co.kr/bid/org/금융결제원) |
-| 38 | 한국예탁결제원 | Y | 공고 없음 (총 3건) | - | 조회기간 내 공개목록 전수 3건, 목표분야 미해당 (2026-10-16~2026-11-16) | [링크](https://www.modoobid.co.kr/bid/org/한국예탁결제원) |
-| 39 | 예금보험공사 | Y | 공고 없음 (총 3건) | - | 조회기간 내 공개목록 전수 3건, 목표분야 미해당 (2026-10-16~2026-11-16) | [링크](https://www.modoobid.co.kr/bid/org/예금보험공사) |
-| 40 | 한국자산관리공사 | Y | 공고 없음 (총 7건) | - | 조회기간 내 공개목록 전수 7건, 목표분야 미해당 (2026-10-16~2026-11-16) | [링크](https://www.modoobid.co.kr/bid/org/한국자산관리공사) |
-| 41 | 한국주택금융공사 | Y | 공고 없음 (총 0건) | - | 조회기간 내 공개목록 전수 0건, 목표분야 미해당 (2026-10-16~2026-11-16) | [링크](https://www.modoobid.co.kr/bid/org/한국주택금융공사) |
-| 42 | 신용보증기금 | Y | 공고 없음 (총 11건) | - | 조회기간 내 공개목록 전수 11건, 목표분야 미해당 (2026-10-16~2026-11-16) | [링크](https://www.modoobid.co.kr/bid/org/신용보증기금) |
-| 43 | 기술보증기금 | Y | 공고 없음 (총 5건) | - | 조회기간 내 공개목록 전수 5건, 목표분야 미해당 (2026-10-16~2026-11-16) | [링크](https://www.modoobid.co.kr/bid/org/기술보증기금) |
-| 44 | 한국해양진흥공사 | Y | 2026년 금융자산 평가용역 | 2026-11-04 | 조회기간 내 공개목록 총 3건 중 목표분야 해당 (2026-10-16~2026-11-16) | [링크](https://www.modoobid.co.kr/bid/org/%ED%95%9C%EA%B5%AD%ED%95%B4%EC%96%91%EC%A7%84%ED%9D%A5%EA%B3%B5%EC%82%AC) |
-| 45 | 한국교직원공제회 | Y | 공고 없음 (총 3건) | - | 조회기간 내 공개목록 전수 3건, 목표분야 미해당 (2026-10-16~2026-11-16) | [링크](https://www.modoobid.co.kr/bid/org/한국교직원공제회) |
+| 번호 | 기관 | 공개목록 | 조사 링크 |
+|---:|---|:---:|---|
+| 1 | KB금융그룹·KB국민은행 | Y | [조사 링크](https://omoney.kbstar.com/quics?page=C018592) |
+| 2 | 신한금융그룹·신한은행 | N | [조사 링크](https://www.shinhan.com) |
+| 3 | 하나금융그룹·하나은행 | Y | [조사 링크](https://banking.kebhana.com/cont/news/news01/index.jsp) |
+| 4 | 우리금융그룹·우리은행 | Y | [조사 링크](https://www.woorifis.com/kor/company/announceList) |
+| 5 | NH농협금융·NH농협은행 | Y | [조사 링크](https://www.nonghyup.com/ecenter/bid/bidList.do) |
+| 6 | IBK기업은행 | Y | [조사 링크](https://www.modoobid.co.kr/bid/org/중소기업은행) |
+| 7 | 한국산업은행 | Y | [조사 링크](https://www.modoobid.co.kr/bid/org/%ED%95%9C%EA%B5%AD%EC%82%B0%EC%97%85%EC%9D%80%ED%96%89) |
+| 8 | 한국수출입은행 | Y | [조사 링크](https://www.modoobid.co.kr/bid/org/한국수출입은행) |
+| 9 | 미래에셋증권 | Y | [조사 링크](https://securities.miraeasset.com/bbs/board/message/list.do?categoryId=1959) |
+| 10 | 한국투자증권 | N | [조사 링크](https://www.truefriend.com) |
+| 11 | NH투자증권 | Y | [조사 링크](https://www.nonghyup.com/ecenter/bid/bidList.do) |
+| 12 | 삼성증권 | N | [조사 링크](https://www.samsungpop.com) |
+| 13 | KB증권 | Y | [조사 링크](https://bbs.kbsec.com/BBS/45) |
+| 14 | 신한투자증권 | Y | [조사 링크](https://bbs2.shinhansec.com/board/message/list.do?boardName=itbusiness&gubun=new_ir) |
+| 15 | 하나증권 | Y | [조사 링크](https://www.hanaw.com/corebbs5/bidAnnuce/list/list.cmd) |
+| 16 | 키움증권 | N | [조사 링크](https://www.kiwoom.com) |
+| 17 | 메리츠증권 | Y | [조사 링크](https://home.imeritz.com/bbs/BbsList.go?bbsGrpId=bascGrp&bbsId=bidding) |
+| 18 | IBK투자증권 | Y | [조사 링크](https://www.ibksystem.co.kr/board?brdId=BRD002) |
+| 19 | 삼성생명 | N | [조사 링크](https://www.samsunglife.com) |
+| 20 | 한화생명 | N | [조사 링크](https://www.hanwhalife.com) |
+| 21 | 교보생명 | Y | [조사 링크](https://keps.kyobo.co.kr:447/epro/spLogin.do) |
+| 22 | 신한라이프 | N | [조사 링크](https://www.shinhanlife.co.kr) |
+| 23 | KB라이프 | N | [조사 링크](https://www.kblife.co.kr) |
+| 24 | iM라이프 | N | [조사 링크](https://www.imlife.co.kr) |
+| 25 | IBK연금보험 | Y | [조사 링크](https://work.00data.kr/projects/R26BK01798197) |
+| 26 | 삼성화재 | Y | [조사 링크](https://www.samsungfire.com/vh/page/VH.HPIF0100.do) |
+| 27 | DB손해보험 | Y | [조사 링크](https://idbins.com/pc/bizxpress/contentTemplet/cmy/pr/an/list.jsp) |
+| 28 | 현대해상 | N | [조사 링크](https://www.hi.co.kr) |
+| 29 | KB손해보험 | Y | [조사 링크](https://sp.kbinsure.co.kr/splogin.jsp) |
+| 30 | 메리츠화재 | N | [조사 링크](https://www.meritzfire.com) |
+| 31 | 한화손해보험 | N | [조사 링크](https://www.hwgeneralins.com) |
+| 32 | 롯데손해보험 | N | [조사 링크](https://www.lotteins.co.kr) |
+| 33 | 금융감독원 | Y | [조사 링크](https://www.modoobid.co.kr/bid/org/금융감독원) |
+| 34 | 금융위원회 | Y | [조사 링크](https://www.modoobid.co.kr/bid/org/금융위원회) |
+| 35 | 한국은행 | Y | [조사 링크](https://www.modoobid.co.kr/bid/org/한국은행) |
+| 36 | 한국거래소 | Y | [조사 링크](https://www.modoobid.co.kr/bid/org/(주)한국거래소) |
+| 37 | 금융결제원 | Y | [조사 링크](https://www.modoobid.co.kr/bid/org/금융결제원) |
+| 38 | 한국예탁결제원 | Y | [조사 링크](https://www.modoobid.co.kr/bid/org/한국예탁결제원) |
+| 39 | 예금보험공사 | Y | [조사 링크](https://www.modoobid.co.kr/bid/org/예금보험공사) |
+| 40 | 한국자산관리공사 | Y | [조사 링크](https://www.modoobid.co.kr/bid/org/한국자산관리공사) |
+| 41 | 한국주택금융공사 | Y | [조사 링크](https://www.modoobid.co.kr/bid/org/한국주택금융공사) |
+| 42 | 신용보증기금 | Y | [조사 링크](https://www.modoobid.co.kr/bid/org/신용보증기금) |
+| 43 | 기술보증기금 | Y | [조사 링크](https://www.modoobid.co.kr/bid/org/기술보증기금) |
+| 44 | 한국해양진흥공사 | Y | [조사 링크](https://www.modoobid.co.kr/bid/org/%ED%95%9C%EA%B5%AD%ED%95%B4%EC%96%91%EC%A7%84%ED%9D%A5%EA%B3%B5%EC%82%AC) |
+| 45 | 한국교직원공제회 | Y | [조사 링크](https://www.modoobid.co.kr/bid/org/한국교직원공제회) |
+
+### 기관별 조회 결과 상세
+
+| 번호 | 기관 | 공개목록 | 사업명/결과 | 공고일 | 마감일 | 비고 | 링크 |
+|---:|---|:---:|---|---|---|---|---|
+| 1 | KB금융그룹·KB국민은행 | Y | 공고 없음 (총 33건) | - | 확인 불가 | 홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-16~2026-11-16 | [링크](https://omoney.kbstar.com/quics?page=C018592) |
+| 2 | 신한금융그룹·신한은행 | N | (공개목록 N) | - | 확인 불가 |  | [링크](https://www.shinhan.com) |
+| 3 | 하나금융그룹·하나은행 | Y | 공고 없음 (총 16건) | - | 확인 불가 | 홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-16~2026-11-16 | [링크](https://banking.kebhana.com/cont/news/news01/index.jsp) |
+| 4 | 우리금융그룹·우리은행 | Y | 공고 없음 (총 7건) | - | 확인 불가 | 홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-16~2026-11-16 | [링크](https://www.woorifis.com/kor/company/announceList) |
+| 5 | NH농협금융·NH농협은행 | Y | 공고 없음 (총 59건) | - | 확인 불가 | 홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-16~2026-11-16 | [링크](https://www.nonghyup.com/ecenter/bid/bidList.do) |
+| 6 | IBK기업은행 | Y | 공고 없음 (총 50건) | - | 확인 불가 | 조회기간 내 공개목록 전수 50건, 목표분야 미해당 (2026-10-16~2026-11-16) | [링크](https://www.modoobid.co.kr/bid/org/중소기업은행) |
+| 7 | 한국산업은행 | Y | 한국산업은행 위험회피회계 및 FVO 적용 대상 원·외화 산금채 가격평가기관 선정 | 2026-11-02 | 확인 불가 | 조회기간 내 공개목록 총 20건 중 목표분야 해당 (2026-10-16~2026-11-16) | [링크](https://www.modoobid.co.kr/bid/org/%ED%95%9C%EA%B5%AD%EC%82%B0%EC%97%85%EC%9D%80%ED%96%89) |
+| 8 | 한국수출입은행 | Y | 공고 없음 (총 13건) | - | 확인 불가 | 조회기간 내 공개목록 전수 13건, 목표분야 미해당 (2026-10-16~2026-11-16) | [링크](https://www.modoobid.co.kr/bid/org/한국수출입은행) |
+| 9 | 미래에셋증권 | Y | 공고 없음 (총 0건) | - | 확인 불가 | 홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-16~2026-11-16 | [링크](https://securities.miraeasset.com/bbs/board/message/list.do?categoryId=1959) |
+| 10 | 한국투자증권 | N | (공개목록 N) | - | 확인 불가 |  | [링크](https://www.truefriend.com) |
+| 11 | NH투자증권 | Y | 공고 없음 (총 7건) | - | 확인 불가 | 홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-16~2026-11-16 | [링크](https://www.nonghyup.com/ecenter/bid/bidList.do) |
+| 12 | 삼성증권 | N | (공개목록 N) | - | 확인 불가 |  | [링크](https://www.samsungpop.com) |
+| 13 | KB증권 | Y | 공고 없음 (총 0건) | - | 확인 불가 | 홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-16~2026-11-16 | [링크](https://bbs.kbsec.com/BBS/45) |
+| 14 | 신한투자증권 | Y | 공고 없음 (총 8건) | - | 확인 불가 | 홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-16~2026-11-16 | [링크](https://bbs2.shinhansec.com/board/message/list.do?boardName=itbusiness&gubun=new_ir) |
+| 15 | 하나증권 | Y | 공고 없음 (총 1건) | - | 확인 불가 | 홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-16~2026-11-16 | [링크](https://www.hanaw.com/corebbs5/bidAnnuce/list/list.cmd) |
+| 16 | 키움증권 | N | (공개목록 N) | - | 확인 불가 |  | [링크](https://www.kiwoom.com) |
+| 17 | 메리츠증권 | Y | 공고 없음 (총 1건) | - | 확인 불가 | 홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-16~2026-11-16 | [링크](https://home.imeritz.com/bbs/BbsList.go?bbsGrpId=bascGrp&bbsId=bidding) |
+| 18 | IBK투자증권 | Y | 공고 없음 (총 2건) | - | 확인 불가 | 홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-16~2026-11-16 | [링크](https://www.ibksystem.co.kr/board?brdId=BRD002) |
+| 19 | 삼성생명 | N | (공개목록 N) | - | 확인 불가 |  | [링크](https://www.samsunglife.com) |
+| 20 | 한화생명 | N | (공개목록 N) | - | 확인 불가 |  | [링크](https://www.hanwhalife.com) |
+| 21 | 교보생명 | Y | 공고 없음 (총 0건) | - | 확인 불가 | 홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-16~2026-11-16 | [링크](https://keps.kyobo.co.kr:447/epro/spLogin.do) |
+| 22 | 신한라이프 | N | (공개목록 N) | - | 확인 불가 |  | [링크](https://www.shinhanlife.co.kr) |
+| 23 | KB라이프 | N | (공개목록 N) | - | 확인 불가 |  | [링크](https://www.kblife.co.kr) |
+| 24 | iM라이프 | N | (공개목록 N) | - | 확인 불가 |  | [링크](https://www.imlife.co.kr) |
+| 25 | IBK연금보험 | Y | K-ICS검증 용역계약 (재입찰) | 2026-10-29 | 2026-11-04 (마감) | K-ICS·IFRS9/17 외부검증 · 조회기간 2026-10-16~2026-11-16 · 조회기간 2026-10-16~2026-11-16 | [링크](https://work.00data.kr/projects/R26BK01798197) |
+| 26 | 삼성화재 | Y | 공고 없음 (총 0건) | - | 확인 불가 | 홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-16~2026-11-16 | [링크](https://www.samsungfire.com/vh/page/VH.HPIF0100.do) |
+| 27 | DB손해보험 | Y | 공고 없음 (총 2건) | - | 확인 불가 | 홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-16~2026-11-16 | [링크](https://idbins.com/pc/bizxpress/contentTemplet/cmy/pr/an/list.jsp) |
+| 28 | 현대해상 | N | (공개목록 N) | - | 확인 불가 |  | [링크](https://www.hi.co.kr) |
+| 29 | KB손해보험 | Y | 공고 없음 (총 2건) | - | 확인 불가 | 홈페이지 게시판(수동전수 기준 유지). 나라장터 자동갱신 대상 아님. 조회기간 2026-10-16~2026-11-16 | [링크](https://sp.kbinsure.co.kr/splogin.jsp) |
+| 30 | 메리츠화재 | N | (공개목록 N) | - | 확인 불가 |  | [링크](https://www.meritzfire.com) |
+| 31 | 한화손해보험 | N | (공개목록 N) | - | 확인 불가 |  | [링크](https://www.hwgeneralins.com) |
+| 32 | 롯데손해보험 | N | (공개목록 N) | - | 확인 불가 |  | [링크](https://www.lotteins.co.kr) |
+| 33 | 금융감독원 | Y | 공고 없음 (총 1건) | - | 확인 불가 | 조회기간 내 공개목록 전수 1건, 목표분야 미해당 (2026-10-16~2026-11-16) | [링크](https://www.modoobid.co.kr/bid/org/금융감독원) |
+| 34 | 금융위원회 | Y | 공고 없음 (총 4건) | - | 확인 불가 | 조회기간 내 공개목록 전수 4건, 목표분야 미해당 (2026-10-16~2026-11-16) | [링크](https://www.modoobid.co.kr/bid/org/금융위원회) |
+| 35 | 한국은행 | Y | 공고 없음 (총 2건) | - | 확인 불가 | 조회기간 내 공개목록 전수 2건, 목표분야 미해당 (2026-10-16~2026-11-16) | [링크](https://www.modoobid.co.kr/bid/org/한국은행) |
+| 36 | 한국거래소 | Y | 공고 없음 (총 4건) | - | 확인 불가 | 조회기간 내 공개목록 전수 4건, 목표분야 미해당 (2026-10-16~2026-11-16) | [링크](https://www.modoobid.co.kr/bid/org/(주)한국거래소) |
+| 37 | 금융결제원 | Y | 공고 없음 (총 5건) | - | 확인 불가 | 조회기간 내 공개목록 전수 5건, 목표분야 미해당 (2026-10-16~2026-11-16) | [링크](https://www.modoobid.co.kr/bid/org/금융결제원) |
+| 38 | 한국예탁결제원 | Y | 공고 없음 (총 3건) | - | 확인 불가 | 조회기간 내 공개목록 전수 3건, 목표분야 미해당 (2026-10-16~2026-11-16) | [링크](https://www.modoobid.co.kr/bid/org/한국예탁결제원) |
+| 39 | 예금보험공사 | Y | 공고 없음 (총 3건) | - | 확인 불가 | 조회기간 내 공개목록 전수 3건, 목표분야 미해당 (2026-10-16~2026-11-16) | [링크](https://www.modoobid.co.kr/bid/org/예금보험공사) |
+| 40 | 한국자산관리공사 | Y | 공고 없음 (총 7건) | - | 확인 불가 | 조회기간 내 공개목록 전수 7건, 목표분야 미해당 (2026-10-16~2026-11-16) | [링크](https://www.modoobid.co.kr/bid/org/한국자산관리공사) |
+| 41 | 한국주택금융공사 | Y | 공고 없음 (총 0건) | - | 확인 불가 | 조회기간 내 공개목록 전수 0건, 목표분야 미해당 (2026-10-16~2026-11-16) | [링크](https://www.modoobid.co.kr/bid/org/한국주택금융공사) |
+| 42 | 신용보증기금 | Y | 공고 없음 (총 11건) | - | 확인 불가 | 조회기간 내 공개목록 전수 11건, 목표분야 미해당 (2026-10-16~2026-11-16) | [링크](https://www.modoobid.co.kr/bid/org/신용보증기금) |
+| 43 | 기술보증기금 | Y | 공고 없음 (총 5건) | - | 확인 불가 | 조회기간 내 공개목록 전수 5건, 목표분야 미해당 (2026-10-16~2026-11-16) | [링크](https://www.modoobid.co.kr/bid/org/기술보증기금) |
+| 44 | 한국해양진흥공사 | Y | 2026년 금융자산 평가용역 | 2026-11-04 | 확인 불가 | 조회기간 내 공개목록 총 3건 중 목표분야 해당 (2026-10-16~2026-11-16) | [링크](https://www.modoobid.co.kr/bid/org/%ED%95%9C%EA%B5%AD%ED%95%B4%EC%96%91%EC%A7%84%ED%9D%A5%EA%B3%B5%EC%82%AC) |
+| 45 | 한국교직원공제회 | Y | 공고 없음 (총 3건) | - | 확인 불가 | 조회기간 내 공개목록 전수 3건, 목표분야 미해당 (2026-10-16~2026-11-16) | [링크](https://www.modoobid.co.kr/bid/org/한국교직원공제회) |
 
 ---
 
